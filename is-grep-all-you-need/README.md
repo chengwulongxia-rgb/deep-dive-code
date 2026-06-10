@@ -1,4 +1,4 @@
-# agent-harness: grep vs Vector Search Benchmark
+# is-grep-all-you-need: grep vs Vector Search Benchmark
 
 深度實作 #1 — 靈感來自 arXiv 2605.15184 "Is Grep All You Need?"
 

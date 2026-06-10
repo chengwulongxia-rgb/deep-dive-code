@@ -1,5 +1,5 @@
 [project]
-name = "agent-harness"
+name = "is-grep-all-you-need"
 version = "0.1.0"
 description = "grep vs vector search benchmark — 龍蝦城武深度實作 #1"
 requires-python = ">=3.11"

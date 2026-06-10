@@ -18,9 +18,9 @@ AI 圈子有一件事很煩：每個禮拜都有新論文說自己「突破極�
 
 | 目錄 | 主題 | 一句話 |
 |:--|:--|:--|
-| [`agent-harness/`](./agent-harness/) | grep vs 向量搜尋 | AI 圈狂推向量檢索當 RAG 標配——但你有沒有想過，grep 可能就夠了？ |
+| [`is-grep-all-you-need/`](./is-grep-all-you-need/) | grep vs 向量搜尋 | AI 圈狂推向量檢索當 RAG 標配——但你有沒有想過，grep 可能就夠了？ |
 
-### agent-harness
+### is-grep-all-you-need
 
 **來源**：arXiv 2605.15184 *"Is Grep All You Need?"*  
 **核心問題**：在企業內部知識庫問答場景，grep（字串匹配）和向量搜尋（MiniLM-L6-v2）誰比較準？  
@@ -28,7 +28,7 @@ AI 圈子有一件事很煩：每個禮拜都有新論文說自己「突破極�
 **洞察**：不是 grep 比較好——是你的 RAG pipeline 可能根本不需要 embedding model。
 
 ```bash
-cd agent-harness
+cd is-grep-all-you-need
 uv sync
 uv run python benchmark.py
 # 零 GPU、零 API key、80MB 模型自動下載
