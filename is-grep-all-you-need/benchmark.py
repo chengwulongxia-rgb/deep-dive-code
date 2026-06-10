@@ -6,8 +6,10 @@
       在內部知識庫問答任務上的準確率。
 
 用法：uv run python benchmark.py
+      uv run python benchmark.py --chart /path/to/output.png
 """
 
+import argparse
 import json
 import re
 import subprocess
@@ -15,6 +17,10 @@ import sys
 import time
 from pathlib import Path
 
+import matplotlib
+matplotlib.use("Agg")  # 無頭模式，不需要 GUI
+import matplotlib.pyplot as plt
+import matplotlib.ticker as mticker
 import numpy as np
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -147,9 +153,98 @@ def evaluate(
     }
 
 
+# ─── 圖表輸出 ──────────────────────────────────────────────
+
+def make_chart(grep_result: dict, vector_result: dict, queries: list[dict],
+               output_path: str) -> None:
+    """生成 grouped bar chart：grep vs MiniLM 準確率比較。"""
+
+    # 計算各類準確率
+    exact_queries = [q for q in queries if q["type"] == "exact"]
+    semantic_queries = [q for q in queries if q["type"] == "semantic"]
+
+    grep_exact = sum(1 for d in grep_result["details"] if d["type"] == "exact" and d["found"])
+    grep_semantic = sum(1 for d in grep_result["details"] if d["type"] == "semantic" and d["found"])
+    vec_exact = sum(1 for d in vector_result["details"] if d["type"] == "exact" and d["found"])
+    vec_semantic = sum(1 for d in vector_result["details"] if d["type"] == "semantic" and d["found"])
+
+    categories = ["整體", "精確查詢", "語意查詢"]
+    grep_scores = [
+        grep_result["accuracy"] * 100,
+        grep_exact / len(exact_queries) * 100 if exact_queries else 0,
+        grep_semantic / len(semantic_queries) * 100 if semantic_queries else 0,
+    ]
+    vector_scores = [
+        vector_result["accuracy"] * 100,
+        vec_exact / len(exact_queries) * 100 if exact_queries else 0,
+        vec_semantic / len(semantic_queries) * 100 if semantic_queries else 0,
+    ]
+
+    # 畫圖
+    plt.rcParams.update({
+        "font.family": "sans-serif",
+        "font.size": 13,
+        "axes.titlesize": 16,
+        "axes.labelsize": 13,
+        "figure.facecolor": "#1a1a2e",
+        "axes.facecolor": "#1a1a2e",
+        "text.color": "#e0e0e0",
+        "axes.labelcolor": "#e0e0e0",
+        "axes.edgecolor": "#444",
+        "xtick.color": "#e0e0e0",
+        "ytick.color": "#e0e0e0",
+        "grid.color": "#333",
+    })
+
+    fig, ax = plt.subplots(figsize=(10, 5.5))
+    x = np.arange(len(categories))
+    width = 0.32
+
+    bars1 = ax.bar(x - width/2, grep_scores, width, label="grep（字串匹配）",
+                   color="#00d4aa", edgecolor="#00d4aa", linewidth=0.8, alpha=0.85)
+    bars2 = ax.bar(x + width/2, vector_scores, width, label="MiniLM-L6-v2（向量）",
+                   color="#6c8cff", edgecolor="#6c8cff", linewidth=0.8, alpha=0.85)
+
+    # 數字標籤
+    for bar in bars1:
+        ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 1,
+                f"{bar.get_height():.0f}%", ha="center", fontsize=12, fontweight="bold",
+                color="#00d4aa")
+    for bar in bars2:
+        ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 1,
+                f"{bar.get_height():.0f}%", ha="center", fontsize=12, fontweight="bold",
+                color="#6c8cff")
+
+    ax.set_xticks(x)
+    ax.set_xticklabels(categories)
+    ax.set_ylim(0, 100)
+    ax.yaxis.set_major_formatter(mticker.PercentFormatter())
+    ax.set_ylabel("準確率")
+    ax.set_title("grep vs 向量搜尋：內部知識庫問答準確率",
+                 fontweight="bold", pad=18)
+    ax.grid(axis="y", alpha=0.3, linestyle="--")
+    ax.legend(framealpha=0.15, edgecolor="#555", fontsize=11,
+              loc="upper right")
+
+    # 底部說明
+    fig.text(0.5, 0.01,
+             "20 份模擬企業文件 × 20 題問答 | 靈感：arXiv 2605.15184 | chengwulongxia-rgb/deep-dive-code",
+             ha="center", fontsize=9, color="#888")
+
+    fig.tight_layout(rect=[0, 0.04, 1, 1])
+    fig.savefig(output_path, dpi=150, facecolor="#1a1a2e", bbox_inches="tight")
+    plt.close(fig)
+    print(f"  📈 圖表已輸出：{output_path}")
+
+
 # ─── 主程式 ──────────────────────────────────────────────
 
 def main():
+    parser = argparse.ArgumentParser(description="grep vs vector search benchmark")
+    parser.add_argument("--chart", type=str, default=None,
+                        help="輸出準確率長條圖 PNG 路徑")
+    args = parser.parse_args()
+
     print("=" * 60)
     print("grep vs Vector Search Benchmark")
     print("靈感：arXiv 2605.15184 — Is Grep All You Need?")
@@ -243,6 +338,11 @@ def main():
     print("  論文觀點：檢索策略的選擇不能只看演算法，harness 設計")
     print("  （如何切分文件、如何呈現結果）同等重要。簡單工具在")
     print("  正確場景下不輸複雜系統。")
+
+    # ─── 圖表輸出 ───
+    if args.chart:
+        print()
+        make_chart(grep_result, vector_result, queries, args.chart)
 
 
 if __name__ == "__main__":
