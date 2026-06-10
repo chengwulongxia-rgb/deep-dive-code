@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "query": "Q3 2025 的營收是多少？",
+    "answer": "4.2 億美元",
+    "type": "exact",
+    "relevant_doc": 3
+  },
+  {
+    "id": 2,
+    "query": "公司的遠端工作政策是什麼？",
+    "answer": "每週至少進辦公室三天",
+    "type": "semantic",
+    "relevant_doc": 12
+  },
+  {
+    "id": 3,
+    "query": "CEO 叫什麼名字？",
+    "answer": "Sarah Chen",
+    "type": "exact",
+    "relevant_doc": 1
+  },
+  {
+    "id": 4,
+    "query": "資料庫密碼是什麼？",
+    "answer": "prod-db-2025!Secure",
+    "type": "exact",
+    "relevant_doc": 8
+  },
+  {
+    "id": 5,
+    "query": "公司怎麼處理客戶投訴？",
+    "answer": "24 小時內首次回應",
+    "type": "semantic",
+    "relevant_doc": 15
+  },
+  {
+    "id": 6,
+    "query": "API 金鑰的申請流程是什麼？",
+    "answer": "安全團隊進行必要性審核",
+    "type": "semantic",
+    "relevant_doc": 10
+  },
+  {
+    "id": 7,
+    "query": "生產環境的 PostgreSQL 版本是多少？",
+    "answer": "16.3",
+    "type": "exact",
+    "relevant_doc": 8
+  },
+  {
+    "id": 8,
+    "query": "新員工入職第一天要做什麼？",
+    "answer": "領取筆電及週邊設備",
+    "type": "semantic",
+    "relevant_doc": 14
+  },
+  {
+    "id": 9,
+    "query": "公司 Slack 的網域是什麼？",
+    "answer": "acmecorp.enterprise.slack.com",
+    "type": "exact",
+    "relevant_doc": 17
+  },
+  {
+    "id": 10,
+    "query": "2026 年的技術策略方向是什麼？",
+    "answer": "遷移至微服務架構",
+    "type": "semantic",
+    "relevant_doc": 5
+  },
+  {
+    "id": 11,
+    "query": "Firebase 專案的 project ID 是什麼？",
+    "answer": "acme-prod-firebase-2025",
+    "type": "exact",
+    "relevant_doc": 9
+  },
+  {
+    "id": 12,
+    "query": "公司如何確保服務的高可用性？",
+    "answer": "跨三個 AWS AZ 部署",
+    "type": "semantic",
+    "relevant_doc": 6
+  },
+  {
+    "id": 13,
+    "query": "CI/CD pipeline 用的 Docker registry 網址？",
+    "answer": "registry.internal.acmecorp.com",
+    "type": "exact",
+    "relevant_doc": 11
+  },
+  {
+    "id": 14,
+    "query": "員工教育訓練補助的上限是多少？",
+    "answer": "5,000 美元",
+    "type": "exact",
+    "relevant_doc": 13
+  },
+  {
+    "id": 15,
+    "query": "公司的資料備份策略是什麼？",
+    "answer": "每日執行增量備份",
+    "type": "semantic",
+    "relevant_doc": 7
+  },
+  {
+    "id": 16,
+    "query": "Kubernetes cluster 的名稱是什麼？",
+    "answer": "acme-prod-eks-primary",
+    "type": "exact",
+    "relevant_doc": 6
+  },
+  {
+    "id": 17,
+    "query": "公司對 AI 輔助開發的立場是什麼？",
+    "answer": "必須經過標準 code review",
+    "type": "semantic",
+    "relevant_doc": 4
+  },
+  {
+    "id": 18,
+    "query": "Jira 的 URL 是什麼？",
+    "answer": "acmecorp.atlassian.net",
+    "type": "exact",
+    "relevant_doc": 17
+  },
+  {
+    "id": 19,
+    "query": "公司對開源的態度是什麼？",
+    "answer": "Apache 2.0 授權釋出",
+    "type": "semantic",
+    "relevant_doc": 16
+  },
+  {
+    "id": 20,
+    "query": "VPN 的伺服器位址？",
+    "answer": "vpn.acmecorp.com",
+    "type": "exact",
+    "relevant_doc": 17
+  }
+]
