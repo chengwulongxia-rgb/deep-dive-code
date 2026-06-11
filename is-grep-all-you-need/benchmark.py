@@ -335,9 +335,12 @@ def main():
     print(f"  精確查詢：grep 優勢（{grep_exact}/{len(exact_queries)} vs {vec_exact}/{len(exact_queries)}）")
     print(f"  語意查詢：{'向量' if vec_semantic > grep_semantic else 'grep'} 優勢（{vec_semantic}/{len(semantic_queries)} vs {grep_semantic}/{len(semantic_queries)}）")
     print()
-    print("  論文觀點：檢索策略的選擇不能只看演算法，harness 設計")
-    print("  （如何切分文件、如何呈現結果）同等重要。簡單工具在")
-    print("  正確場景下不輸複雜系統。")
+    print("  論文核心命題：harness 設計（用什麼框架包裝搜尋、")
+    print("  輸出格式是 inline 還是 file、模型如何讀取結果）")
+    print("  對準確率的影響 ≥ 檢索策略本身。grep 贏向量只是")
+    print("  這個命題的一個實驗結果，不是論文的終點。")
+    print()
+    print("  實用建議：先試 grep，不夠再補向量——分工，不是對立。")
 
     # ─── 圖表輸出 ───
     if args.chart:
