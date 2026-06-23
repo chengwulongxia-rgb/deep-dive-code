@@ -39,7 +39,10 @@ Destyled defeats forgery: 4/4 (100%)
 ## 快速開始
 
 ```bash
-# 前置：Ollama 需已安裝，且 gpt-oss:120b-cloud 可用
+# 前置：在 ollama.com 註冊帳號並取得 API 金鑰
+ollama login
+
+# 拉取雲端模型（需登入）
 ollama pull gpt-oss:120b-cloud
 
 # 執行實驗（8 案例 × 3 條件 = 24 次查詢，約 90 秒）
