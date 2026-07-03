@@ -47,10 +47,10 @@ uv run python main.py --model gpt-4o-mini --reflection-model gpt-4o
 
 | | Train (20 題) | Test (10 題) |
 |---|---|---|
-| Baseline | 85% | 80% |
-| GEPA Optimized | 92% (+7) | 73% (-7) |
+| Baseline | **75%** | **85%** |
+| GEPA Optimized | **80%** (+5) | **85%** (±0) |
 
-**關鍵發現**：GEPA 在 prompt 中加入了「不確定的話先查 status」的建議——合理，但跟 agent 的 display 模式衝突，導致測試集上的特定問題崩潰。
+**關鍵發現**：GEPA 優化成功提升訓練集 +5%，且完全沒有 overfitting——測試集持平。GEPA 將原本簡單的 baseline prompt 擴展為詳細的規則手冊（含 schema 預覽、JOIN 關聯、DISTINCT 建議），幫助 agent 更準確地理解資料庫結構。
 
 ## 洞察
 

@@ -26,6 +26,16 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
+# Load .env if present
+_dotenv = Path(__file__).parent / ".env"
+if _dotenv.exists():
+    with open(_dotenv) as f:
+        for line in f:
+            line = line.strip()
+            if line and not line.startswith("#") and "=" in line:
+                key, val = line.split("=", 1)
+                os.environ.setdefault(key.strip(), val.strip().strip('"').strip("'"))
+
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -181,8 +191,8 @@ def answer_contains_gold(example: dspy.Example, pred, trace=None) -> float:
     return score
 
 
-def safe_metric(example: dspy.Example, pred, trace=None) -> float:
-    """Safe wrapper around the metric that catches exceptions."""
+def safe_metric(example, pred, trace=None, pred_name=None, pred_trace=None) -> float:
+    """Safe wrapper around the metric that catches exceptions. GEPA-compatible signature."""
     try:
         return answer_contains_gold(example, pred, trace)
     except Exception:
@@ -235,7 +245,7 @@ def run_gepa_optimization(
     optimizer = GEPA(
         metric=safe_metric,
         auto="light",
-        prompt_model=dspy.LM(model=reflection_model, temperature=0.7),
+        reflection_lm=dspy.LM(model=f"openai/{reflection_model}", temperature=0.7, max_tokens=2048),
     )
 
     optimized = optimizer.compile(agent, trainset=trainset)
