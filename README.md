@@ -19,6 +19,7 @@ AI 圈子有一件事很煩：每個禮拜都有新論文說自己「突破極�
 | 目錄 | 主題 | 一句話 |
 |:--|:--|:--|
 | [`is-grep-all-you-need/`](./is-grep-all-you-need/) | grep vs 向量搜尋 | AI 圈狂推向量檢索當 RAG 標配——但你有沒有想過，grep 可能就夠了？ |
+| [`dspy-datasette-agent-prompts/`](./dspy-datasette-agent-prompts/) | DSPy × SQL agent 提示優化 | 用基因演算法自動調 system prompt——然後發現它 overfitting 了 |
 
 ### is-grep-all-you-need
 
@@ -34,6 +35,21 @@ uv run python benchmark.py
 # 零 GPU、零 API key、80MB 模型自動下載
 ```
 
+### dspy-datasette-agent-prompts
+
+**來源**：Simon Willison — *"Using DSPy to evaluate and improve Datasette Agent's SQL system prompts"*
+**核心問題**：DSPy 的 GEPA optimizer 能自動優化 SQL agent 的 system prompt 嗎？優化會 overfitting 嗎？
+**結果**：Training +7%、Test -7%。GEPA 加的「先查 status」建議跟 agent 的 display 模式互咬，導致測試集崩潰。
+**洞察**：prompt optimization 的瓶頸不是 optimizer，是你對自己系統隱性規則的理解。
+
+```bash
+cd dspy-datasette-agent-prompts
+uv sync
+export OPENAI_API_KEY='***'
+uv run python main.py
+# ⚠️ 需要 OpenAI API key（DSPy 本質上需要 LLM 才能 demo prompt 優化）
+```
+
 ## 如何使用這個 repo
 
 ```bash
@@ -42,7 +58,7 @@ cd deep-dive-code/<任何目錄>
 uv sync && uv run python <主程式>.py
 ```
 
-每個目錄都是獨立 Python 專案（`pyproject.toml` + `uv.lock`），不互相依賴。**不用 GPU、不用外部 API**——這是刻意為之。如果你需要用 OpenAI API 才能跑 benchmark，那這個 benchmark 就已經輸了。
+每個目錄都是獨立 Python 專案（`pyproject.toml` + `uv.lock`），不互相依賴。**不用 GPU**——這是刻意為之。大部分實作零外部 API（例外：DSPy prompt 優化類實作需 LLM API key，會標註）。
 
 ## 對應部落格
 

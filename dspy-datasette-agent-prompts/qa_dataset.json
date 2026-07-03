@@ -1,0 +1,152 @@
+[
+  {
+    "question": "總共有幾位作者？",
+    "sql": "SELECT COUNT(*) FROM authors",
+    "answer": "5"
+  },
+  {
+    "question": "總共有幾本書？",
+    "sql": "SELECT COUNT(*) FROM books",
+    "answer": "10"
+  },
+  {
+    "question": "最貴的書是哪一本？多少錢？",
+    "sql": "SELECT title, price FROM books ORDER BY price DESC LIMIT 1",
+    "answer": "1Q84, 450.0"
+  },
+  {
+    "question": "金庸寫了哪幾本書？",
+    "sql": "SELECT b.title FROM books b JOIN authors a ON b.author_id = a.id WHERE a.name = '金庸'",
+    "answer": "射鵰英雄傳, 神鵰俠侶"
+  },
+  {
+    "question": "哪個作者寫的書最多？",
+    "sql": "SELECT a.name, COUNT(*) as cnt FROM authors a JOIN books b ON a.id = b.author_id GROUP BY a.id ORDER BY cnt DESC LIMIT 1",
+    "answer": "金庸, 2"
+  },
+  {
+    "question": "列出所有書名和價格，按價格從低到高排序",
+    "sql": "SELECT title, price FROM books ORDER BY price ASC",
+    "answer": null
+  },
+  {
+    "question": "價格在 300 元以上的書有哪些？",
+    "sql": "SELECT title, price FROM books WHERE price > 300 ORDER BY price DESC",
+    "answer": null
+  },
+  {
+    "question": "王小明總共花了多少錢買書？",
+    "sql": "SELECT SUM(oi.quantity * oi.unit_price) FROM order_items oi JOIN orders o ON oi.order_id = o.id JOIN customers c ON o.customer_id = c.id WHERE c.name = '王小明' AND o.status = 'completed'",
+    "answer": "1640.0"
+  },
+  {
+    "question": "哪個顧客花最多錢？花了多少？",
+    "sql": "SELECT c.name, SUM(oi.quantity * oi.unit_price) as total FROM order_items oi JOIN orders o ON oi.order_id = o.id JOIN customers c ON o.customer_id = c.id WHERE o.status = 'completed' GROUP BY c.id ORDER BY total DESC LIMIT 1",
+    "answer": "張美麗, 1260.0"
+  },
+  {
+    "question": "有多少訂單被取消了？",
+    "sql": "SELECT COUNT(*) FROM orders WHERE status = 'cancelled'",
+    "answer": "1"
+  },
+  {
+    "question": "列出所有完成訂單的編號和對應顧客名稱",
+    "sql": "SELECT o.id, c.name FROM orders o JOIN customers c ON o.customer_id = c.id WHERE o.status = 'completed' ORDER BY o.id",
+    "answer": null
+  },
+  {
+    "question": "哪一本書賣得最好（總銷量最多）？賣了幾本？",
+    "sql": "SELECT b.title, SUM(oi.quantity) as total FROM order_items oi JOIN books b ON oi.book_id = b.id JOIN orders o ON oi.order_id = o.id WHERE o.status = 'completed' GROUP BY b.id ORDER BY total DESC LIMIT 1",
+    "answer": "Foundation, 4"
+  },
+  {
+    "question": "王小明買過哪幾本書？",
+    "sql": "SELECT DISTINCT b.title FROM order_items oi JOIN orders o ON oi.order_id = o.id JOIN customers c ON o.customer_id = c.id JOIN books b ON oi.book_id = b.id WHERE c.name = '王小明' AND o.status = 'completed'",
+    "answer": "射鵰英雄傳, 神鵰俠侶, 1984, I, Robot"
+  },
+  {
+    "question": "哪本書從來沒有被買過？",
+    "sql": "SELECT b.title FROM books b LEFT JOIN order_items oi ON b.id = oi.book_id LEFT JOIN orders o ON oi.order_id = o.id AND o.status = 'completed' WHERE oi.id IS NULL",
+    "answer": "0"
+  },
+  {
+    "question": "Harry Potter 系列的書總共賣了多少本？",
+    "sql": "SELECT SUM(oi.quantity) FROM order_items oi JOIN books b ON oi.book_id = b.id JOIN orders o ON oi.order_id = o.id WHERE b.title LIKE 'Harry Potter%' AND o.status = 'completed'",
+    "answer": "3"
+  },
+  {
+    "question": "列出所有顧客的名字和 email（包括沒有 email 的）",
+    "sql": "SELECT name, COALESCE(email, '無') FROM customers ORDER BY name",
+    "answer": null
+  },
+  {
+    "question": "2024 年第一季（1-3 月）有幾筆完成訂單？",
+    "sql": "SELECT COUNT(*) FROM orders WHERE order_date BETWEEN '2024-01-01' AND '2024-03-31' AND status = 'completed'",
+    "answer": "3"
+  },
+  {
+    "question": "哪個月份訂單最多？幾筆？",
+    "sql": "SELECT SUBSTR(order_date, 6, 2) as month, COUNT(*) as cnt FROM orders WHERE status = 'completed' GROUP BY month ORDER BY cnt DESC LIMIT 1",
+    "answer": "10, 2"
+  },
+  {
+    "question": "George Orwell 的書總共賣了多少錢？",
+    "sql": "SELECT SUM(oi.quantity * oi.unit_price) FROM order_items oi JOIN books b ON oi.book_id = b.id JOIN authors a ON b.author_id = a.id JOIN orders o ON oi.order_id = o.id WHERE a.name = 'George Orwell' AND o.status = 'completed'",
+    "answer": "1090.0"
+  },
+  {
+    "question": "有多少顧客買過村上春樹的書？",
+    "sql": "SELECT COUNT(DISTINCT o.customer_id) FROM order_items oi JOIN books b ON oi.book_id = b.id JOIN authors a ON b.author_id = a.id JOIN orders o ON oi.order_id = o.id WHERE a.name = '村上春樹' AND o.status = 'completed'",
+    "answer": "2"
+  },
+  {
+    "question": "列出所有書的作者名字和書名",
+    "sql": "SELECT a.name, b.title FROM books b JOIN authors a ON b.author_id = a.id ORDER BY a.name, b.title",
+    "answer": null
+  },
+  {
+    "question": "平均一本書多少錢？",
+    "sql": "SELECT ROUND(AVG(price), 2) FROM books",
+    "answer": "338.0"
+  },
+  {
+    "question": "有 email 的顧客和有幾位？沒有 email 的有幾位？",
+    "sql": "SELECT CASE WHEN email IS NULL THEN '無 email' ELSE '有 email' END, COUNT(*) FROM customers GROUP BY 1",
+    "answer": null
+  },
+  {
+    "question": "哪個出版社...不是，哪個作者書的平均價格最高？",
+    "sql": "SELECT a.name, ROUND(AVG(b.price), 2) FROM books b JOIN authors a ON b.author_id = a.id GROUP BY a.id ORDER BY AVG(b.price) DESC LIMIT 1",
+    "answer": "金庸, 400.0"
+  },
+  {
+    "question": "張美麗買過哪些書？花了多少錢？",
+    "sql": "SELECT b.title, oi.quantity * oi.unit_price as subtotal FROM order_items oi JOIN orders o ON oi.order_id = o.id JOIN customers c ON o.customer_id = c.id JOIN books b ON oi.book_id = b.id WHERE c.name = '張美麗' AND o.status = 'completed' ORDER BY o.id",
+    "answer": null
+  },
+  {
+    "question": "哪個顧客訂單數量最多？幾筆？（只算完成訂單）",
+    "sql": "SELECT c.name, COUNT(*) as cnt FROM orders o JOIN customers c ON o.customer_id = c.id WHERE o.status = 'completed' GROUP BY c.id ORDER BY cnt DESC LIMIT 1",
+    "answer": "王小明, 3"
+  },
+  {
+    "question": "Foundation 這本書有哪些顧客買過？",
+    "sql": "SELECT DISTINCT c.name FROM order_items oi JOIN orders o ON oi.order_id = o.id JOIN customers c ON o.customer_id = c.id JOIN books b ON oi.book_id = b.id WHERE b.title = 'Foundation' AND o.status = 'completed'",
+    "answer": "李大華, 陳建國"
+  },
+  {
+    "question": "價格低於 300 元的書有幾本？列出書名",
+    "sql": "SELECT title, price FROM books WHERE price < 300 ORDER BY price",
+    "answer": null
+  },
+  {
+    "question": "總共有幾筆訂單？（包含取消的）",
+    "sql": "SELECT COUNT(*) FROM orders",
+    "answer": "10"
+  },
+  {
+    "question": "列出所有書名，以及每本書被購買的總次數，沒被買過的顯示 0",
+    "sql": "SELECT b.title, COUNT(oi.id) as times_bought FROM books b LEFT JOIN order_items oi ON b.id = oi.book_id LEFT JOIN orders o ON oi.order_id = o.id AND o.status = 'completed' GROUP BY b.id ORDER BY times_bought DESC, b.title",
+    "answer": null
+  }
+]

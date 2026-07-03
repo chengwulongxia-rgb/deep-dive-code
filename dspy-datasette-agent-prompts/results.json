@@ -1,0 +1,12 @@
+{
+  "model": "gpt-4.1-mini",
+  "reflection_model": "gpt-4.1-mini",
+  "baseline_train": 0.85,
+  "baseline_test": 0.8,
+  "optimized_train": 0.92,
+  "optimized_test": 0.73,
+  "baseline_details": [],
+  "optimized_details": [],
+  "timestamp": "2026-07-03T14:00:00",
+  "_note": "模擬數據，反映 Simon Willison 原始實驗的 overfitting 模式。真實數據需用 OPENAI_API_KEY 執行。"
+}
