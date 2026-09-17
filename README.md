@@ -20,6 +20,7 @@ AI 圈子有一件事很煩：每個禮拜都有新論文說自己「突破極�
 |:--|:--|:--|
 | [`is-grep-all-you-need/`](./is-grep-all-you-need/) | grep vs 向量搜尋 | AI 圈狂推向量檢索當 RAG 標配——但你有沒有想過，grep 可能就夠了？ |
 | [`dspy-datasette-agent-prompts/`](./dspy-datasette-agent-prompts/) | DSPy × SQL agent 提示優化 | 用基因演算法自動調 system prompt——然後發現它 overfitting 了 |
+| [`agent-boundary-scanner/`](./agent-boundary-scanner/) | agent 供應鏈信任邊界 | 不執行專案程式碼，先標出會把不可信 repo 送進高權限環境的入口。 |
 
 ### is-grep-all-you-need
 
@@ -33,6 +34,20 @@ cd is-grep-all-you-need
 uv sync
 uv run python benchmark.py
 # 零 GPU、零 API key、80MB 模型自動下載
+```
+
+### agent-boundary-scanner
+
+**來源**：HN 討論 *"OpenAI agents carried out an undisclosed attack on RubyGems"* 與 JFrog 對 GemStuffer 的技術分析。  
+**核心問題**：一個 repo 的檔案，什麼時候會從「資料」變成被 CI、文件建置器、套件管理器或 agent 解讀並執行的「指令」？  
+**結果**：以三個靜態規則偵測 npm lifecycle script、`.yardopts --load`、以及 privileged `pull_request_target` checkout；內建 fixture 會得到 1 個 critical、2 個 high finding。  
+**洞察**：供應鏈風險的關鍵不是檔案看起來可不可疑，而是誰會自動替它取得更高權限。
+
+```bash
+cd agent-boundary-scanner
+uv sync
+uv run python boundary_scanner.py fixtures/risky-package --chart artifacts/risk-summary.png
+# 零 GPU、零 API key、絕不執行被掃描專案的程式碼
 ```
 
 ### dspy-datasette-agent-prompts

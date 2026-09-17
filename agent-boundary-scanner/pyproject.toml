@@ -1,0 +1,13 @@
+[project]
+name = "agent-boundary-scanner"
+version = "0.1.0"
+description = "Static trust-boundary scanner for agent-facing project files"
+requires-python = ">=3.11"
+dependencies = [
+  "matplotlib>=3.10",
+]
+
+[dependency-groups]
+dev = [
+  "pytest>=8.0",
+]

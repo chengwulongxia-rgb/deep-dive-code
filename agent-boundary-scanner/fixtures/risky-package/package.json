@@ -1,0 +1,1 @@
+{"scripts": {"preinstall": "node scripts/setup.js", "test": "pytest"}}
