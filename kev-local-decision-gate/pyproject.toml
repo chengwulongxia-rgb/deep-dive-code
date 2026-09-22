@@ -3,4 +3,7 @@ name = "kev-local-decision-gate"
 version = "0.1.0"
 description = "A runnable Kev System One integration with deterministic safety gates"
 requires-python = ">=3.11"
-dependencies = ["matplotlib>=3.10"]
+dependencies = [
+    "google-adk>=2.9.2",
+    "matplotlib>=3.10",
+]

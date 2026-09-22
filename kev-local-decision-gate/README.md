@@ -39,6 +39,33 @@ uv run python main.py --chart artifacts/decision-boundary.png
 uv run python -m unittest discover -s tests -v
 ```
 
+## Google ADK：真正省在 LLM 前面
+
+把 Kev 放進 `before_tool_callback` 能擋危險 tool call，卻不能省掉該輪 Gemini 已經看過所有 tool schema、已經做過 planning 的成本。本實作改在 **ADK Runner 之前** dispatch：
+
+```text
+user ticket → Kev Choice → 高信心：窄工具 ADK agent → Gemini
+                           低信心：全工具 supervisor → Gemini
+```
+
+`adk_dispatch.py` 將案件導到 `billing_agent`、`shipping_agent` 或 `returns_agent`；每個 agent 只帶自己需要的 function tools。Kev 信心低於 0.85、選 `supervisor`、或 response 失效時，才回到保有全部工具的 `supervisor_agent`。
+
+這不是用較小模型取代 Gemini，而是讓 Gemini 少做一個它不擅長、又高頻的「從八個工具中先猜哪三個相關」任務。
+
+### 跑真實的 Kev + ADK turn
+
+先啟動自己管理的 Kev server，並設定 Google Gemini 的 key：
+
+```bash
+export GOOGLE_API_KEY='你的 Google AI Studio key'
+uv run python adk_routed_app.py \
+  --kev-url http://localhost:8009 \
+  --ticket 'I was charged twice for my order.' \
+  --amount 40
+```
+
+這會先印出 Kev 選中的 ADK agent 及該 agent 真正暴露的工具清單，才執行該 agent 的 Gemini turn。ADK 由 `google-adk` 2.9.2 建構；本 repo 的單元測試驗證 agent factory、route fallback 與 API contract，沒有拿假延遲冒充真實 speedup。
+
 ## 接真正的 Kev
 
 先依照 [jaredpalmer/kev](https://github.com/jaredpalmer/kev) 的文件，在你的電腦或主機上啟動一個相容 `/v1/systemone` 的 Kev server。假設服務在 `http://localhost:8009`：
