@@ -21,6 +21,22 @@ AI 圈子有一件事很煩：每個禮拜都有新論文說自己「突破極�
 | [`is-grep-all-you-need/`](./is-grep-all-you-need/) | grep vs 向量搜尋 | AI 圈狂推向量檢索當 RAG 標配——但你有沒有想過，grep 可能就夠了？ |
 | [`dspy-datasette-agent-prompts/`](./dspy-datasette-agent-prompts/) | DSPy × SQL agent 提示優化 | 用基因演算法自動調 system prompt——然後發現它 overfitting 了 |
 | [`agent-boundary-scanner/`](./agent-boundary-scanner/) | agent 供應鏈信任邊界 | 不執行專案程式碼，先標出會把不可信 repo 送進高權限環境的入口。 |
+| [`kev-local-decision-gate/`](./kev-local-decision-gate/) | Kev × 客服退款安全閘門 | 讓 decision model 理解案件，但由可審計規則決定能不能退款。 |
+
+### kev-local-decision-gate
+
+**來源**：[Jared Palmer 的 Kev](https://github.com/jaredpalmer/kev) — 可本機執行的 Jev-like System One model。  
+**核心問題**：讓模型替 agent 判斷案件時，如何避免把「0.99 信心」錯當成付款授權？  
+**結果**：Kev 只輸出部門與退款機率；Python 規則同時檢查金額上限、部門信心與退款信心，任一條不足一律升級人工。  
+**洞察**：型別安全讓結果可以被程式讀；真正的安全來自模型外部、可測試的權限邊界。
+
+```bash
+cd kev-local-decision-gate
+uv sync
+uv run python main.py
+uv run python main.py --chart artifacts/decision-boundary.png
+# 離線 demo 零 GPU、零 API key；--kev-url 才會呼叫你自架的 Kev server
+```
 
 ### is-grep-all-you-need
 
