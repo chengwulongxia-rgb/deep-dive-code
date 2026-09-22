@@ -48,24 +48,23 @@ user ticket → Kev Choice → 高信心：窄工具 ADK agent → Gemini
                            低信心：全工具 supervisor → Gemini
 ```
 
-`adk_dispatch.py` 將案件導到 `billing_agent`、`shipping_agent` 或 `returns_agent`。但它不再自己定義 Python tools：依 [ADK MCP 文件](https://adk.dev/tools-custom/mcp-tools/)，`adk_mcp_agent.py` 在 Kev route 完成後才建立一個 `McpToolset`，以 `tool_filter` 把既有 MCP server 的工具縮到該 route 的白名單。Kev 信心低於 0.85、選 `supervisor`、或 response 失效時，才以同一個官方機制建立較寬的 supervisor tool filter。
+`adk_dispatch.py` 將案件導到 `billing_agent`、`shipping_agent` 或 `returns_agent`；每個 agent 只帶自己需要的 function tools。Kev 信心低於 0.85、選 `supervisor`、或 response 失效時，才回到保有全部工具的 `supervisor_agent`。
 
-這不是用較小模型取代 Gemini，而是讓 Gemini 少做一個它不擅長、又高頻的「從所有 MCP tools 中先猜哪幾個相關」任務。MCP tool 的 schema、執行與 lifecycle 都仍由 ADK `McpToolset` 管理。
+這不是用較小模型取代 Gemini，而是讓 Gemini 少做一個它不擅長、又高頻的「從八個工具中先猜哪三個相關」任務。
 
 ### 跑真實的 Kev + ADK turn
 
-先啟動自己管理的 Kev server、既有的 Streamable HTTP MCP tool server，並設定 Google Gemini 的 key：
+先啟動自己管理的 Kev server，並設定 Google Gemini 的 key：
 
 ```bash
 export GOOGLE_API_KEY='你的 Google AI Studio key'
 uv run python adk_routed_app.py \
   --kev-url http://localhost:8009 \
-  --mcp-url https://tools.example.internal/mcp \
   --ticket 'I was charged twice for my order.' \
   --amount 40
 ```
 
-`--mcp-url` 必須是你現有 tool server 的 Streamable HTTP endpoint；其中工具名稱需要與 `adk_dispatch.py` 的 route mapping 相符。程式會先印出 Kev route 及 `McpToolset.tool_filter`，然後讓 ADK discovery、schema adaptation、`call_tool` proxy 與 `toolset.close()` lifecycle 全部走官方實作。ADK 由 `google-adk` 2.9.2 與 `mcp` 2.2.0 建構；本 repo 的單元測試驗證 route fallback、`McpToolset` 白名單與 API contract，沒有拿假延遲冒充真實 speedup。
+這會先印出 Kev 選中的 ADK agent 及該 agent 真正暴露的工具清單，才執行該 agent 的 Gemini turn。ADK 由 `google-adk` 2.9.2 建構；本 repo 的單元測試驗證 agent factory、route fallback 與 API contract，沒有拿假延遲冒充真實 speedup。
 
 ## 接真正的 Kev
 
