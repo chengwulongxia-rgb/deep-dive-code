@@ -22,6 +22,24 @@ AI 圈子有一件事很煩：每個禮拜都有新論文說自己「突破極�
 | [`dspy-datasette-agent-prompts/`](./dspy-datasette-agent-prompts/) | DSPy × SQL agent 提示優化 | 用基因演算法自動調 system prompt——然後發現它 overfitting 了 |
 | [`agent-boundary-scanner/`](./agent-boundary-scanner/) | agent 供應鏈信任邊界 | 不執行專案程式碼，先標出會把不可信 repo 送進高權限環境的入口。 |
 | [`kev-local-decision-gate/`](./kev-local-decision-gate/) | Kev × 客服退款安全閘門 | 讓 decision model 理解案件，但由可審計規則決定能不能退款。 |
+| [`killswitch-can-llms-use-it/`](./killswitch-can-llms-use-it/) | KillSwitch 最小重現 | 用真正的直譯器，比對印出 7 與錯誤順序造成的空堆疊失敗。 |
+
+### killswitch-can-llms-use-it
+
+**來源**：[KillSwitch](https://github.com/dom96/KillSwitch/tree/44eabb04db0e114883da2a60e87d2d53b576b212) 與[部落格分析](https://ai.youdonthavefriends.com/llm/ai/deep-analysis/2026/10/20/killswitch-language-benchmark.html)。
+
+**核心問題**：作者稱 LLM 不能用的語言，最小程式到底如何執行？
+
+**結果**：固定版本直譯器中，正確順序印出 `7`；把印出語句移到取值區塊下面，則得到空堆疊錯誤。
+
+**洞察**：可重現的單例能核對機制，但不能拿來冒充整份模型評測。
+
+```bash
+cd killswitch-can-llms-use-it
+python3 main.py
+# 需 Docker，首次建置需網路；案例在停網、唯讀、非 root 容器中執行
+# 零 GPU、零 LLM API；也可使用 uv run python main.py
+```
 
 ### kev-local-decision-gate
 
