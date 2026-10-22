@@ -23,6 +23,7 @@ AI 圈子有一件事很煩：每個禮拜都有新論文說自己「突破極�
 | [`agent-boundary-scanner/`](./agent-boundary-scanner/) | agent 供應鏈信任邊界 | 不執行專案程式碼，先標出會把不可信 repo 送進高權限環境的入口。 |
 | [`kev-local-decision-gate/`](./kev-local-decision-gate/) | Kev × 客服退款安全閘門 | 讓 decision model 理解案件，但由可審計規則決定能不能退款。 |
 | [`killswitch-can-llms-use-it/`](./killswitch-can-llms-use-it/) | KillSwitch 最小重現 | 用真正的直譯器，比對印出 7 與錯誤順序造成的空堆疊失敗。 |
+| [`php2shell-oom-to-uaf/`](./php2shell-oom-to-uaf/) | PHP2Shell 觸發階段 | 一個 multipart POST 如何在應用程式碼之前把請求解析器推到 OOM——以及沒做到的下一步。 |
 
 ### killswitch-can-llms-use-it
 

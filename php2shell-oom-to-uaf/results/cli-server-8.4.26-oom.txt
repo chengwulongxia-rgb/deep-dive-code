@@ -1,0 +1,20 @@
+body=6291580 bytes  shape=huge_field_name  memory_limit=8M
+--- baseline GET ---
+sapi=cli-server post=0 files=0 peak=2097152
+--- request 1: POST huge_field_name ---
+HTTP=200
+
+Fatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2098791 bytes) in Unknown on line 0
+--- request 2: GET, same worker ---
+sapi=cli-server post=0 files=0 peak=2097152
+--- worker state ---
+worker=alive
+--- server log tail ---
+[Thu Oct 22 02:04:26 2026] 127.0.0.1:40306 Accepted
+[Thu Oct 22 02:04:26 2026] 127.0.0.1:40306 [200]: GET /target.php
+[Thu Oct 22 02:04:26 2026] 127.0.0.1:40306 Closing
+[Thu Oct 22 02:04:26 2026] 127.0.0.1:40316 Accepted
+[Thu Oct 22 02:04:26 2026] 127.0.0.1:40316 Closing
+[Thu Oct 22 02:04:26 2026] 127.0.0.1:40320 Accepted
+[Thu Oct 22 02:04:26 2026] 127.0.0.1:40320 [200]: GET /target.php
+[Thu Oct 22 02:04:26 2026] 127.0.0.1:40320 Closing

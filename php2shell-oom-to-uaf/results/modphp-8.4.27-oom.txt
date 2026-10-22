@@ -1,0 +1,23 @@
+body=6291580 bytes  shape=huge_field_name  memory_limit=8M  sapi=mod_php
+--- baseline GET ---
+sapi=apache2handler post=0 files=0 peak=2097152
+--- request 1: POST huge_field_name ---
+HTTP=200
+
+Fatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 2101248 bytes) in Unknown on line 0
+--- request 2: GET ---
+sapi=apache2handler post=0 files=0 peak=2097152
+--- apache children ---
+     11 S    apache2
+     25 S    apache2
+     26 S    apache2
+     27 S    apache2
+     28 S    apache2
+     29 S    apache2
+--- apache error log tail ---
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.0.1. Set the 'ServerName' directive globally to suppress this message
+[Thu Oct 22 02:04:25.415035 2026] [mpm_prefork:notice] [pid 11:tid 11] AH00163: Apache/2.4.69 (Debian) PHP/8.4.27 configured -- resuming normal operations
+[Thu Oct 22 02:04:25.415059 2026] [core:notice] [pid 11:tid 11] AH00094: Command line: 'apache2 -D FOREGROUND'
+127.0.0.1 - - [22/Oct/2026:02:04:25 +0000] "GET /target.php HTTP/1.1" 200 241 "-" "-"
+127.0.0.1 - - [22/Oct/2026:02:04:25 +0000] "POST /target.php HTTP/1.1" 200 333 "-" "-"
+127.0.0.1 - - [22/Oct/2026:02:04:25 +0000] "GET /target.php HTTP/1.1" 200 241 "-" "-"

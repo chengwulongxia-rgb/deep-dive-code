@@ -1,0 +1,8 @@
+pad    http    worker    r2                             sig
+200    200     alive     sapi=apache2handler post=0 fil 0
+400    200     alive     sapi=apache2handler post=0 fil 0
+600    200     alive     sapi=apache2handler post=0 fil 0
+800    200     alive     sapi=apache2handler post=0 fil 0
+1000   200     alive     sapi=apache2handler post=0 fil 0
+1200   200     alive     sapi=apache2handler post=0 fil 0
+1400   200     alive     sapi=apache2handler post=0 fil 0

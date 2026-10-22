@@ -1,0 +1,4 @@
+parts=60000 body=8197818 bytes (7.82 MiB)  post_max_size=8M  memory_limit=128M
+verdict=REACHED_USERLAND
+HTTP=200 Warning: PHP Request Startup: Maximum number of allowable file uploads has been exceeded in Unknown on line 0 Warning: PHP Request Startup: Multipart body parts limit exceeded 1020. To increa
+segfault_lines=0
