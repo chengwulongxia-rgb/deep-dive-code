@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-10-22T12:47:21.506196+08:00",
+  "unit_tests": {
+    "count": 9,
+    "result": "PASS",
+    "command": "HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 uv run --locked python -m unittest -v"
+  },
+  "pyright": {
+    "result": "0 errors, 0 warnings",
+    "command": "uvx pyright --project pyproject.toml"
+  },
+  "audit": {
+    "generations_verified": 96,
+    "score_rows_recomputed": 768,
+    "thresholds_recomputed": 16,
+    "actual_tokenizer_roundtrips_verified": 768,
+    "generation_replay": {
+      "sources": 2,
+      "repetitions_each": 2,
+      "exact_token_match": true
+    }
+  },
+  "security_scan": {
+    "credential_literal": "PASS",
+    "unsafe_execution": "PASS"
+  }
+}

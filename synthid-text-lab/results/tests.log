@@ -1,0 +1,14 @@
+test_real_chart_shows_false_positives_as_bars (test_lab.CLITests.test_real_chart_shows_false_positives_as_bars) ... ok
+test_saved_artifacts_audit_without_model (test_lab.CLITests.test_saved_artifacts_audit_without_model) ... ok
+test_toy_json_trace_and_chart_offline (test_lab.CLITests.test_toy_json_trace_and_chart_offline) ... ok
+test_threshold_uses_calibration_plain_only (test_lab.CalibrationTests.test_threshold_uses_calibration_plain_only) ... ok
+test_disjoint_plan_and_deterministic_edits (test_lab.RealHelpersTests.test_disjoint_plan_and_deterministic_edits) ... ok
+test_official_masks_and_empty_scores (test_lab.RealHelpersTests.test_official_masks_and_empty_scores) ... ok
+test_real_summary_calibrates_each_length_edit_and_key (test_lab.RealHelpersTests.test_real_summary_calibrates_each_length_edit_and_key) ... ok
+test_deterministic_tournament (test_lab.ToyTests.test_deterministic_tournament) ... ok
+test_fixed_low_entropy_has_no_choice_and_little_evidence (test_lab.ToyTests.test_fixed_low_entropy_has_no_choice_and_little_evidence) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 10.317s
+
+OK

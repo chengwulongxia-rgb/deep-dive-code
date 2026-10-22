@@ -1,0 +1,19 @@
+{
+  "generations_verified": 96,
+  "score_rows_recomputed": 768,
+  "thresholds_recomputed": 16,
+  "prompt_seed_leakage": false,
+  "replay": [
+    {
+      "source_id": "64-evaluation-plain-00",
+      "repetitions": 2,
+      "exact_token_match": true
+    },
+    {
+      "source_id": "64-evaluation-watermarked-00",
+      "repetitions": 2,
+      "exact_token_match": true
+    }
+  ],
+  "actual_tokenizer_roundtrips_verified": 768
+}

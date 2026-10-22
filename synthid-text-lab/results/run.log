@@ -1,0 +1,424 @@
+64-calibration-plain-00: 64 new tokens in 1.506s
+64-calibration-plain-01: 64 new tokens in 1.491s
+64-calibration-plain-02: 64 new tokens in 1.499s
+64-calibration-plain-03: 64 new tokens in 1.494s
+64-calibration-plain-04: 64 new tokens in 1.496s
+64-calibration-plain-05: 64 new tokens in 1.498s
+64-calibration-plain-06: 64 new tokens in 1.492s
+64-calibration-plain-07: 64 new tokens in 1.499s
+64-calibration-plain-08: 64 new tokens in 1.493s
+64-calibration-plain-09: 64 new tokens in 1.528s
+64-calibration-plain-10: 64 new tokens in 1.490s
+64-calibration-plain-11: 64 new tokens in 1.483s
+64-calibration-plain-12: 64 new tokens in 1.488s
+64-calibration-plain-13: 64 new tokens in 1.487s
+64-calibration-plain-14: 64 new tokens in 1.493s
+64-calibration-plain-15: 64 new tokens in 1.493s
+64-calibration-plain-16: 64 new tokens in 1.507s
+64-calibration-plain-17: 64 new tokens in 1.489s
+64-calibration-plain-18: 64 new tokens in 1.491s
+64-calibration-plain-19: 64 new tokens in 1.497s
+64-calibration-plain-20: 64 new tokens in 1.498s
+64-calibration-plain-21: 64 new tokens in 1.518s
+64-calibration-plain-22: 64 new tokens in 1.508s
+64-calibration-plain-23: 64 new tokens in 1.497s
+64-evaluation-plain-00: 64 new tokens in 1.608s
+64-evaluation-watermarked-00: 64 new tokens in 1.712s
+64-evaluation-plain-01: 64 new tokens in 1.513s
+64-evaluation-watermarked-01: 64 new tokens in 1.711s
+64-evaluation-plain-02: 64 new tokens in 1.501s
+64-evaluation-watermarked-02: 64 new tokens in 1.723s
+64-evaluation-plain-03: 64 new tokens in 1.532s
+64-evaluation-watermarked-03: 64 new tokens in 1.712s
+64-evaluation-plain-04: 64 new tokens in 1.497s
+64-evaluation-watermarked-04: 64 new tokens in 1.734s
+64-evaluation-plain-05: 64 new tokens in 1.495s
+64-evaluation-watermarked-05: 64 new tokens in 1.721s
+64-evaluation-plain-06: 64 new tokens in 1.495s
+64-evaluation-watermarked-06: 64 new tokens in 1.717s
+64-evaluation-plain-07: 64 new tokens in 1.631s
+64-evaluation-watermarked-07: 64 new tokens in 1.762s
+64-evaluation-plain-08: 64 new tokens in 1.612s
+64-evaluation-watermarked-08: 64 new tokens in 1.724s
+64-evaluation-plain-09: 64 new tokens in 1.499s
+64-evaluation-watermarked-09: 64 new tokens in 1.719s
+64-evaluation-plain-10: 64 new tokens in 1.495s
+64-evaluation-watermarked-10: 64 new tokens in 1.716s
+64-evaluation-plain-11: 64 new tokens in 1.508s
+64-evaluation-watermarked-11: 64 new tokens in 1.725s
+128-calibration-plain-00: 128 new tokens in 2.990s
+128-calibration-plain-01: 128 new tokens in 3.003s
+128-calibration-plain-02: 128 new tokens in 3.004s
+128-calibration-plain-03: 128 new tokens in 2.990s
+128-calibration-plain-04: 128 new tokens in 3.004s
+128-calibration-plain-05: 128 new tokens in 2.999s
+128-calibration-plain-06: 128 new tokens in 3.004s
+128-calibration-plain-07: 128 new tokens in 3.013s
+128-calibration-plain-08: 128 new tokens in 2.997s
+128-calibration-plain-09: 128 new tokens in 3.007s
+128-calibration-plain-10: 128 new tokens in 3.003s
+128-calibration-plain-11: 128 new tokens in 3.004s
+128-calibration-plain-12: 128 new tokens in 3.011s
+128-calibration-plain-13: 128 new tokens in 3.007s
+128-calibration-plain-14: 128 new tokens in 3.000s
+128-calibration-plain-15: 128 new tokens in 3.017s
+128-calibration-plain-16: 128 new tokens in 3.062s
+128-calibration-plain-17: 128 new tokens in 2.991s
+128-calibration-plain-18: 128 new tokens in 2.997s
+128-calibration-plain-19: 128 new tokens in 3.005s
+128-calibration-plain-20: 128 new tokens in 3.001s
+128-calibration-plain-21: 128 new tokens in 3.002s
+128-calibration-plain-22: 128 new tokens in 3.010s
+128-calibration-plain-23: 128 new tokens in 3.009s
+128-evaluation-plain-00: 128 new tokens in 3.119s
+128-evaluation-watermarked-00: 128 new tokens in 3.485s
+128-evaluation-plain-01: 128 new tokens in 3.002s
+128-evaluation-watermarked-01: 128 new tokens in 3.488s
+128-evaluation-plain-02: 128 new tokens in 2.990s
+128-evaluation-watermarked-02: 128 new tokens in 3.484s
+128-evaluation-plain-03: 128 new tokens in 3.015s
+128-evaluation-watermarked-03: 128 new tokens in 3.474s
+128-evaluation-plain-04: 128 new tokens in 3.021s
+128-evaluation-watermarked-04: 128 new tokens in 3.463s
+128-evaluation-plain-05: 128 new tokens in 3.010s
+128-evaluation-watermarked-05: 128 new tokens in 3.482s
+128-evaluation-plain-06: 128 new tokens in 3.024s
+128-evaluation-watermarked-06: 128 new tokens in 3.467s
+128-evaluation-plain-07: 128 new tokens in 3.144s
+128-evaluation-watermarked-07: 128 new tokens in 3.593s
+128-evaluation-plain-08: 128 new tokens in 3.012s
+128-evaluation-watermarked-08: 128 new tokens in 3.472s
+128-evaluation-plain-09: 128 new tokens in 2.995s
+128-evaluation-watermarked-09: 128 new tokens in 3.458s
+128-evaluation-plain-10: 128 new tokens in 3.155s
+128-evaluation-watermarked-10: 128 new tokens in 3.466s
+128-evaluation-plain-11: 128 new tokens in 3.007s
+128-evaluation-watermarked-11: 128 new tokens in 3.468s
+{
+  "counts": {
+    "generations": 96,
+    "score_rows": 768,
+    "generation_groups": {
+      "64:calibration:plain": 24,
+      "64:evaluation:plain": 12,
+      "64:evaluation:watermarked": 12,
+      "128:calibration:plain": 24,
+      "128:evaluation:plain": 12,
+      "128:evaluation:watermarked": 12
+    }
+  },
+  "timing": {
+    "model_load_seconds": 16.27183322981,
+    "generation_and_scoring_seconds": 232.25184279121459,
+    "sum_generate_seconds": 225.42389780841768,
+    "total_seconds": 248.53288049902767
+  },
+  "summary": [
+    {
+      "source_length": 128,
+      "condition": "clean",
+      "key_condition": "correct",
+      "threshold": 0.5252016186724172,
+      "calibration_count": 24,
+      "calibration_detected": 0,
+      "plain_count": 12,
+      "plain_detected": 3,
+      "plain_unscorable": 0,
+      "plain_mean_effective_tokens": 111.66666666666667,
+      "watermarked_count": 12,
+      "watermarked_detected": 12,
+      "watermarked_unscorable": 0,
+      "watermarked_mean_effective_tokens": 120.16666666666667
+    },
+    {
+      "source_length": 128,
+      "condition": "clean",
+      "key_condition": "wrong",
+      "threshold": 0.5272436141977773,
+      "calibration_count": 24,
+      "calibration_detected": 0,
+      "plain_count": 12,
+      "plain_detected": 0,
+      "plain_unscorable": 0,
+      "plain_mean_effective_tokens": 111.66666666666667,
+      "watermarked_count": 12,
+      "watermarked_detected": 1,
+      "watermarked_unscorable": 0,
+      "watermarked_mean_effective_tokens": 120.16666666666667
+    },
+    {
+      "source_length": 128,
+      "condition": "delete_10pct",
+      "key_condition": "correct",
+      "threshold": 0.5443925261507497,
+      "calibration_count": 24,
+      "calibration_detected": 0,
+      "plain_count": 12,
+      "plain_detected": 0,
+      "plain_unscorable": 0,
+      "plain_mean_effective_tokens": 104.08333333333333,
+      "watermarked_count": 12,
+      "watermarked_detected": 12,
+      "watermarked_unscorable": 0,
+      "watermarked_mean_effective_tokens": 110.5
+    },
+    {
+      "source_length": 128,
+      "condition": "delete_10pct",
+      "key_condition": "wrong",
+      "threshold": 0.5270270109186636,
+      "calibration_count": 24,
+      "calibration_detected": 0,
+      "plain_count": 12,
+      "plain_detected": 0,
+      "plain_unscorable": 0,
+      "plain_mean_effective_tokens": 104.08333333333333,
+      "watermarked_count": 12,
+      "watermarked_detected": 0,
+      "watermarked_unscorable": 0,
+      "watermarked_mean_effective_tokens": 110.5
+    },
+    {
+      "source_length": 128,
+      "condition": "replace_10pct",
+      "key_condition": "correct",
+      "threshold": 0.5433467626581655,
+      "calibration_count": 24,
+      "calibration_detected": 0,
+      "plain_count": 12,
+      "plain_detected": 1,
+      "plain_unscorable": 0,
+      "plain_mean_effective_tokens": 116.25,
+      "watermarked_count": 12,
+      "watermarked_detected": 12,
+      "watermarked_unscorable": 0,
+      "watermarked_mean_effective_tokens": 122.58333333333333
+    },
+    {
+      "source_length": 128,
+      "condition": "replace_10pct",
+      "key_condition": "wrong",
+      "threshold": 0.5385638475428091,
+      "calibration_count": 24,
+      "calibration_detected": 0,
+      "plain_count": 12,
+      "plain_detected": 0,
+      "plain_unscorable": 0,
+      "plain_mean_effective_tokens": 116.25,
+      "watermarked_count": 12,
+      "watermarked_detected": 0,
+      "watermarked_unscorable": 0,
+      "watermarked_mean_effective_tokens": 122.58333333333333
+    },
+    {
+      "source_length": 128,
+      "condition": "truncate_half",
+      "key_condition": "correct",
+      "threshold": 0.5416666865358816,
+      "calibration_count": 24,
+      "calibration_detected": 0,
+      "plain_count": 12,
+      "plain_detected": 0,
+      "plain_unscorable": 0,
+      "plain_mean_effective_tokens": 56.75,
+      "watermarked_count": 12,
+      "watermarked_detected": 12,
+      "watermarked_unscorable": 0,
+      "watermarked_mean_effective_tokens": 57.0
+    },
+    {
+      "source_length": 128,
+      "condition": "truncate_half",
+      "key_condition": "wrong",
+      "threshold": 0.5400943160067068,
+      "calibration_count": 24,
+      "calibration_detected": 0,
+      "plain_count": 12,
+      "plain_detected": 0,
+      "plain_unscorable": 0,
+      "plain_mean_effective_tokens": 56.75,
+      "watermarked_count": 12,
+      "watermarked_detected": 0,
+      "watermarked_unscorable": 0,
+      "watermarked_mean_effective_tokens": 57.0
+    },
+    {
+      "source_length": 64,
+      "condition": "clean",
+      "key_condition": "correct",
+      "threshold": 0.531250000001,
+      "calibration_count": 24,
+      "calibration_detected": 0,
+      "plain_count": 12,
+      "plain_detected": 2,
+      "plain_unscorable": 0,
+      "plain_mean_effective_tokens": 59.666666666666664,
+      "watermarked_count": 12,
+      "watermarked_detected": 12,
+      "watermarked_unscorable": 0,
+      "watermarked_mean_effective_tokens": 59.166666666666664
+    },
+    {
+      "source_length": 64,
+      "condition": "clean",
+      "key_condition": "wrong",
+      "threshold": 0.5541666746149526,
+      "calibration_count": 24,
+      "calibration_detected": 0,
+      "plain_count": 12,
+      "plain_detected": 1,
+      "plain_unscorable": 0,
+      "plain_mean_effective_tokens": 59.666666666666664,
+      "watermarked_count": 12,
+      "watermarked_detected": 0,
+      "watermarked_unscorable": 0,
+      "watermarked_mean_effective_tokens": 59.166666666666664
+    },
+    {
+      "source_length": 64,
+      "condition": "delete_10pct",
+      "key_condition": "correct",
+      "threshold": 0.5324074029932485,
+      "calibration_count": 24,
+      "calibration_detected": 0,
+      "plain_count": 12,
+      "plain_detected": 1,
+      "plain_unscorable": 0,
+      "plain_mean_effective_tokens": 53.833333333333336,
+      "watermarked_count": 12,
+      "watermarked_detected": 12,
+      "watermarked_unscorable": 0,
+      "watermarked_mean_effective_tokens": 53.583333333333336
+    },
+    {
+      "source_length": 64,
+      "condition": "delete_10pct",
+      "key_condition": "wrong",
+      "threshold": 0.5525000095377431,
+      "calibration_count": 24,
+      "calibration_detected": 0,
+      "plain_count": 12,
+      "plain_detected": 0,
+      "plain_unscorable": 0,
+      "plain_mean_effective_tokens": 53.833333333333336,
+      "watermarked_count": 12,
+      "watermarked_detected": 0,
+      "watermarked_unscorable": 0,
+      "watermarked_mean_effective_tokens": 53.583333333333336
+    },
+    {
+      "source_length": 64,
+      "condition": "replace_10pct",
+      "key_condition": "correct",
+      "threshold": 0.5333333611498342,
+      "calibration_count": 24,
+      "calibration_detected": 0,
+      "plain_count": 12,
+      "plain_detected": 2,
+      "plain_unscorable": 0,
+      "plain_mean_effective_tokens": 59.833333333333336,
+      "watermarked_count": 12,
+      "watermarked_detected": 12,
+      "watermarked_unscorable": 0,
+      "watermarked_mean_effective_tokens": 59.583333333333336
+    },
+    {
+      "source_length": 64,
+      "condition": "replace_10pct",
+      "key_condition": "wrong",
+      "threshold": 0.5562499761591421,
+      "calibration_count": 24,
+      "calibration_detected": 0,
+      "plain_count": 12,
+      "plain_detected": 0,
+      "plain_unscorable": 0,
+      "plain_mean_effective_tokens": 59.833333333333336,
+      "watermarked_count": 12,
+      "watermarked_detected": 0,
+      "watermarked_unscorable": 0,
+      "watermarked_mean_effective_tokens": 59.583333333333336
+    },
+    {
+      "source_length": 64,
+      "condition": "truncate_half",
+      "key_condition": "correct",
+      "threshold": 0.5401785969744192,
+      "calibration_count": 24,
+      "calibration_detected": 0,
+      "plain_count": 12,
+      "plain_detected": 2,
+      "plain_unscorable": 0,
+      "plain_mean_effective_tokens": 28.0,
+      "watermarked_count": 12,
+      "watermarked_detected": 12,
+      "watermarked_unscorable": 0,
+      "watermarked_mean_effective_tokens": 27.583333333333332
+    },
+    {
+      "source_length": 64,
+      "condition": "truncate_half",
+      "key_condition": "wrong",
+      "threshold": 0.5491071343431936,
+      "calibration_count": 24,
+      "calibration_detected": 0,
+      "plain_count": 12,
+      "plain_detected": 3,
+      "plain_unscorable": 0,
+      "plain_mean_effective_tokens": 28.0,
+      "watermarked_count": 12,
+      "watermarked_detected": 0,
+      "watermarked_unscorable": 0,
+      "watermarked_mean_effective_tokens": 27.583333333333332
+    }
+  ],
+  "roundtrip": [
+    {
+      "origin": "plain",
+      "condition": "clean",
+      "count": 72,
+      "mismatches": 16
+    },
+    {
+      "origin": "plain",
+      "condition": "truncate_half",
+      "count": 72,
+      "mismatches": 12
+    },
+    {
+      "origin": "plain",
+      "condition": "delete_10pct",
+      "count": 72,
+      "mismatches": 28
+    },
+    {
+      "origin": "plain",
+      "condition": "replace_10pct",
+      "count": 72,
+      "mismatches": 34
+    },
+    {
+      "origin": "watermarked",
+      "condition": "clean",
+      "count": 24,
+      "mismatches": 7
+    },
+    {
+      "origin": "watermarked",
+      "condition": "truncate_half",
+      "count": 24,
+      "mismatches": 3
+    },
+    {
+      "origin": "watermarked",
+      "condition": "delete_10pct",
+      "count": 24,
+      "mismatches": 10
+    },
+    {
+      "origin": "watermarked",
+      "condition": "replace_10pct",
+      "count": 24,
+      "mismatches": 13
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "toy_scores": [
+    {
+      "origin": "plain",
+      "condition": "uniform_256",
+      "seed": 42,
+      "key": 123,
+      "score": 0.5049407114624506,
+      "effective_tokens": 253,
+      "threshold": 0.65,
+      "minimum_effective_tokens": 32,
+      "detected": false
+    },
+    {
+      "origin": "plain",
+      "condition": "uniform_256",
+      "seed": 42,
+      "key": 456,
+      "score": 0.5227272727272727,
+      "effective_tokens": 253,
+      "threshold": 0.65,
+      "minimum_effective_tokens": 32,
+      "detected": false
+    },
+    {
+      "origin": "watermarked",
+      "condition": "uniform_256",
+      "seed": 42,
+      "key": 123,
+      "score": 0.7549407114624506,
+      "effective_tokens": 253,
+      "threshold": 0.65,
+      "minimum_effective_tokens": 32,
+      "detected": true
+    },
+    {
+      "origin": "watermarked",
+      "condition": "uniform_256",
+      "seed": 42,
+      "key": 456,
+      "score": 0.5,
+      "effective_tokens": 253,
+      "threshold": 0.65,
+      "minimum_effective_tokens": 32,
+      "detected": false
+    },
+    {
+      "origin": "plain",
+      "condition": "fixed_low_entropy",
+      "seed": 42,
+      "key": 123,
+      "score": 0.0,
+      "effective_tokens": 1,
+      "threshold": 0.65,
+      "minimum_effective_tokens": 32,
+      "detected": null
+    },
+    {
+      "origin": "plain",
+      "condition": "fixed_low_entropy",
+      "seed": 42,
+      "key": 456,
+      "score": 0.5,
+      "effective_tokens": 1,
+      "threshold": 0.65,
+      "minimum_effective_tokens": 32,
+      "detected": null
+    },
+    {
+      "origin": "watermarked",
+      "condition": "fixed_low_entropy",
+      "seed": 42,
+      "key": 123,
+      "score": 0.0,
+      "effective_tokens": 1,
+      "threshold": 0.65,
+      "minimum_effective_tokens": 32,
+      "detected": null
+    },
+    {
+      "origin": "watermarked",
+      "condition": "fixed_low_entropy",
+      "seed": 42,
+      "key": 456,
+      "score": 0.5,
+      "effective_tokens": 1,
+      "threshold": 0.65,
+      "minimum_effective_tokens": 32,
+      "detected": null
+    }
+  ],
+  "trace_final_token": 13
+}

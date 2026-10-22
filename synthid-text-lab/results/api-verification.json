@@ -1,0 +1,17 @@
+{
+  "api_signatures": {
+    "SynthIDTextWatermarkingConfig": "(ngram_len: int, keys: list[int], context_history_size: int = 1024, sampling_table_seed: int = 0, sampling_table_size: int = 65536, skip_first_ngram_calls: bool = False, debug_mode: bool = False)",
+    "SynthIDTextWatermarkLogitsProcessor": "(ngram_len: int, keys: list[int], sampling_table_size: int, sampling_table_seed: int, context_history_size: int, device: torch.device, skip_first_ngram_calls: bool = False, debug_mode: bool = False)",
+    "SynthIDTextWatermarkDetector": "(detector_module: transformers.generation.watermarking.BayesianDetectorModel, logits_processor: transformers.generation.logits_process.SynthIDTextWatermarkLogitsProcessor, tokenizer: Any)"
+  },
+  "installed_source_sha256": {
+    "/home/wens/project/deep-dive-code/synthid-text-lab/.venv/lib/python3.11/site-packages/transformers/generation/configuration_utils.py": "d83f2281f939402be1633a29f3c760e29f5d2f284258d8ed99693b873744074b",
+    "/home/wens/project/deep-dive-code/synthid-text-lab/.venv/lib/python3.11/site-packages/transformers/generation/logits_process.py": "6481506629ff6f021157e893fc64c4e7b5b06a72072771809d679387cb54a4b1",
+    "/home/wens/project/deep-dive-code/synthid-text-lab/.venv/lib/python3.11/site-packages/transformers/generation/watermarking.py": "757fda9774887e7391990ad9320904cd56a1748f162e95bb7788b6addc1a9003"
+  },
+  "cpu_model": "AMD Ryzen 5 5600GT with Radeon Graphics",
+  "official_docs_checked": [
+    "https://huggingface.co/docs/transformers/v4.57.1/en/internal/generation_utils",
+    "https://github.com/google-deepmind/synthid-text"
+  ]
+}

@@ -24,6 +24,26 @@ AI 圈子有一件事很煩：每個禮拜都有新論文說自己「突破極�
 | [`kev-local-decision-gate/`](./kev-local-decision-gate/) | Kev × 客服退款安全閘門 | 讓 decision model 理解案件，但由可審計規則決定能不能退款。 |
 | [`killswitch-can-llms-use-it/`](./killswitch-can-llms-use-it/) | KillSwitch 最小重現 | 用真正的直譯器，比對印出 7 與錯誤順序造成的空堆疊失敗。 |
 | [`php2shell-oom-to-uaf/`](./php2shell-oom-to-uaf/) | PHP2Shell 觸發階段 | 一個 multipart POST 如何在應用程式碼之前把請求解析器推到 OOM——以及沒做到的下一步。 |
+| [`synthid-text-lab/`](./synthid-text-lab/) | SynthID 文字浮水印 | CPU 跑 96 份生成，檢出與未加水印誤報一起公開。 |
+
+### synthid-text-lab
+
+**來源**：[Raschka 的 Claude 文字浮水印講解](https://magazine.sebastianraschka.com/p/claude-watermarking)、[SynthID-Text 論文](https://www.nature.com/articles/s41586-024-08025-4)與 Transformers 4.57.1 正式 processor。
+
+**核心問題**：浮水印取樣如何留下可偵測訊號？只有檢出成功，是否足以判斷來源？
+
+**結果**：每長度 24 份校準 negative、12 份測試 negative、12 份水印測試；兩個長度共 96 次真實生成。正確 key 的水印各條件皆檢出 12/12，但未編輯 128-token negative 誤報 3/12。
+
+**洞察**：分數需要校準與有效位置；token-ID 層實驗不能冒充可驗 Claude 或任意網頁文字的偵測器。
+
+```bash
+cd synthid-text-lab
+uv sync --locked --python 3.11
+python3 main.py                        # stdlib 玩具，不下載模型
+uv run python main.py --real --threads 4 --output results/rerun
+uv run python main.py --chart results/redrawn.png --input results/real.json
+# 零 GPU、零 API key；真實模型首次需要下載公開權重
+```
 
 ### killswitch-can-llms-use-it
 
