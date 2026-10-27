@@ -1,4 +1,3 @@
-import ast
 import json
 from pathlib import Path
 import unittest
@@ -35,30 +34,6 @@ class SmokeTests(unittest.TestCase):
             self.assertEqual(cases, smoke.build_cases(dom))
         finally:
             smoke.LABELS.clear(); smoke.LABELS.update(old)
-
-    def test_notebook_clean(self):
-        nb = json.loads((HERE / 'smoke.ipynb').read_text())
-        self.assertEqual(nb['nbformat'], 4)
-        for cell in nb['cells']:
-            if cell['cell_type'] == 'code':
-                self.assertEqual(cell['outputs'], [])
-                self.assertIsNone(cell['execution_count'])
-                ast.parse(''.join(cell['source']))
-        text = json.dumps(nb, ensure_ascii=False)
-        self.assertIn('鹿野鄉今晚的降雨機率', text)
-        self.assertNotIn('REPO_REVISION', text)
-        self.assertNotIn('REPO_OWNER', text)
-        written = {}
-        for cell in nb['cells']:
-            if cell['cell_type'] != 'code':
-                continue
-            for node in ast.walk(ast.parse(''.join(cell['source']))):
-                if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute) and node.func.attr == 'write_text':
-                    target = node.func.value
-                    if isinstance(target, ast.Call) and target.args and isinstance(target.args[0], ast.Constant):
-                        written[target.args[0].value] = ast.literal_eval(node.args[0])
-        self.assertEqual(written['/content/remote_smoke.py'], (HERE / 'remote_smoke.py').read_text())
-        self.assertEqual(written['/content/cwa_dom.json'], (HERE / 'cwa_dom.json').read_text())
 
 if __name__ == '__main__':
     unittest.main()

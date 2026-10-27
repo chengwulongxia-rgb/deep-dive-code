@@ -6,11 +6,10 @@
 
 ## 檔案與入口
 
-- `smoke.ipynb`：可在 Colab 開啟的自包含 Notebook，內嵌相同的輸入快照及執行程式，沒有未發布的下載網址或待填 placeholder。選 L4 後執行；完成下載後立即中斷連線並刪除執行階段。互動 Notebook 不會自動替讀者關閉 runtime。
 - `remote_smoke.py`：用官方 Kev 原始碼在 CUDA 上推論，拒絕 CPU fallback 與非 L4 GPU。不開公網 API、不做訓練。
 - `run_colab.py`：透過已安裝並完成 ADC 認證的 Colab CLI 建立 L4、探測型號、上傳程式／快照、執行、下載結果，再於 finally 停止**本次**工作階段。
 - `cwa_dom.json`：使用一般 `table` DOM 掃描取得的三個可見表格，保留 caption、列欄文字及 rowspan／colspan。不是依網站 class 或特定 ID 寫死 selector；也不是整個 DOM，更不是零前處理。
-- `test_remote_smoke.py`：CPU 測試，核對原句逐字相同、候選合法、答案未洩漏、降雨機率欄位保留、輸入界限，以及 Notebook 與實際程式／快照一致。
+- `test_remote_smoke.py`：CPU 測試，核對原句逐字相同、候選合法、答案未洩漏、降雨機率欄位保留、輸入界限。
 - `results/<UTC>/lifecycle.json`：每輪實際生命週期與清理結果。CLI 的含連線資訊原始紀錄只留在私有 scratch，不當作可公開憑證分享。
 
 ## 本機 CLI 執行
@@ -56,7 +55,7 @@ python3 -B run_colab.py --approved-l4-20min
 
 第二輪原句仍是「鹿野鄉今晚的降雨機率」：模型選 `table_0`（即時觀測），預先核對的正確候選是 `table_1`（鄉鎮預報），所以**這個案例選錯**。原始選項機率為 table_0 `0.371`、table_1 `0.369`、table_2 `0.260`，API confidence `0.0565`；這些不是降雨機率，也不是正確率。
 
-實際環境為 NVIDIA L4、Python 3.13.16、PyTorch 2.8.0+cu128、Transformers 5.17.0。原始結果與每個請求保存在 `results/20261027T082658Z/artifacts/kev-smoke-result.json`，摘要在 `results/summary.json`。兩輪生命週期累計約 147 秒，皆已停止；這是本機流程計時，不冒充供應商精確計費秒數。Notebook 內嵌程式與輸入已逐位元比對下載的實際執行檔，Notebook 本身維持乾淨 code outputs，未宣稱以 Jupyter UI 再 Run all 一輪。
+實際環境為 NVIDIA L4、Python 3.13.16、PyTorch 2.8.0+cu128、Transformers 5.17.0。原始結果與每個請求保存在 `results/20261027T082658Z/artifacts/kev-smoke-result.json`，摘要在 `results/summary.json`。兩輪生命週期累計約 147 秒，皆已停止；這是本機流程計時，不冒充供應商精確計費秒數。本次 Notebook 已依使用者要求移除；僅保留實驗程式與原始結果，不提供 Notebook 入口。
 
 結論只到「Kev 能在 Colab L4 執行，但此模型／輸入摘要／原句組合選錯候選」。不能從一例推論所有 Kev 模型無法理解中文，也不能把完成推論寫成通過天氣查詢。
 

@@ -26,7 +26,6 @@ AI 圈子有一件事很煩：每個禮拜都有新論文說自己「突破極�
 | [`php2shell-oom-to-uaf/`](./php2shell-oom-to-uaf/) | PHP2Shell 觸發階段 | 一個 multipart POST 如何在應用程式碼之前把請求解析器推到 OOM——以及沒做到的下一步。 |
 | [`synthid-text-lab/`](./synthid-text-lab/) | SynthID 文字浮水印 | CPU 跑 96 份生成，檢出與未加水印誤報一起公開。 |
 | [`argus-boundary-audit/`](./argus-boundary-audit/) | Argus 提案與執行邊界 | 固定上游版本，停網容器重跑 18 項控制測試；附本機 Docker Notebook 入口與原始證據。 |
-| [`kev-colab-weather-smoke/`](./kev-colab-weather-smoke/) | Colab × Kev 中文 DOM | L4 實跑「鹿野鄉今晚的降雨機率」，保留選錯候選的原始結果與自包含 Notebook。 |
 
 ### synthid-text-lab
 
