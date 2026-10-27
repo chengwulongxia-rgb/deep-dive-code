@@ -1,0 +1,14 @@
+{
+  "session_name": "kev-smoke-20261027t082120z",
+  "requested_gpu": "L4",
+  "approved_minutes": 20,
+  "private_logs": "/home/wens/.hermes/cache/scratch/kev-colab-private-krr9is_7",
+  "started_utc": "2026-10-27T08:21:20.282543+00:00",
+  "inference_completed": false,
+  "stop_exit": 0,
+  "execute_exit": 0,
+  "download_exit": 1,
+  "sessions_after_stop": "[colab] No active sessions found on server.\n",
+  "elapsed_seconds": 26.247959595173597,
+  "ended_utc": "2026-10-27T08:21:46.530496+00:00"
+}

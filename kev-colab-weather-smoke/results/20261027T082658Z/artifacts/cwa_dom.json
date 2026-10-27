@@ -1,0 +1,931 @@
+{
+  "url": "https://www.cwa.gov.tw/V8/C/W/Town/Town.html?TID=1001405",
+  "title": "🐴 臺東縣鹿野鄉 - 鄉鎮預報 | 交通部中央氣象署",
+  "headings": [
+    "鄉鎮預報 - 臺東縣鹿野鄉",
+    "臺東縣鹿野鄉",
+    "72小時預報\n一週溫度曲線\n一週體感溫度曲線\n過去24小時",
+    "72小時預報\n一週預報\n過去24小時",
+    "臺東縣鹿野鄉即時影像",
+    "天氣圖資",
+    "臺東縣附近旅遊景點天氣連結"
+  ],
+  "tables": [
+    {
+      "id": "table_0",
+      "caption": "",
+      "rows": [
+        [
+          {
+            "text": "",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "",
+            "rowspan": 1,
+            "colspan": 1
+          }
+        ],
+        [
+          {
+            "text": "資料\n時間",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "溫度",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "體感\n溫度",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "相對\n溼度",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "時雨量",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "日出",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "日沒",
+            "rowspan": 1,
+            "colspan": 1
+          }
+        ],
+        [
+          {
+            "text": "10/27\n(二)\n15:30",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "24",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "26",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "76%",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "0.0mm",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "05:58",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "17:21",
+            "rowspan": 1,
+            "colspan": 1
+          }
+        ]
+      ],
+      "text": "\t\n\t\n\t\n\t\n\t\n\t\n\n資料\n時間\t溫度\t體感\n溫度\t相對\n溼度\t時雨量\t日出\t日沒\n10/27\n(二)\n15:30\t\n24\n\t\n26\n\t76%\t0.0mm\t05:58\t17:21"
+    },
+    {
+      "id": "table_1",
+      "caption": "逐三小時天氣預報資料",
+      "rows": [
+        [
+          {
+            "text": "日期",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "10/27\n星期二",
+            "rowspan": 1,
+            "colspan": 8
+          },
+          {
+            "text": "10/28\n星期三",
+            "rowspan": 1,
+            "colspan": 19
+          },
+          {
+            "text": "10/29\n星期四",
+            "rowspan": 1,
+            "colspan": 8
+          },
+          {
+            "text": "10/30\n星期五",
+            "rowspan": 1,
+            "colspan": 6
+          }
+        ],
+        [
+          {
+            "text": "時間",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "16:00",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "17:00",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "18:00",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "19:00",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "20:00",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "21:00",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "22:00",
+            "rowspan": 1,
+            "colspan": 1
+          }
+        ],
+        [
+          {
+            "text": "溫度",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "25",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "24",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "23",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "22",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "22",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "22",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "21",
+            "rowspan": 1,
+            "colspan": 1
+          }
+        ],
+        [
+          {
+            "text": "體感溫度",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "25",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "24",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "23",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "23",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "23",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "22",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "22",
+            "rowspan": 1,
+            "colspan": 1
+          }
+        ],
+        [
+          {
+            "text": "相對溼度",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "66%",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "68%",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "71%",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "75%",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "79%",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "80%",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "82%",
+            "rowspan": 1,
+            "colspan": 1
+          }
+        ],
+        [
+          {
+            "text": "天氣狀況",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "",
+            "rowspan": 1,
+            "colspan": 2
+          },
+          {
+            "text": "",
+            "rowspan": 1,
+            "colspan": 3
+          },
+          {
+            "text": "",
+            "rowspan": 1,
+            "colspan": 3
+          },
+          {
+            "text": "",
+            "rowspan": 1,
+            "colspan": 3
+          },
+          {
+            "text": "",
+            "rowspan": 1,
+            "colspan": 3
+          },
+          {
+            "text": "",
+            "rowspan": 1,
+            "colspan": 3
+          },
+          {
+            "text": "",
+            "rowspan": 1,
+            "colspan": 3
+          }
+        ],
+        [
+          {
+            "text": "降雨機率",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "10%",
+            "rowspan": 1,
+            "colspan": 2
+          },
+          {
+            "text": "10%",
+            "rowspan": 1,
+            "colspan": 3
+          },
+          {
+            "text": "20%",
+            "rowspan": 1,
+            "colspan": 3
+          },
+          {
+            "text": "20%",
+            "rowspan": 1,
+            "colspan": 3
+          },
+          {
+            "text": "20%",
+            "rowspan": 1,
+            "colspan": 3
+          },
+          {
+            "text": "20%",
+            "rowspan": 1,
+            "colspan": 3
+          },
+          {
+            "text": "20%",
+            "rowspan": 1,
+            "colspan": 3
+          }
+        ],
+        [
+          {
+            "text": "蒲福風級",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "2",
+            "rowspan": 1,
+            "colspan": 2
+          },
+          {
+            "text": "2",
+            "rowspan": 1,
+            "colspan": 3
+          },
+          {
+            "text": "2",
+            "rowspan": 1,
+            "colspan": 3
+          },
+          {
+            "text": "2",
+            "rowspan": 1,
+            "colspan": 3
+          },
+          {
+            "text": "2",
+            "rowspan": 1,
+            "colspan": 3
+          },
+          {
+            "text": "2",
+            "rowspan": 1,
+            "colspan": 3
+          },
+          {
+            "text": "2",
+            "rowspan": 1,
+            "colspan": 3
+          }
+        ],
+        [
+          {
+            "text": "風速(m/s)",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "3",
+            "rowspan": 1,
+            "colspan": 2
+          },
+          {
+            "text": "3",
+            "rowspan": 1,
+            "colspan": 3
+          },
+          {
+            "text": "3",
+            "rowspan": 1,
+            "colspan": 3
+          },
+          {
+            "text": "3",
+            "rowspan": 1,
+            "colspan": 3
+          },
+          {
+            "text": "3",
+            "rowspan": 1,
+            "colspan": 3
+          },
+          {
+            "text": "3",
+            "rowspan": 1,
+            "colspan": 3
+          },
+          {
+            "text": "3",
+            "rowspan": 1,
+            "colspan": 3
+          }
+        ],
+        [
+          {
+            "text": "風向",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "東北風",
+            "rowspan": 1,
+            "colspan": 2
+          },
+          {
+            "text": "東北風",
+            "rowspan": 1,
+            "colspan": 3
+          },
+          {
+            "text": "東北風",
+            "rowspan": 1,
+            "colspan": 3
+          },
+          {
+            "text": "東北風",
+            "rowspan": 1,
+            "colspan": 3
+          },
+          {
+            "text": "西北風",
+            "rowspan": 1,
+            "colspan": 3
+          },
+          {
+            "text": "西北風",
+            "rowspan": 1,
+            "colspan": 3
+          },
+          {
+            "text": "偏北風",
+            "rowspan": 1,
+            "colspan": 3
+          }
+        ]
+      ],
+      "text": "逐三小時天氣預報資料\n日期\t10/27\n星期二\t10/28\n星期三\t10/29\n星期四\t10/30\n星期五\n時間\t16:00\t17:00\t18:00\t19:00\t20:00\t21:00\t22:00\t23:00\t00:00\t01:00\t02:00\t03:00\t04:00\t05:00\t06:00\t07:00\t08:00\t09:00\t10:00\t11:00\t12:00\t13:00\t14:00\t15:00\t16:00\t18:00\t21:00\t00:00\t03:00\t06:00\t09:00\t12:00\t15:00\t18:00\t21:00\t00:00\t03:00\t06:00\t09:00\t12:00\t15:00\n溫度\t\n25\n\t\n24\n\t\n23\n\t\n22\n\t\n22\n\t\n22\n\t\n21\n\t\n21\n\t\n21\n\t\n21\n\t\n20\n\t\n20\n\t\n20\n\t\n20\n\t\n20\n\t\n21\n\t\n23\n\t\n25\n\t\n27\n\t\n28\n\t\n28\n\t\n28\n\t\n27\n\t\n26\n\t\n25\n\t\n23\n\t\n21\n\t\n20\n\t\n20\n\t\n19\n\t\n26\n\t\n30\n\t\n27\n\t\n24\n\t\n22\n\t\n21\n\t\n20\n\t\n20\n\t\n27\n\t\n30\n\t\n28\n\n體感溫度\t\n25\n\t\n24\n\t\n23\n\t\n23\n\t\n23\n\t\n22\n\t\n22\n\t\n22\n\t\n21\n\t\n21\n\t\n21\n\t\n20\n\t\n20\n\t\n20\n\t\n20\n\t\n21\n\t\n23\n\t\n26\n\t\n27\n\t\n28\n\t\n29\n\t\n29\n\t\n28\n\t\n27\n\t\n26\n\t\n23\n\t\n22\n\t\n21\n\t\n20\n\t\n19\n\t\n28\n\t\n32\n\t\n29\n\t\n25\n\t\n24\n\t\n23\n\t\n21\n\t\n21\n\t\n29\n\t\n32\n\t\n30\n\n相對溼度\t66%\t68%\t71%\t75%\t79%\t80%\t82%\t83%\t84%\t86%\t88%\t88%\t88%\t88%\t83%\t78%\t73%\t68%\t62%\t56%\t58%\t59%\t61%\t64%\t68%\t75%\t82%\t84%\t88%\t84%\t70%\t61%\t67%\t79%\t84%\t88%\t89%\t85%\t70%\t60%\t67%\n天氣狀況\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n降雨機率\t10%\t10%\t20%\t20%\t20%\t20%\t20%\t30%\t20%\t20%\t20%\t20%\t20%\t20%\t20%\t20%\t20%\t20%\t20%\t20%\t20%\t20%\t20%\t20%\t20%\n蒲福風級\t2\t2\t2\t2\t2\t2\t2\t3\t2\t2\t2\t2\t2\t2\t2\t2\t2\t2\t2\t2\t2\t2\t2\t2\t2\n風向\t東北風\t東北風\t東北風\t東北風\t西北風\t西北風\t偏北風\t東北風\t東北風\t東北風\t東北風\t偏北風\t偏北風\t西北風\t偏北風\t偏東風\t偏東風\t偏東風\t偏北風\t西北風\t西北風\t西北風\t西北風\t偏東風\t偏東風\n舒適度\t舒適\t舒適\t舒適\t舒適\t舒適\t舒適\t舒適\t舒適\t舒適\t舒適\t舒適\t舒適\t舒適\t稍有寒意\t稍有寒意\t舒適\t舒適\t舒適\t舒適\t舒適\t舒適\t舒適\t舒適\t舒適\t舒適\t舒適\t舒適\t舒適\t稍有寒意\t稍有寒意\t舒適\t舒適\t舒適\t舒適\t舒適\t舒適\t舒適\t稍有寒意\t舒適\t悶熱\t舒適"
+    },
+    {
+      "id": "table_2",
+      "caption": "沿海逐三小時預報",
+      "rows": [
+        [
+          {
+            "text": "時間/日期",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "12:00\n10/27\n(二)",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "15:00\n10/27\n(二)",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "18:00\n10/27\n(二)",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "21:00\n10/27\n(二)",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "00:00\n10/28\n(三)",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "03:00\n10/28\n(三)",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "06:00\n10/28\n(三)",
+            "rowspan": 1,
+            "colspan": 1
+          }
+        ],
+        [
+          {
+            "text": "風級",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "5",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "5",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "5",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "4",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "4",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "4",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "4",
+            "rowspan": 1,
+            "colspan": 1
+          }
+        ],
+        [
+          {
+            "text": "風速",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "17",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "18",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "18",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "15",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "12",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "11",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "12",
+            "rowspan": 1,
+            "colspan": 1
+          }
+        ],
+        [
+          {
+            "text": "風向",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "東北風",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "東北風",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "偏北風",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "偏北風",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "偏北風",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "偏北風",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "偏北風",
+            "rowspan": 1,
+            "colspan": 1
+          }
+        ],
+        [
+          {
+            "text": "流速",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "1",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "<1",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "<1",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "<1",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "1",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "1",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "<1",
+            "rowspan": 1,
+            "colspan": 1
+          }
+        ],
+        [
+          {
+            "text": "流向",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "偏北",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "偏北",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "西南",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "偏北",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "東北",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "東北",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "偏南",
+            "rowspan": 1,
+            "colspan": 1
+          }
+        ],
+        [
+          {
+            "text": "浪高",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "2.3",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "2.4",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "2.4",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "2.4",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "2.3",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "2.3",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "2.3",
+            "rowspan": 1,
+            "colspan": 1
+          }
+        ],
+        [
+          {
+            "text": "浪向",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "東北",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "東北",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "東北",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "東北",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "東北",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "東北",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "東北",
+            "rowspan": 1,
+            "colspan": 1
+          }
+        ],
+        [
+          {
+            "text": "週期",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "6.8",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "6.9",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "7.1",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "7.2",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "7.2",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "7.0",
+            "rowspan": 1,
+            "colspan": 1
+          },
+          {
+            "text": "6.9",
+            "rowspan": 1,
+            "colspan": 1
+          }
+        ]
+      ],
+      "text": "沿海逐三小時預報\n時間/日期\t12:00\n10/27\n(二)\t15:00\n10/27\n(二)\t18:00\n10/27\n(二)\t21:00\n10/27\n(二)\t00:00\n10/28\n(三)\t03:00\n10/28\n(三)\t06:00\n10/28\n(三)\t09:00\n10/28\n(三)\t12:00\n10/28\n(三)\t15:00\n10/28\n(三)\t18:00\n10/28\n(三)\t21:00\n10/28\n(三)\t00:00\n10/29\n(四)\t03:00\n10/29\n(四)\t06:00\n10/29\n(四)\t09:00\n10/29\n(四)\t12:00\n10/29\n(四)\n風級\t5\t5\t5\t4\t4\t4\t4\t4\t5\t5\t4\t4\t3\t3\t3\t2\t3\n風速 \t17\t18\t18\t15\t12\t11\t12\t15\t17\t16\t13\t12\t10\t8\t8\t6\t8\n風向\t\n東北風\t\n東北風\t\n偏北風\t\n偏北風\t\n偏北風\t\n偏北風\t\n偏北風\t\n偏北風\t\n偏北風\t\n東北風\t\n偏北風\t\n偏北風\t\n偏北風\t\n偏北風\t\n偏北風\t\n偏北風\t\n偏北風\n流速 \t1\t<1\t<1\t<1\t1\t1\t<1\t<1\t<1\t<1\t<1\t<1\t1\t1\t<1\t<1\t1\n流向 \t\n偏北\t\n偏北\t\n西南\t\n偏北\t\n東北\t\n東北\t\n偏南\t\n東北\t\n偏北\t\n偏西\t\n西南\t\n偏北\t\n偏北\t\n東北\t\n偏南\t\n偏北\t\n偏北\n浪高 \t2.3\t2.4\t2.4\t2.4\t2.3\t2.3\t2.3\t2.5\t2.5\t2.4\t2.3\t2.2\t2.0\t1.9\t1.8\t1.7\t1.6\n浪向 \t\n東北\t\n東北\t\n東北\t\n東北\t\n東北\t\n東北\t\n東北\t\n東北\t\n東北\t\n東北\t\n東北\t\n東北\t\n東北\t\n東北\t\n東北\t\n東北\t\n東北\n週期 \t6.8\t6.9\t7.1\t7.2\t7.2\t7.0\t6.9\t7.0\t7.0\t7.3\t7.4\t7.4\t7.4\t7.4\t7.4\t7.4\t7.3"
+    }
+  ],
+  "captured_at": "2026-10-27T08:12:08.546479+00:00"
+}

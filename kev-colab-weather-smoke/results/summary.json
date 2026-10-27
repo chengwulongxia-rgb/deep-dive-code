@@ -1,0 +1,21 @@
+{
+  "question": "鹿野鄉今晚的降雨機率",
+  "gpu": "NVIDIA L4",
+  "model_id": "jaredpalmer/kev-0.8b",
+  "model_revision": "bf75a6a8848ea6960ff2ed108d9ed44c2941174f",
+  "choice": "table_0",
+  "expected": "table_1",
+  "correct": false,
+  "probabilities": {
+    "table_0": 0.371,
+    "table_1": 0.369,
+    "table_2": 0.26
+  },
+  "confidence": 0.0565,
+  "inference_completed": true,
+  "attempts": 2,
+  "cumulative_lifecycle_seconds": 146.94261402171105,
+  "all_stop_exits_zero": true,
+  "source_sha256": "b44141545f662d93b212e967df95a22f9991e82df335545e1161c67646aeb47e",
+  "input_sha256": "3a02680918893c495b40336a541e164dc3873840dc61d1b83cf7f6555d6c8392"
+}

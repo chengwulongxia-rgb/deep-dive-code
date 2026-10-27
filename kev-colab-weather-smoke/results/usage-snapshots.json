@@ -1,0 +1,8 @@
+{
+  "before_balance": "396.41",
+  "after_balance": "396.35",
+  "observed_balance_decrease": "0.06",
+  "usage_rate_per_hour": "0.00",
+  "active_assignments": 0,
+  "note": "Observed account snapshots, not a guarantee that delayed billing has fully settled."
+}

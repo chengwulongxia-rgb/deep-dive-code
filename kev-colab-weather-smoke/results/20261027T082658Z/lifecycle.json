@@ -1,0 +1,23 @@
+{
+  "session_name": "kev-smoke-20261027t082658z",
+  "requested_gpu": "L4",
+  "approved_minutes": 20,
+  "private_logs": "/home/wens/.hermes/cache/scratch/kev-colab-private-t24xjb7v",
+  "started_utc": "2026-10-27T08:26:58.374949+00:00",
+  "previous_attempt_seconds": 26.247959595173597,
+  "inference_completed": true,
+  "stop_exit": 0,
+  "execute_exit": 0,
+  "download_exit": 0,
+  "model_summary": {
+    "user_original_zh": {
+      "status": "completed",
+      "completed": 1,
+      "total": 1,
+      "correct": 0
+    }
+  },
+  "sessions_after_stop": "[colab] No active sessions found on server.\n",
+  "elapsed_seconds": 120.69465442653745,
+  "ended_utc": "2026-10-27T08:28:59.069456+00:00"
+}
