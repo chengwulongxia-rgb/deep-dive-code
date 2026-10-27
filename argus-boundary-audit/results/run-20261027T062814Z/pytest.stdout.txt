@@ -1,0 +1,31 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.16, pytest-9.1.1, pluggy-1.7.0 -- /opt/venv/bin/python
+rootdir: /src
+configfile: pytest.ini
+plugins: asyncio-1.4.1, respx-0.23.1, anyio-4.15.1
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+collecting ... collected 18 items
+
+tests/test_actions.py::test_policy_matrix_by_risk PASSED                 [  5%]
+tests/test_actions.py::test_policy_kill_switch_and_deny_list PASSED      [ 11%]
+tests/test_actions.py::test_kill_switch_blocks_execution_of_approved_request PASSED [ 16%]
+tests/test_actions.py::test_handler_recheck_denies_when_switch_flips_after_enqueue PASSED [ 22%]
+tests/test_actions.py::test_low_risk_auto_approval_and_agent_requests PASSED [ 27%]
+tests/test_agents_tools.py::test_registry_contents PASSED                [ 33%]
+tests/test_agents_tools.py::test_action_tools PASSED                     [ 38%]
+tests/test_simulator.py::test_full_run_through_the_api_reports_coverage_and_leaves_no_trace PASSED [ 44%]
+tests/test_actions.py::test_agent_originated_request_never_auto_approved PASSED [ 50%]
+tests/test_actions.py::test_propose_action_tool_creates_pending_request PASSED [ 55%]
+tests/test_actions.py::test_full_lifecycle_request_approve_twice_execute_rollback PASSED [ 61%]
+tests/test_autoresponse.py::test_policy_autonomous_guardrails PASSED     [ 66%]
+tests/test_autoresponse.py::test_nothing_happens_until_tenant_opts_in PASSED [ 72%]
+tests/test_autoresponse.py::test_guardrails_skip_escalate_cap_and_deny PASSED [ 77%]
+tests/test_autoresponse.py::test_blast_radius_and_tenant_cap_and_kill_switch PASSED [ 83%]
+tests/test_simulator.py::test_evasion_variant_reveals_gaps PASSED        [ 88%]
+tests/test_simulator.py::test_disabled_rule_shows_as_gap PASSED          [ 94%]
+tests/test_simulator.py::test_purge_refuses_real_tenants PASSED          [100%]
+
+---------------------- generated xml file: /tmp/junit.xml ----------------------
+============================== 18 passed in 6.23s ==============================
+
+ARGUS_JUNIT_BASE64:PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48dGVzdHN1aXRlcyBuYW1lPSJweXRlc3QgdGVzdHMiPjx0ZXN0c3VpdGUgbmFtZT0icHl0ZXN0IiBlcnJvcnM9IjAiIGZhaWx1cmVzPSIwIiBza2lwcGVkPSIwIiB0ZXN0cz0iMTgiIHRpbWU9IjYuMjMyIiB0aW1lc3RhbXA9IjIwMjYtMTAtMjdUMDY6Mjg6MjIuNzU4Mjg0KzAwOjAwIiBob3N0bmFtZT0iOGEyZWI1NmZjNDgxIj48dGVzdGNhc2UgY2xhc3NuYW1lPSJ0ZXN0cy50ZXN0X2FjdGlvbnMiIG5hbWU9InRlc3RfcG9saWN5X21hdHJpeF9ieV9yaXNrIiB0aW1lPSIwLjAwNCIgLz48dGVzdGNhc2UgY2xhc3NuYW1lPSJ0ZXN0cy50ZXN0X2FjdGlvbnMiIG5hbWU9InRlc3RfcG9saWN5X2tpbGxfc3dpdGNoX2FuZF9kZW55X2xpc3QiIHRpbWU9IjAuMDA0IiAvPjx0ZXN0Y2FzZSBjbGFzc25hbWU9InRlc3RzLnRlc3RfYWN0aW9ucyIgbmFtZT0idGVzdF9raWxsX3N3aXRjaF9ibG9ja3NfZXhlY3V0aW9uX29mX2FwcHJvdmVkX3JlcXVlc3QiIHRpbWU9IjAuODg5IiAvPjx0ZXN0Y2FzZSBjbGFzc25hbWU9InRlc3RzLnRlc3RfYWN0aW9ucyIgbmFtZT0idGVzdF9oYW5kbGVyX3JlY2hlY2tfZGVuaWVzX3doZW5fc3dpdGNoX2ZsaXBzX2FmdGVyX2VucXVldWUiIHRpbWU9IjAuNDEyIiAvPjx0ZXN0Y2FzZSBjbGFzc25hbWU9InRlc3RzLnRlc3RfYWN0aW9ucyIgbmFtZT0idGVzdF9sb3dfcmlza19hdXRvX2FwcHJvdmFsX2FuZF9hZ2VudF9yZXF1ZXN0cyIgdGltZT0iMC40MTIiIC8+PHRlc3RjYXNlIGNsYXNzbmFtZT0idGVzdHMudGVzdF9hZ2VudHNfdG9vbHMiIG5hbWU9InRlc3RfcmVnaXN0cnlfY29udGVudHMiIHRpbWU9IjAuMDAxIiAvPjx0ZXN0Y2FzZSBjbGFzc25hbWU9InRlc3RzLnRlc3RfYWdlbnRzX3Rvb2xzIiBuYW1lPSJ0ZXN0X2FjdGlvbl90b29scyIgdGltZT0iMC4zNTkiIC8+PHRlc3RjYXNlIGNsYXNzbmFtZT0idGVzdHMudGVzdF9zaW11bGF0b3IiIG5hbWU9InRlc3RfZnVsbF9ydW5fdGhyb3VnaF90aGVfYXBpX3JlcG9ydHNfY292ZXJhZ2VfYW5kX2xlYXZlc19ub190cmFjZSIgdGltZT0iMC41NzciIC8+PHRlc3RjYXNlIGNsYXNzbmFtZT0idGVzdHMudGVzdF9hY3Rpb25zIiBuYW1lPSJ0ZXN0X2FnZW50X29yaWdpbmF0ZWRfcmVxdWVzdF9uZXZlcl9hdXRvX2FwcHJvdmVkIiB0aW1lPSIwLjIwOCIgLz48dGVzdGNhc2UgY2xhc3NuYW1lPSJ0ZXN0cy50ZXN0X2FjdGlvbnMiIG5hbWU9InRlc3RfcHJvcG9zZV9hY3Rpb25fdG9vbF9jcmVhdGVzX3BlbmRpbmdfcmVxdWVzdCIgdGltZT0iMC4yMDQiIC8+PHRlc3RjYXNlIGNsYXNzbmFtZT0idGVzdHMudGVzdF9hY3Rpb25zIiBuYW1lPSJ0ZXN0X2Z1bGxfbGlmZWN5Y2xlX3JlcXVlc3RfYXBwcm92ZV90d2ljZV9leGVjdXRlX3JvbGxiYWNrIiB0aW1lPSIwLjUyMCIgLz48dGVzdGNhc2UgY2xhc3NuYW1lPSJ0ZXN0cy50ZXN0X2F1dG9yZXNwb25zZSIgbmFtZT0idGVzdF9wb2xpY3lfYXV0b25vbW91c19ndWFyZHJhaWxzIiB0aW1lPSIwLjAwNCIgLz48dGVzdGNhc2UgY2xhc3NuYW1lPSJ0ZXN0cy50ZXN0X2F1dG9yZXNwb25zZSIgbmFtZT0idGVzdF9ub3RoaW5nX2hhcHBlbnNfdW50aWxfdGVuYW50X29wdHNfaW4iIHRpbWU9IjAuMzA5IiAvPjx0ZXN0Y2FzZSBjbGFzc25hbWU9InRlc3RzLnRlc3RfYXV0b3Jlc3BvbnNlIiBuYW1lPSJ0ZXN0X2d1YXJkcmFpbHNfc2tpcF9lc2NhbGF0ZV9jYXBfYW5kX2RlbnkiIHRpbWU9IjAuNTA1IiAvPjx0ZXN0Y2FzZSBjbGFzc25hbWU9InRlc3RzLnRlc3RfYXV0b3Jlc3BvbnNlIiBuYW1lPSJ0ZXN0X2JsYXN0X3JhZGl1c19hbmRfdGVuYW50X2NhcF9hbmRfa2lsbF9zd2l0Y2giIHRpbWU9IjAuMzgzIiAvPjx0ZXN0Y2FzZSBjbGFzc25hbWU9InRlc3RzLnRlc3Rfc2ltdWxhdG9yIiBuYW1lPSJ0ZXN0X2V2YXNpb25fdmFyaWFudF9yZXZlYWxzX2dhcHMiIHRpbWU9IjAuNjU1IiAvPjx0ZXN0Y2FzZSBjbGFzc25hbWU9InRlc3RzLnRlc3Rfc2ltdWxhdG9yIiBuYW1lPSJ0ZXN0X2Rpc2FibGVkX3J1bGVfc2hvd3NfYXNfZ2FwIiB0aW1lPSIwLjM3NSIgLz48dGVzdGNhc2UgY2xhc3NuYW1lPSJ0ZXN0cy50ZXN0X3NpbXVsYXRvciIgbmFtZT0idGVzdF9wdXJnZV9yZWZ1c2VzX3JlYWxfdGVuYW50cyIgdGltZT0iMC4wNzkiIC8+PC90ZXN0c3VpdGU+PC90ZXN0c3VpdGVzPg==

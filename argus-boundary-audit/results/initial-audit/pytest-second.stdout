@@ -1,0 +1,20 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.16, pytest-9.1.1, pluggy-1.7.0 -- /usr/local/bin/python
+rootdir: /src
+configfile: pytest.ini
+plugins: asyncio-1.4.1, respx-0.23.1, anyio-4.15.1
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+collecting ... collected 10 items
+
+tests/test_actions.py::test_agent_originated_request_never_auto_approved PASSED [ 10%]
+tests/test_actions.py::test_propose_action_tool_creates_pending_request PASSED [ 20%]
+tests/test_actions.py::test_full_lifecycle_request_approve_twice_execute_rollback PASSED [ 30%]
+tests/test_autoresponse.py::test_policy_autonomous_guardrails PASSED     [ 40%]
+tests/test_autoresponse.py::test_nothing_happens_until_tenant_opts_in PASSED [ 50%]
+tests/test_autoresponse.py::test_guardrails_skip_escalate_cap_and_deny PASSED [ 60%]
+tests/test_autoresponse.py::test_blast_radius_and_tenant_cap_and_kill_switch PASSED [ 70%]
+tests/test_simulator.py::test_evasion_variant_reveals_gaps PASSED        [ 80%]
+tests/test_simulator.py::test_disabled_rule_shows_as_gap PASSED          [ 90%]
+tests/test_simulator.py::test_purge_refuses_real_tenants PASSED          [100%]
+
+============================== 10 passed in 4.01s ==============================

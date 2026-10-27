@@ -1,0 +1,66 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 533B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.13-slim@sha256:bb2988715db2cf7ace7b53f38f3cffbef7c7046a656bee66245eb0ed386e2e81
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/5] FROM docker.io/library/python:3.13-slim@sha256:bb2988715db2cf7ace7b53f38f3cffbef7c7046a656bee66245eb0ed386e2e81
+#4 resolve docker.io/library/python:3.13-slim@sha256:bb2988715db2cf7ace7b53f38f3cffbef7c7046a656bee66245eb0ed386e2e81 0.0s done
+#4 CACHED
+
+#5 [internal] load build context
+#5 transferring context: 987B done
+#5 DONE 0.0s
+
+#6 [2/5] RUN python -m venv /opt/venv && chown -R 65534:65534 /opt/venv
+#6 DONE 2.3s
+
+#7 [3/5] COPY requirements.lock /requirements.lock
+#7 DONE 0.0s
+
+#8 [4/5] RUN python -m pip --isolated install --no-cache-dir --only-binary=:all: --no-deps --index-url=https://pypi.org/simple -r /requirements.lock && python -m pip check
+#8 1.119 Collecting alembic==1.20.1 (from -r /requirements.lock (line 1))
+#8 21.14   WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='files.pythonhosted.org', port=443): Failed to resolve 'files.pythonhosted.org' ([Errno -3] Temporary failure in name resolution)")': /packages/11/3c/8740f5b4e1bd57333e4f84265b9b6363da4f7cf70f5622dd1e2fde7a0bd5/alembic-1.20.1-py3-none-any.whl.metadata
+#8 41.66   WARNING: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='files.pythonhosted.org', port=443): Failed to resolve 'files.pythonhosted.org' ([Errno -3] Temporary failure in name resolution)")': /packages/11/3c/8740f5b4e1bd57333e4f84265b9b6363da4f7cf70f5622dd1e2fde7a0bd5/alembic-1.20.1-py3-none-any.whl.metadata
+#8 62.67   WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='files.pythonhosted.org', port=443): Failed to resolve 'files.pythonhosted.org' ([Errno -3] Temporary failure in name resolution)")': /packages/11/3c/8740f5b4e1bd57333e4f84265b9b6363da4f7cf70f5622dd1e2fde7a0bd5/alembic-1.20.1-py3-none-any.whl.metadata
+#8 84.69   WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='files.pythonhosted.org', port=443): Failed to resolve 'files.pythonhosted.org' ([Errno -3] Temporary failure in name resolution)")': /packages/11/3c/8740f5b4e1bd57333e4f84265b9b6363da4f7cf70f5622dd1e2fde7a0bd5/alembic-1.20.1-py3-none-any.whl.metadata
+#8 108.7   WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='files.pythonhosted.org', port=443): Failed to resolve 'files.pythonhosted.org' ([Errno -3] Temporary failure in name resolution)")': /packages/11/3c/8740f5b4e1bd57333e4f84265b9b6363da4f7cf70f5622dd1e2fde7a0bd5/alembic-1.20.1-py3-none-any.whl.metadata
+#8 128.7 
+#8 128.7 [notice] A new release of pip is available: 26.2.1 -> 26.2.2
+#8 128.7 [notice] To update, run: pip install --upgrade pip
+#8 128.7 error: connection-failed
+#8 128.7 
+#8 128.7 × Failed to connect to files.pythonhosted.org while fetching https://files.pythonhosted.org/packages/11/3c/8740f5b4e1bd57333e4f84265b9b6363da4f7cf70f5622dd1e2fde7a0bd5/alembic-1.20.1-py3-none-any.whl.metadata
+#8 128.7 ╰─> Failed to resolve IP address for 'files.pythonhosted.org' ([Errno -3] Temporary failure in name resolution)
+#8 128.7 
+#8 128.7 hint: Are you connected to the Internet? If so, check whether your system can connect to files.pythonhosted.org before trying again. There may be a firewall or proxy that's preventing the connection.
+#8 ERROR: process "/bin/sh -c python -m pip --isolated install --no-cache-dir --only-binary=:all: --no-deps --index-url=https://pypi.org/simple -r /requirements.lock && python -m pip check" did not complete successfully: exit code: 1
+------
+ > [4/5] RUN python -m pip --isolated install --no-cache-dir --only-binary=:all: --no-deps --index-url=https://pypi.org/simple -r /requirements.lock && python -m pip check:
+108.7   WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("HTTPSConnection(host='files.pythonhosted.org', port=443): Failed to resolve 'files.pythonhosted.org' ([Errno -3] Temporary failure in name resolution)")': /packages/11/3c/8740f5b4e1bd57333e4f84265b9b6363da4f7cf70f5622dd1e2fde7a0bd5/alembic-1.20.1-py3-none-any.whl.metadata
+128.7 
+128.7 [notice] A new release of pip is available: 26.2.1 -> 26.2.2
+128.7 [notice] To update, run: pip install --upgrade pip
+128.7 error: connection-failed
+128.7 
+128.7 × Failed to connect to files.pythonhosted.org while fetching https://files.pythonhosted.org/packages/11/3c/8740f5b4e1bd57333e4f84265b9b6363da4f7cf70f5622dd1e2fde7a0bd5/alembic-1.20.1-py3-none-any.whl.metadata
+128.7 ╰─> Failed to resolve IP address for 'files.pythonhosted.org' ([Errno -3] Temporary failure in name resolution)
+128.7 
+128.7 hint: Are you connected to the Internet? If so, check whether your system can connect to files.pythonhosted.org before trying again. There may be a firewall or proxy that's preventing the connection.
+------
+Dockerfile:9
+--------------------
+   7 |     COPY requirements.lock /requirements.lock
+   8 |     USER 65534:65534
+   9 | >>> RUN python -m pip --isolated install --no-cache-dir --only-binary=:all: --no-deps --index-url=https://pypi.org/simple -r /requirements.lock && python -m pip check
+  10 |     WORKDIR /src
+  11 |     
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c python -m pip --isolated install --no-cache-dir --only-binary=:all: --no-deps --index-url=https://pypi.org/simple -r /requirements.lock && python -m pip check" did not complete successfully: exit code: 1

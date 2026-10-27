@@ -1,0 +1,20 @@
+tests/test_actions.py::test_policy_matrix_by_risk
+tests/test_actions.py::test_policy_kill_switch_and_deny_list
+tests/test_actions.py::test_kill_switch_blocks_execution_of_approved_request
+tests/test_actions.py::test_handler_recheck_denies_when_switch_flips_after_enqueue
+tests/test_actions.py::test_low_risk_auto_approval_and_agent_requests
+tests/test_agents_tools.py::test_registry_contents
+tests/test_agents_tools.py::test_action_tools
+tests/test_simulator.py::test_full_run_through_the_api_reports_coverage_and_leaves_no_trace
+tests/test_actions.py::test_agent_originated_request_never_auto_approved
+tests/test_actions.py::test_propose_action_tool_creates_pending_request
+tests/test_actions.py::test_full_lifecycle_request_approve_twice_execute_rollback
+tests/test_autoresponse.py::test_policy_autonomous_guardrails
+tests/test_autoresponse.py::test_nothing_happens_until_tenant_opts_in
+tests/test_autoresponse.py::test_guardrails_skip_escalate_cap_and_deny
+tests/test_autoresponse.py::test_blast_radius_and_tenant_cap_and_kill_switch
+tests/test_simulator.py::test_evasion_variant_reveals_gaps
+tests/test_simulator.py::test_disabled_rule_shows_as_gap
+tests/test_simulator.py::test_purge_refuses_real_tenants
+
+18 tests collected in 0.32s

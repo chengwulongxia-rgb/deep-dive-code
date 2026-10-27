@@ -1,0 +1,18 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.16, pytest-9.1.1, pluggy-1.7.0 -- /usr/local/bin/python
+rootdir: /src
+configfile: pytest.ini
+plugins: asyncio-1.4.1, respx-0.23.1, anyio-4.15.1
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+collecting ... collected 8 items
+
+tests/test_actions.py::test_policy_matrix_by_risk PASSED                 [ 12%]
+tests/test_actions.py::test_policy_kill_switch_and_deny_list PASSED      [ 25%]
+tests/test_actions.py::test_kill_switch_blocks_execution_of_approved_request PASSED [ 37%]
+tests/test_actions.py::test_handler_recheck_denies_when_switch_flips_after_enqueue PASSED [ 50%]
+tests/test_actions.py::test_low_risk_auto_approval_and_agent_requests PASSED [ 62%]
+tests/test_agents_tools.py::test_registry_contents PASSED                [ 75%]
+tests/test_agents_tools.py::test_action_tools PASSED                     [ 87%]
+tests/test_simulator.py::test_full_run_through_the_api_reports_coverage_and_leaves_no_trace PASSED [100%]
+
+============================== 8 passed in 3.00s ===============================

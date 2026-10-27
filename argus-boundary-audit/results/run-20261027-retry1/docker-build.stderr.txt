@@ -1,0 +1,222 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 533B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.13-slim@sha256:bb2988715db2cf7ace7b53f38f3cffbef7c7046a656bee66245eb0ed386e2e81
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/5] FROM docker.io/library/python:3.13-slim@sha256:bb2988715db2cf7ace7b53f38f3cffbef7c7046a656bee66245eb0ed386e2e81
+#4 resolve docker.io/library/python:3.13-slim@sha256:bb2988715db2cf7ace7b53f38f3cffbef7c7046a656bee66245eb0ed386e2e81 0.0s done
+#4 CACHED
+
+#5 [internal] load build context
+#5 transferring context: 987B done
+#5 DONE 0.0s
+
+#6 [2/5] RUN python -m venv /opt/venv && chown -R 65534:65534 /opt/venv
+#6 DONE 2.3s
+
+#7 [3/5] COPY requirements.lock /requirements.lock
+#7 DONE 0.0s
+
+#8 [4/5] RUN python -m pip --isolated install --no-cache-dir --only-binary=:all: --no-deps --index-url=https://pypi.org/simple -r /requirements.lock && python -m pip check
+#8 1.059 Collecting alembic==1.20.1 (from -r /requirements.lock (line 1))
+#8 1.306   Downloading alembic-1.20.1-py3-none-any.whl.metadata (7.3 kB)
+#8 1.371 Collecting annotated-doc==0.0.5 (from -r /requirements.lock (line 2))
+#8 1.431   Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+#8 1.496 Collecting annotated-types==0.8.0 (from -r /requirements.lock (line 3))
+#8 1.554   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+#8 1.698 Collecting anthropic==2.3.0 (from -r /requirements.lock (line 4))
+#8 1.754   Downloading anthropic-2.3.0-py3-none-any.whl.metadata (6.0 kB)
+#8 1.831 Collecting anyio==4.15.1 (from -r /requirements.lock (line 5))
+#8 1.888   Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+#8 1.963 Collecting certifi==2026.10.23 (from -r /requirements.lock (line 6))
+#8 2.021   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+#8 2.219 Collecting cffi==2.1.1 (from -r /requirements.lock (line 7))
+#8 2.276   Downloading cffi-2.1.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+#8 2.343 Collecting click==8.5.0 (from -r /requirements.lock (line 8))
+#8 2.401   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+#8 2.626 Collecting cryptography==50.0.2 (from -r /requirements.lock (line 9))
+#8 2.684   Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.4 kB)
+#8 2.761 Collecting distro==1.9.0 (from -r /requirements.lock (line 10))
+#8 2.818   Downloading distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+#8 2.886 Collecting docstring_parser==0.18.0 (from -r /requirements.lock (line 11))
+#8 2.946   Downloading docstring_parser-0.18.0-py3-none-any.whl.metadata (3.5 kB)
+#8 3.032 Collecting fastapi==0.162.0 (from -r /requirements.lock (line 12))
+#8 3.089   Downloading fastapi-0.162.0-py3-none-any.whl.metadata (26 kB)
+#8 3.173 Collecting h11==0.16.0 (from -r /requirements.lock (line 13))
+#8 3.231   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#8 3.308 Collecting httpcore==1.0.9 (from -r /requirements.lock (line 14))
+#8 3.370   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+#8 3.449 Collecting httpcore2==2.16.0 (from -r /requirements.lock (line 15))
+#8 3.508   Downloading httpcore2-2.16.0-py3-none-any.whl.metadata (27 kB)
+#8 3.605 Collecting httptools==0.9.0 (from -r /requirements.lock (line 16))
+#8 3.662   Downloading httptools-0.9.0-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (3.5 kB)
+#8 3.921 Collecting httpx==0.28.1 (from -r /requirements.lock (line 17))
+#8 3.979   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+#8 4.045 Collecting httpx2==2.16.0 (from -r /requirements.lock (line 18))
+#8 4.103   Downloading httpx2-2.16.0-py3-none-any.whl.metadata (10 kB)
+#8 4.176 Collecting idna==3.20 (from -r /requirements.lock (line 19))
+#8 4.233   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+#8 4.299 Collecting iniconfig==2.3.1 (from -r /requirements.lock (line 20))
+#8 4.356   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+#8 4.419 Collecting itsdangerous==2.2.0 (from -r /requirements.lock (line 21))
+#8 4.477   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#8 4.600 Collecting jiter==0.18.0 (from -r /requirements.lock (line 22))
+#8 4.663   Downloading jiter-0.18.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.2 kB)
+#8 4.729 Collecting Mako==1.4.3 (from -r /requirements.lock (line 23))
+#8 4.786   Downloading mako-1.4.3-py3-none-any.whl.metadata (2.9 kB)
+#8 4.881 Collecting MarkupSafe==3.0.4 (from -r /requirements.lock (line 24))
+#8 4.941   Downloading markupsafe-3.0.4-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#8 5.028 Collecting openai==2.54.0 (from -r /requirements.lock (line 25))
+#8 5.086   Downloading openai-2.54.0-py3-none-any.whl.metadata (40 kB)
+#8 5.176 Collecting opentelemetry-api==1.45.1 (from -r /requirements.lock (line 26))
+#8 5.233   Downloading opentelemetry_api-1.45.1-py3-none-any.whl.metadata (1.4 kB)
+#8 5.300 Collecting packaging==26.3 (from -r /requirements.lock (line 27))
+#8 5.358   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+#8 5.423 Collecting pluggy==1.7.0 (from -r /requirements.lock (line 28))
+#8 5.480   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+#8 5.546 Collecting prometheus_client==0.26.0 (from -r /requirements.lock (line 29))
+#8 5.604   Downloading prometheus_client-0.26.0-py3-none-any.whl.metadata (2.1 kB)
+#8 5.672 Collecting psycopg==3.3.6 (from -r /requirements.lock (line 30))
+#8 5.732   Downloading psycopg-3.3.6-py3-none-any.whl.metadata (4.4 kB)
+#8 5.897 Collecting psycopg-binary==3.3.6 (from -r /requirements.lock (line 31))
+#8 5.956   Downloading psycopg_binary-3.3.6-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.7 kB)
+#8 6.019 Collecting pycparser==3.12 (from -r /requirements.lock (line 32))
+#8 6.077   Downloading pycparser-3.12-py3-none-any.whl.metadata (9.7 kB)
+#8 6.202 Collecting pydantic==2.14.1 (from -r /requirements.lock (line 33))
+#8 6.262   Downloading pydantic-2.14.1-py3-none-any.whl.metadata (133 kB)
+#8 6.398 Collecting pydantic-settings==2.16.1 (from -r /requirements.lock (line 34))
+#8 6.456   Downloading pydantic_settings-2.16.1-py3-none-any.whl.metadata (4.0 kB)
+#8 7.065 Collecting pydantic_core==2.50.1 (from -r /requirements.lock (line 35))
+#8 7.126   Downloading pydantic_core-2.50.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.5 kB)
+#8 7.213 Collecting Pygments==2.21.0 (from -r /requirements.lock (line 36))
+#8 7.282   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+#8 7.359 Collecting PyJWT==2.15.1 (from -r /requirements.lock (line 37))
+#8 7.426   Downloading pyjwt-2.15.1-py3-none-any.whl.metadata (3.5 kB)
+#8 7.511 Collecting pytest==9.1.1 (from -r /requirements.lock (line 38))
+#8 7.576   Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+#8 7.674 Collecting pytest-asyncio==1.4.1 (from -r /requirements.lock (line 39))
+#8 7.732   Downloading pytest_asyncio-1.4.1-py3-none-any.whl.metadata (4.4 kB)
+#8 7.819 Collecting python-dotenv==1.2.4 (from -r /requirements.lock (line 40))
+#8 7.876   Downloading python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
+#8 7.982 Collecting PyYAML==6.0.3 (from -r /requirements.lock (line 41))
+#8 8.051   Downloading pyyaml-6.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#8 8.124 Collecting redis==5.3.1 (from -r /requirements.lock (line 42))
+#8 8.182   Downloading redis-5.3.1-py3-none-any.whl.metadata (9.2 kB)
+#8 8.268 Collecting respx==0.23.1 (from -r /requirements.lock (line 43))
+#8 8.348   Downloading respx-0.23.1-py2.py3-none-any.whl.metadata (4.3 kB)
+#8 8.421 Collecting sniffio==1.3.1 (from -r /requirements.lock (line 44))
+#8 8.480   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+#8 8.743 Collecting SQLAlchemy==2.1.6 (from -r /requirements.lock (line 45))
+#8 8.822   Downloading sqlalchemy-2.1.6-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (9.7 kB)
+#8 8.918 Collecting starlette==1.10.0 (from -r /requirements.lock (line 46))
+#8 8.976   Downloading starlette-1.10.0-py3-none-any.whl.metadata (6.6 kB)
+#8 9.061 Collecting tqdm==4.70.1 (from -r /requirements.lock (line 47))
+#8 9.120   Downloading tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+#8 9.213 Collecting truststore==0.10.5 (from -r /requirements.lock (line 48))
+#8 9.270   Downloading truststore-0.10.5-py3-none-any.whl.metadata (4.5 kB)
+#8 9.343 Collecting typing-inspection==0.4.4 (from -r /requirements.lock (line 49))
+#8 9.410   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+#8 9.487 Collecting typing_extensions==4.16.0 (from -r /requirements.lock (line 50))
+#8 9.544   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+#8 9.617 Collecting uvicorn==0.54.0 (from -r /requirements.lock (line 51))
+#8 9.676   Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+#8 9.792 Collecting uvloop==0.23.0 (from -r /requirements.lock (line 52))
+#8 9.853   Downloading uvloop-0.23.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.1 kB)
+#8 9.969 Collecting watchfiles==1.3.0 (from -r /requirements.lock (line 53))
+#8 10.03   Downloading watchfiles-1.3.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#8 10.18 Collecting websockets==17.3 (from -r /requirements.lock (line 54))
+#8 10.24   Downloading websockets-17.3-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.3 kB)
+#8 10.33 Downloading alembic-1.20.1-py3-none-any.whl (270 kB)
+#8 10.46 Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+#8 10.53 Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+#8 10.60 Downloading anthropic-2.3.0-py3-none-any.whl (2.2 MB)
+#8 10.74    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 15.5 MB/s  0:00:00
+#8 10.80 Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+#8 10.86 Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+#8 10.94 Downloading cffi-2.1.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (221 kB)
+#8 11.01 Downloading click-8.5.0-py3-none-any.whl (125 kB)
+#8 11.07 Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl (4.8 MB)
+#8 11.26    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 24.4 MB/s  0:00:00
+#8 11.32 Downloading distro-1.9.0-py3-none-any.whl (20 kB)
+#8 11.39 Downloading docstring_parser-0.18.0-py3-none-any.whl (22 kB)
+#8 11.45 Downloading fastapi-0.162.0-py3-none-any.whl (148 kB)
+#8 11.52 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#8 11.59 Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+#8 11.66 Downloading httpcore2-2.16.0-py3-none-any.whl (85 kB)
+#8 11.73 Downloading httptools-0.9.0-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (520 kB)
+#8 11.79 Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+#8 11.86 Downloading httpx2-2.16.0-py3-none-any.whl (97 kB)
+#8 11.92 Downloading idna-3.20-py3-none-any.whl (69 kB)
+#8 11.99 Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+#8 12.05 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#8 12.11 Downloading jiter-0.18.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (335 kB)
+#8 12.18 Downloading mako-1.4.3-py3-none-any.whl (80 kB)
+#8 12.24 Downloading markupsafe-3.0.4-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (23 kB)
+#8 12.30 Downloading openai-2.54.0-py3-none-any.whl (1.7 MB)
+#8 12.41    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 14.0 MB/s  0:00:00
+#8 12.47 Downloading opentelemetry_api-1.45.1-py3-none-any.whl (60 kB)
+#8 12.53 Downloading packaging-26.3-py3-none-any.whl (129 kB)
+#8 12.59 Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+#8 12.66 Downloading prometheus_client-0.26.0-py3-none-any.whl (64 kB)
+#8 12.72 Downloading psycopg-3.3.6-py3-none-any.whl (215 kB)
+#8 12.79 Downloading psycopg_binary-3.3.6-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.2 MB)
+#8 12.97    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 28.7 MB/s  0:00:00
+#8 13.04 Downloading pycparser-3.12-py3-none-any.whl (62 kB)
+#8 13.10 Downloading pydantic-2.14.1-py3-none-any.whl (488 kB)
+#8 13.18 Downloading pydantic_settings-2.16.1-py3-none-any.whl (80 kB)
+#8 13.24 Downloading pydantic_core-2.50.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.2 MB)
+#8 13.31    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 28.9 MB/s  0:00:00
+#8 13.37 Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+#8 13.41    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 31.0 MB/s  0:00:00
+#8 13.46 Downloading pyjwt-2.15.1-py3-none-any.whl (33 kB)
+#8 13.53 Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+#8 13.60 Downloading pytest_asyncio-1.4.1-py3-none-any.whl (17 kB)
+#8 13.66 Downloading python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+#8 13.73 Downloading pyyaml-6.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (801 kB)
+#8 13.76    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 801.6/801.6 kB 37.0 MB/s  0:00:00
+#8 13.82 Downloading redis-5.3.1-py3-none-any.whl (272 kB)
+#8 13.90 Downloading respx-0.23.1-py2.py3-none-any.whl (25 kB)
+#8 13.99 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+#8 14.05 Downloading sqlalchemy-2.1.6-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (4.7 MB)
+#8 14.20    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 30.8 MB/s  0:00:00
+#8 14.27 Downloading starlette-1.10.0-py3-none-any.whl (80 kB)
+#8 14.33 Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+#8 14.39 Downloading truststore-0.10.5-py3-none-any.whl (19 kB)
+#8 14.46 Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+#8 14.52 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+#8 14.58 Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+#8 14.65 Downloading uvloop-0.23.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (4.5 MB)
+#8 14.79    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 31.1 MB/s  0:00:00
+#8 14.85 Downloading watchfiles-1.3.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (458 kB)
+#8 14.92 Downloading websockets-17.3-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (225 kB)
+#8 15.07 Installing collected packages: websockets, watchfiles, uvloop, uvicorn, typing-inspection, typing_extensions, truststore, tqdm, starlette, SQLAlchemy, sniffio, respx, redis, PyYAML, python-dotenv, pytest-asyncio, pytest, PyJWT, Pygments, pydantic-settings, pydantic_core, pydantic, pycparser, psycopg-binary, psycopg, prometheus_client, pluggy, packaging, opentelemetry-api, openai, MarkupSafe, Mako, jiter, itsdangerous, iniconfig, idna, httpx2, httpx, httptools, httpcore2, httpcore, h11, fastapi, docstring_parser, distro, cryptography, click, cffi, certifi, anyio, anthropic, annotated-types, annotated-doc, alembic
+#8 20.75 
+#8 20.76 Successfully installed Mako-1.4.3 MarkupSafe-3.0.4 PyJWT-2.15.1 PyYAML-6.0.3 Pygments-2.21.0 SQLAlchemy-2.1.6 alembic-1.20.1 annotated-doc-0.0.5 annotated-types-0.8.0 anthropic-2.3.0 anyio-4.15.1 certifi-2026.10.23 cffi-2.1.1 click-8.5.0 cryptography-50.0.2 distro-1.9.0 docstring_parser-0.18.0 fastapi-0.162.0 h11-0.16.0 httpcore-1.0.9 httpcore2-2.16.0 httptools-0.9.0 httpx-0.28.1 httpx2-2.16.0 idna-3.20 iniconfig-2.3.1 itsdangerous-2.2.0 jiter-0.18.0 openai-2.54.0 opentelemetry-api-1.45.1 packaging-26.3 pluggy-1.7.0 prometheus_client-0.26.0 psycopg-3.3.6 psycopg-binary-3.3.6 pycparser-3.12 pydantic-2.14.1 pydantic-settings-2.16.1 pydantic_core-2.50.1 pytest-9.1.1 pytest-asyncio-1.4.1 python-dotenv-1.2.4 redis-5.3.1 respx-0.23.1 sniffio-1.3.1 starlette-1.10.0 tqdm-4.70.1 truststore-0.10.5 typing-inspection-0.4.4 typing_extensions-4.16.0 uvicorn-0.54.0 uvloop-0.23.0 watchfiles-1.3.0 websockets-17.3
+#8 20.76 
+#8 20.76 [notice] A new release of pip is available: 26.2.1 -> 26.2.2
+#8 20.76 [notice] To update, run: pip install --upgrade pip
+#8 21.34 No broken requirements found.
+#8 DONE 21.5s
+
+#9 [5/5] WORKDIR /src
+#9 DONE 0.1s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 4.0s done
+#10 exporting manifest sha256:750d1d8ccd248fe1c81ff6356c020cf6b0d1381c1f3c4acf66190bd3aa996441 done
+#10 exporting config sha256:967a16646c5a95433e3cb7495c650a37675270a26ed84f7c9df433c58e847ce3 done
+#10 exporting attestation manifest sha256:78d495d9289f44b1e2fc8d1aeeaa08262a1e470f864ef3646a06c6c458177373 0.0s done
+#10 exporting manifest list sha256:8794fff690ba7a7f9c05c265b59fd6cf8e2ff233307be60f1c1a5f64ba03989c done
+#10 naming to docker.io/library/argus-boundary-audit:12887aa1578f478cb6dfdee6d2572419 done
+#10 unpacking to docker.io/library/argus-boundary-audit:12887aa1578f478cb6dfdee6d2572419
+#10 unpacking to docker.io/library/argus-boundary-audit:12887aa1578f478cb6dfdee6d2572419 1.6s done
+#10 DONE 5.7s

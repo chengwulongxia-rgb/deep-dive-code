@@ -1,0 +1,18 @@
+{
+  "runner_tests_passed": 14,
+  "notebook_json_and_code_syntax": "passed",
+  "evidence_hashes_verified": 54,
+  "artifact_hashes_verified": 7,
+  "unique_upstream_passes": 18,
+  "runtime_isolation_readback_verified": true,
+  "root_untracked_files_before_sha256": {
+    "pyproject.toml": "aa4ee1cd7c85268f17f251a6e2ffce9b3406855ba5fbadc98353a5ebc4c7702e",
+    "uv.lock": "2c3e43b3f568136e6fefae8a0e4df017e82147c3c8987700127c90b318802a25"
+  },
+  "root_untracked_files_after_sha256": {
+    "pyproject.toml": "aa4ee1cd7c85268f17f251a6e2ffce9b3406855ba5fbadc98353a5ebc4c7702e",
+    "uv.lock": "2c3e43b3f568136e6fefae8a0e4df017e82147c3c8987700127c90b318802a25"
+  },
+  "root_files_unchanged": true,
+  "tracked_and_staged_diffs_empty": true
+}

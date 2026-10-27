@@ -1,0 +1,7 @@
+{
+  "python": "3.13.16 (main, Oct  1 2026, 21:42:25) [GCC 14.2.0]",
+  "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.41",
+  "uid": 65534,
+  "gid": 65534,
+  "ai_provider": "none"
+}

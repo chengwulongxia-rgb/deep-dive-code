@@ -1,0 +1,281 @@
+[
+    {
+        "Id": "26f1781efc6f4873b9eec7d0cafa35275ee3c77fb47a25d69cde1ab3fae62e4d",
+        "Created": "2026-10-27T06:21:50.906189082Z",
+        "Path": "python",
+        "Args": [
+            "-c",
+            "import base64,pathlib,subprocess,sys; code=subprocess.call(sys.argv[1:]); p=pathlib.Path(\"/tmp/junit.xml\"); print(\"\\nARGUS_JUNIT_BASE64:\"+base64.b64encode(p.read_bytes()).decode(),flush=True) if p.is_file() else None; sys.exit(code)",
+            "python",
+            "-m",
+            "pytest",
+            "-p",
+            "no:cacheprovider",
+            "--basetemp=/tmp/pytest",
+            "--color=no",
+            "-vv",
+            "--tb=long",
+            "--junitxml=/tmp/junit.xml",
+            "tests/test_actions.py::test_policy_matrix_by_risk",
+            "tests/test_actions.py::test_policy_kill_switch_and_deny_list",
+            "tests/test_actions.py::test_kill_switch_blocks_execution_of_approved_request",
+            "tests/test_actions.py::test_handler_recheck_denies_when_switch_flips_after_enqueue",
+            "tests/test_actions.py::test_low_risk_auto_approval_and_agent_requests",
+            "tests/test_agents_tools.py::test_registry_contents",
+            "tests/test_agents_tools.py::test_action_tools",
+            "tests/test_simulator.py::test_full_run_through_the_api_reports_coverage_and_leaves_no_trace",
+            "tests/test_actions.py::test_agent_originated_request_never_auto_approved",
+            "tests/test_actions.py::test_propose_action_tool_creates_pending_request",
+            "tests/test_actions.py::test_full_lifecycle_request_approve_twice_execute_rollback",
+            "tests/test_autoresponse.py::test_policy_autonomous_guardrails",
+            "tests/test_autoresponse.py::test_nothing_happens_until_tenant_opts_in",
+            "tests/test_autoresponse.py::test_guardrails_skip_escalate_cap_and_deny",
+            "tests/test_autoresponse.py::test_blast_radius_and_tenant_cap_and_kill_switch",
+            "tests/test_simulator.py::test_evasion_variant_reveals_gaps",
+            "tests/test_simulator.py::test_disabled_rule_shows_as_gap",
+            "tests/test_simulator.py::test_purge_refuses_real_tenants"
+        ],
+        "State": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-27T06:21:50.937288604Z",
+            "FinishedAt": "2026-10-27T06:22:00.21884514Z"
+        },
+        "Image": "sha256:bf9f74f4d8908b67fd69d516c9958032b6c3f8096ec7988d390bafc47d365ee5",
+        "ResolvConfPath": "/var/lib/docker/containers/26f1781efc6f4873b9eec7d0cafa35275ee3c77fb47a25d69cde1ab3fae62e4d/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/26f1781efc6f4873b9eec7d0cafa35275ee3c77fb47a25d69cde1ab3fae62e4d/hostname",
+        "HostsPath": "/var/lib/docker/containers/26f1781efc6f4873b9eec7d0cafa35275ee3c77fb47a25d69cde1ab3fae62e4d/hosts",
+        "LogPath": "/var/lib/docker/containers/26f1781efc6f4873b9eec7d0cafa35275ee3c77fb47a25d69cde1ab3fae62e4d/26f1781efc6f4873b9eec7d0cafa35275ee3c77fb47a25d69cde1ab3fae62e4d-json.log",
+        "Name": "/argus-boundary-1fa964cb232e4c68966bd776b018a1ac-pytest",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "none",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": [
+                "ALL"
+            ],
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": true,
+            "SecurityOpt": [
+                "no-new-privileges"
+            ],
+            "Tmpfs": {
+                "/tmp": "rw,nosuid,nodev,size=256m,mode=1777"
+            },
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 1073741824,
+            "NanoCpus": 2000000000,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 2147483648,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": 128,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "bind",
+                    "Source": "/home/wens/.hermes/cache/scratch/argus-boundary-9w77c4d5/source",
+                    "Target": "/src",
+                    "ReadOnly": true
+                }
+            ],
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/home/wens/.hermes/cache/scratch/argus-boundary-9w77c4d5/source",
+                "Destination": "/src",
+                "Mode": "",
+                "RW": false,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "26f1781efc6f",
+            "Domainname": "",
+            "User": "65534:65534",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PYTHONDONTWRITEBYTECODE=1",
+                "HOME=/tmp",
+                "AI_PROVIDER=none",
+                "PATH=/opt/venv/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.13.16",
+                "PYTHON_SHA256=f4b1bfb3c79b5bb11b8d228a12504163b4c0dab4d679828d8f5f26b6cb6ab35d"
+            ],
+            "Cmd": [
+                "python",
+                "-c",
+                "import base64,pathlib,subprocess,sys; code=subprocess.call(sys.argv[1:]); p=pathlib.Path(\"/tmp/junit.xml\"); print(\"\\nARGUS_JUNIT_BASE64:\"+base64.b64encode(p.read_bytes()).decode(),flush=True) if p.is_file() else None; sys.exit(code)",
+                "python",
+                "-m",
+                "pytest",
+                "-p",
+                "no:cacheprovider",
+                "--basetemp=/tmp/pytest",
+                "--color=no",
+                "-vv",
+                "--tb=long",
+                "--junitxml=/tmp/junit.xml",
+                "tests/test_actions.py::test_policy_matrix_by_risk",
+                "tests/test_actions.py::test_policy_kill_switch_and_deny_list",
+                "tests/test_actions.py::test_kill_switch_blocks_execution_of_approved_request",
+                "tests/test_actions.py::test_handler_recheck_denies_when_switch_flips_after_enqueue",
+                "tests/test_actions.py::test_low_risk_auto_approval_and_agent_requests",
+                "tests/test_agents_tools.py::test_registry_contents",
+                "tests/test_agents_tools.py::test_action_tools",
+                "tests/test_simulator.py::test_full_run_through_the_api_reports_coverage_and_leaves_no_trace",
+                "tests/test_actions.py::test_agent_originated_request_never_auto_approved",
+                "tests/test_actions.py::test_propose_action_tool_creates_pending_request",
+                "tests/test_actions.py::test_full_lifecycle_request_approve_twice_execute_rollback",
+                "tests/test_autoresponse.py::test_policy_autonomous_guardrails",
+                "tests/test_autoresponse.py::test_nothing_happens_until_tenant_opts_in",
+                "tests/test_autoresponse.py::test_guardrails_skip_escalate_cap_and_deny",
+                "tests/test_autoresponse.py::test_blast_radius_and_tenant_cap_and_kill_switch",
+                "tests/test_simulator.py::test_evasion_variant_reveals_gaps",
+                "tests/test_simulator.py::test_disabled_rule_shows_as_gap",
+                "tests/test_simulator.py::test_purge_refuses_real_tenants"
+            ],
+            "Image": "argus-boundary-audit:1fa964cb232e4c68966bd776b018a1ac",
+            "Volumes": null,
+            "WorkingDir": "/src",
+            "Entrypoint": null,
+            "Labels": {}
+        },
+        "NetworkSettings": {
+            "SandboxID": "",
+            "SandboxKey": "",
+            "Ports": {},
+            "Networks": {
+                "none": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "84640e42eb84f2c2edeead63398bc9108cf9826e14c62eeb5e931f25ffc1e08b",
+                    "EndpointID": "",
+                    "Gateway": "",
+                    "IPAddress": "",
+                    "MacAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:750d1d8ccd248fe1c81ff6356c020cf6b0d1381c1f3c4acf66190bd3aa996441",
+            "size": 1815,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]

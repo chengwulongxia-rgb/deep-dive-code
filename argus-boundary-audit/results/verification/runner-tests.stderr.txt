@@ -1,0 +1,19 @@
+test_archive_extracts_normal_file (test_reproduce.RunnerTests.test_archive_extracts_normal_file) ... ok
+test_archive_rejects_links (test_reproduce.RunnerTests.test_archive_rejects_links) ... ok
+test_archive_rejects_traversal (test_reproduce.RunnerTests.test_archive_rejects_traversal) ... ok
+test_build_network_is_explicit_and_not_runtime (test_reproduce.RunnerTests.test_build_network_is_explicit_and_not_runtime) ... ok
+test_fixed_selection_has_18_unique_nodes (test_reproduce.RunnerTests.test_fixed_selection_has_18_unique_nodes) ... ok
+test_junit_export_roundtrip_and_rejects_missing (test_reproduce.RunnerTests.test_junit_export_roundtrip_and_rejects_missing) ... ok
+test_junit_requires_exact_selected_passes (test_reproduce.RunnerTests.test_junit_requires_exact_selected_passes) ... ok
+test_notebook_is_local_and_compiles (test_reproduce.RunnerTests.test_notebook_is_local_and_compiles) ... ok
+test_recorder_keeps_nonzero_and_timeout_output (test_reproduce.RunnerTests.test_recorder_keeps_nonzero_and_timeout_output) ... ok
+test_runtime_is_isolated (test_reproduce.RunnerTests.test_runtime_is_isolated) ... ok
+test_source_clean_accepted (test_reproduce.RunnerTests.test_source_clean_accepted) ... ok
+test_source_rejects_dirty_and_wrong_sha (test_reproduce.RunnerTests.test_source_rejects_dirty_and_wrong_sha) ... ok
+test_source_rejects_env_even_when_ignored (test_reproduce.RunnerTests.test_source_rejects_env_even_when_ignored) ... ok
+test_source_rejects_subdirectory (test_reproduce.RunnerTests.test_source_rejects_subdirectory) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.210s
+
+OK
