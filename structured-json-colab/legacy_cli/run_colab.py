@@ -77,7 +77,8 @@ def main():
     args = parser.parse_args()
     assert args.approved_l4_20min_5cu
     here = Path(__file__).resolve().parent
-    history = here/'.private-runs'
+    history_root = here.parent if here.name == 'legacy_cli' else here
+    history = history_root/'.private-runs'
     history.mkdir(mode=0o700, exist_ok=True)
     reports = []
     for p in history.glob('*/lifecycle.json'):

@@ -37,7 +37,7 @@ class EvaluationTests(unittest.TestCase):
     def test_fixture_count_and_all_gold_validate(self):
         from pathlib import Path
         from benchmark import evaluate
-        data=json.loads(Path('fixtures.json').read_text())['cases']
+        data=json.loads(Path(__file__).with_name('fixtures.json').read_text())['cases']
         self.assertEqual(len(data),24)
         self.assertEqual(len({c['id'] for c in data}),24)
         for case in data:
@@ -86,25 +86,24 @@ class EvaluationTests(unittest.TestCase):
         self.assertAlmostEqual(summary['field_em'],6/7)
         self.assertEqual(summary['cases'],1)
 
-    def test_notebook_is_self_contained_and_matches_worker(self):
-        import ast
+    def test_notebook_native_cells_preserve_original_scoring(self):
         from pathlib import Path
-        nb=json.loads(Path('experiment.ipynb').read_text())
-        written={}
-        for cell in nb['cells']:
-            if cell['cell_type']!='code':
-                continue
-            source=''.join(cell['source'])
-            tree=ast.parse(source)
-            for node in ast.walk(tree):
-                if isinstance(node,ast.Call) and isinstance(node.func,ast.Attribute) and node.func.attr=='write_text':
-                    target=node.func.value
-                    if isinstance(target,ast.Call) and target.args and isinstance(target.args[0],ast.Constant):
-                        written[target.args[0].value]=ast.literal_eval(node.args[0])
-        for name in ['benchmark.py','fixtures.json','requirements.txt','bootstrap.py']:
-            self.assertEqual(written['/content/'+name],Path(name).read_text())
-        self.assertIn('不會自動關閉',json.dumps(nb,ensure_ascii=False))
-        self.assertNotIn('REPO_REVISION',json.dumps(nb))
+        here = Path(__file__).resolve().parent
+        root = here.parent if here.name == 'legacy_cli' else here
+        notebook = json.loads((root / 'experiment.ipynb').read_text())
+        from typing import Any
+        namespace: dict[str, Any] = {'json': json}
+        for cell in notebook['cells']:
+            tags = cell.get('metadata', {}).get('tags', [])
+            if cell['cell_type'] == 'code' and any(tag in tags for tag in ['data-definition', 'cpu-definition']):
+                exec(compile(''.join(cell['source']), '<native notebook cell>', 'exec'), namespace)
+        self.assertEqual(namespace['CASES'], json.loads((here / 'fixtures.json').read_text())['cases'])
+        evidence = root / 'results/l4-20261028T074106Z'
+        rows = [json.loads(line) for line in (evidence / 'results.jsonl').read_text().splitlines()]
+        cases = {case['id']: case for case in namespace['CASES']}
+        for row in rows:
+            self.assertEqual(namespace['evaluate'](row['attempts'][-1]['raw'], cases[row['case_id']]['gold']), row['score'])
+        self.assertEqual(namespace['summarize'](rows), json.loads((evidence / 'report.json').read_text())['summary'])
 
 if __name__ == '__main__':
     unittest.main()

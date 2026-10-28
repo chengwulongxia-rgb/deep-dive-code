@@ -1,0 +1,20 @@
+{
+  "execution_mode": "replay",
+  "new_gpu_inference": false,
+  "new_gpu_allocation": false,
+  "clean_jupyter_run_all": true,
+  "code_cells_executed": 27,
+  "cell_errors": 0,
+  "inline_figures": 2,
+  "real_saved_rows_rescored": 72,
+  "primary_summary_matches_recorded_gpu_run": true,
+  "posthoc_A_field_correct": 160,
+  "posthoc_C_field_correct": 145,
+  "source_of_truth": "experiment.ipynb",
+  "external_experiment_script_calls": false,
+  "legacy_cli_preserved": true,
+  "obsolete_notebook_generator_removed": true,
+  "original_evidence_manifest_unchanged": true,
+  "notebook_sha256": "a16ff00f742fe6cd84180c86d4bac1508fec38bd7714c29ae9fa8aae0e902c55",
+  "fresh_gpu_path_reexecuted_after_rewrite": false
+}

@@ -27,7 +27,7 @@ AI 圈子有一件事很煩：每個禮拜都有新論文說自己「突破極�
 | [`synthid-text-lab/`](./synthid-text-lab/) | SynthID 文字浮水印 | CPU 跑 96 份生成，檢出與未加水印誤報一起公開。 |
 | [`argus-boundary-audit/`](./argus-boundary-audit/) | Argus 提案與執行邊界 | 固定上游版本，停網容器重跑 18 項控制測試；附本機 Docker Notebook 入口與原始證據。 |
 | [`sdxl-colab-lifecycle/`](./sdxl-colab-lifecycle/) | SDXL → GCS 生命週期 | Colab L4 單張生圖，GCS 精確 generation／SHA256 讀回驗證與自動清理；附互動 Notebook。 |
-| [`structured-json-colab/`](./structured-json-colab/) | JSON 限制式解碼 | L4 實跑 24 題三組對照，分開原始 JSON、Schema 與內容正確率；保留 code fence 診斷與 nullable pattern 最小重現。 |
+| [`structured-json-colab/`](./structured-json-colab/) | JSON 限制式解碼 | Notebook 原生 cells：資料、模型、A/B/C 推論、評分、圖表與錯誤分析；可 replay 首輪 24 題真實輸出或選 L4 新跑。 |
 
 ### structured-json-colab
 
@@ -39,13 +39,15 @@ AI 圈子有一件事很煩：每個禮拜都有新論文說自己「突破極�
 
 **洞察**：輸出契約、parser 支援範圍與內容真實性是不同問題。CPU 另重現 lm-format-enforcer 0.11.3 在 nullable string 分支遺失 pattern 的行為；GPU 已停止，原始證據、報告和自包含 Colab Notebook 均保留。
 
+**主要入口**：[`experiment.ipynb`](./structured-json-colab/experiment.ipynb)。27 個原生 code cells 直接完成資料、模型、對照推論、評分與分析，不匯出或呼叫外部實驗腳本；預設 replay 已保存的真實輸出，改 `MODE = "fresh"` 才會做新 GPU 推論。舊 CLI 檔案保留在 `legacy_cli/` 作歷史重現，不是 Notebook 依賴。
+
 ```bash
 cd structured-json-colab
 uv sync --frozen
-uv run python -m unittest discover -s . -p 'test_*.py' -v
-uv run python verify_results.py results/l4-20261028T074106Z
-# 重評原始結果／繪圖不開 GPU；experiment.ipynb 才是互動 Colab 入口
-# 啟動新 GPU 需另確認預算，不把先前實驗授權視為永久額度
+uv run python -m unittest test_notebook_native -v
+uv run python -m unittest discover -s legacy_cli -p 'test_*.py' -v
+uv run python legacy_cli/verify_results.py results/l4-20261028T074106Z
+# CPU replay 的 Notebook Run all 已驗證；新 GPU 推論需另確認預算
 ```
 
 ### synthid-text-lab

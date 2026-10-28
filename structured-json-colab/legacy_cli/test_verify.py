@@ -11,7 +11,7 @@ class EvidenceTests(unittest.TestCase):
             d=Path(td)
             (d/'report.json').write_text(json.dumps({'status':'completed'}))
             (d/'results.jsonl').write_text('')
-            (d/'inputs.json').write_text(Path('fixtures.json').read_text())
+            (d/'inputs.json').write_text(Path(__file__).with_name('fixtures.json').read_text())
             with self.assertRaises(ValueError):
                 verify(d)
 
