@@ -1,0 +1,21 @@
+test_isolated_install_preserves_colab_packages (test_bootstrap.BootstrapTests.test_isolated_install_preserves_colab_packages) ... ok
+test_supported_transformers_and_pytorch_only_backend (test_bootstrap.BootstrapTests.test_supported_transformers_and_pytorch_only_backend) ... ok
+test_import_is_stdlib_safe_and_failure_exports (test_lifecycle.GenerateTests.test_import_is_stdlib_safe_and_failure_exports) ... ok
+test_notebook_embeds_sources_and_valid_python (test_lifecycle.NotebookTests.test_notebook_embeds_sources_and_valid_python) ... ok
+test_checksum_failure_never_writes_success (test_lifecycle.StorageTests.test_checksum_failure_never_writes_success) ... ok
+test_conflict_never_overwrites (test_lifecycle.StorageTests.test_conflict_never_overwrites) ... ok
+test_failed_manifest_prevents_any_upload (test_lifecycle.StorageTests.test_failed_manifest_prevents_any_upload) ... ok
+test_put_and_publish_success_order (test_lifecycle.StorageTests.test_put_and_publish_success_order) ... ok
+test_timeout_recovers_exact_generation_without_duplicate_upload (test_lifecycle.StorageTests.test_timeout_recovers_exact_generation_without_duplicate_upload) ... ok
+test_unsafe_prefixes_and_names_rejected (test_lifecycle.StorageTests.test_unsafe_prefixes_and_names_rejected) ... ok
+test_budget_expiry_cannot_be_swallowed_by_http_timeout_retries (test_runner.RunnerTests.test_budget_expiry_cannot_be_swallowed_by_http_timeout_retries) ... ok
+test_budget_reserves_cleanup_and_counts_failures (test_runner.RunnerTests.test_budget_reserves_cleanup_and_counts_failures) ... ok
+test_failed_generation_artifacts_are_downloaded_before_raise (test_runner.RunnerTests.test_failed_generation_artifacts_are_downloaded_before_raise) ... ok
+test_transfer_commands_use_positional_paths (test_runner.RunnerTests.test_transfer_commands_use_positional_paths) ... ok
+test_valid_archive (test_runner.RunnerTests.test_valid_archive) ... ok
+test_zip_slip_is_rejected (test_runner.RunnerTests.test_zip_slip_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.018s
+
+OK

@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+  "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+  "torch_version": "2.11.0+cu130",
+  "cuda_version": "13.0",
+  "gpu": "NVIDIA L4",
+  "packages": {
+    "diffusers": "0.35.1",
+    "transformers": "4.55.4",
+    "accelerate": "1.11.0",
+    "safetensors": "0.6.2",
+    "Pillow": "11.3.0",
+    "huggingface-hub": "0.36.0"
+  },
+  "nvidia_smi_before": "Wed Oct 28 02:04:05 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 580.82.07              Driver Version: 580.82.07      CUDA Version: 13.0     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA L4                      Off |   00000000:00:03.0 Off |                    0 |\n| N/A   54C    P8             17W /   72W |       3MiB /  23034MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+\n",
+  "load_seconds": 25.719452993999994,
+  "inference_seconds": 12.731416268999965,
+  "peak_allocated_bytes": 11237538816,
+  "peak_reserved_bytes": 15133048832,
+  "image_dimensions": [
+    1024,
+    1024
+  ],
+  "image_nonconstant": true,
+  "elapsed_seconds": 51.71665979199997
+}

@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "model": "stabilityai/stable-diffusion-xl-base-1.0",
+  "resolved_revision": "462165984030d82259a11f4367a4eed129e94a7b",
+  "files": {
+    "image.png": {
+      "sha256": "0bf591a5ea5df3b1eaad8b87f7ba392c8b9c054340d4aae5fd0e62a347ee8876",
+      "bytes": 1658346
+    },
+    "metrics.json": {
+      "sha256": "f37fd2a71afcc5a8c07bcdff390f106e8c8d77e18fc77dcc8042d3292e2cb4c0",
+      "bytes": 2430
+    },
+    "parameters.json": {
+      "sha256": "c222d1aafbe983a524b5d12d369fb4349f4e2423033a4d8400c1b5a2de5abd30",
+      "bytes": 362
+    }
+  }
+}

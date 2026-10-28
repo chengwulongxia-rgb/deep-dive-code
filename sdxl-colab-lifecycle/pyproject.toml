@@ -1,0 +1,14 @@
+[project]
+name = "sdxl-colab-lifecycle"
+version = "0.1.0"
+description = "Bounded Colab L4 generation with generation-verified GCS artifact persistence"
+requires-python = ">=3.11"
+dependencies = [
+  "google-auth[requests]==2.40.3",
+  "requests==2.32.5",
+  "Pillow==11.3.0",
+  "nbformat==5.10.4",
+]
+
+# Host orchestration only. CUDA runtime dependencies are pinned separately in
+# requirements.txt and installed inside the Colab VM; torch is supplied by Colab.

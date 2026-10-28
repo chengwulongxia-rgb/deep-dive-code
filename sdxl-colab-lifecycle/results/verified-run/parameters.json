@@ -1,0 +1,11 @@
+{
+  "model": "stabilityai/stable-diffusion-xl-base-1.0",
+  "revision": "462165984030d82259a11f4367a4eed129e94a7b",
+  "variant": "fp16",
+  "prompt": "A small wooden cabin beside a quiet mountain lake at sunrise, watercolor illustration, warm light, no text",
+  "width": 1024,
+  "height": 1024,
+  "num_inference_steps": 25,
+  "guidance_scale": 7.5,
+  "seed": 42
+}
