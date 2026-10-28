@@ -1,0 +1,5 @@
+[project]
+name="structured-json-colab"
+version="0.1.0"
+requires-python=">=3.11,<3.15"
+dependencies=["jsonschema==4.25.1", "matplotlib==3.10.6"]
