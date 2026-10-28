@@ -1,0 +1,123 @@
+case-01 C schema True fields 7 /7
+case-01 A schema False fields 0 /7
+case-01 B schema False fields 0 /7
+case-02 C schema False fields 0 /7
+case-02 A schema False fields 0 /7
+case-02 B schema False fields 0 /7
+case-03 A schema False fields 0 /7
+case-03 B schema False fields 0 /7
+case-03 C schema True fields 7 /7
+case-04 C schema True fields 7 /7
+case-04 A schema False fields 0 /7
+case-04 B schema False fields 0 /7
+case-05 C schema True fields 7 /7
+case-05 A schema False fields 0 /7
+case-05 B schema False fields 0 /7
+case-06 C schema True fields 6 /7
+case-06 A schema False fields 0 /7
+case-06 B schema False fields 0 /7
+case-07 C schema True fields 7 /7
+case-07 A schema False fields 0 /7
+case-07 B schema False fields 0 /7
+case-08 C schema True fields 7 /7
+case-08 A schema False fields 0 /7
+case-08 B schema False fields 0 /7
+case-09 A schema False fields 0 /7
+case-09 B schema False fields 0 /7
+case-09 C schema True fields 7 /7
+case-10 C schema True fields 7 /7
+case-10 A schema False fields 0 /7
+case-10 B schema False fields 0 /7
+case-11 C schema True fields 7 /7
+case-11 A schema False fields 0 /7
+case-11 B schema False fields 0 /7
+case-12 C schema True fields 6 /7
+case-12 A schema False fields 0 /7
+case-12 B schema False fields 0 /7
+case-13 C schema True fields 6 /7
+case-13 A schema False fields 0 /7
+case-13 B schema False fields 0 /7
+case-14 C schema True fields 7 /7
+case-14 A schema False fields 0 /7
+case-14 B schema False fields 0 /7
+case-15 C schema False fields 5 /7
+case-15 A schema False fields 0 /7
+case-15 B schema False fields 0 /7
+case-16 C schema True fields 7 /7
+case-16 A schema False fields 0 /7
+case-16 B schema False fields 0 /7
+case-17 A schema False fields 0 /7
+case-17 B schema False fields 0 /7
+case-17 C schema True fields 7 /7
+case-18 C schema True fields 6 /7
+case-18 A schema False fields 0 /7
+case-18 B schema False fields 0 /7
+case-19 A schema False fields 0 /7
+case-19 B schema False fields 0 /7
+case-19 C schema True fields 7 /7
+case-20 A schema False fields 0 /7
+case-20 B schema False fields 0 /7
+case-20 C schema True fields 7 /7
+case-21 C schema True fields 6 /7
+case-21 A schema False fields 0 /7
+case-21 B schema False fields 0 /7
+case-22 C schema False fields 0 /7
+case-22 A schema False fields 0 /7
+case-22 B schema False fields 0 /7
+case-23 A schema False fields 0 /7
+case-23 B schema False fields 0 /7
+case-23 C schema True fields 7 /7
+case-24 A schema False fields 0 /7
+case-24 B schema False fields 0 /7
+case-24 C schema True fields 5 /7
+{
+  "status": "completed",
+  "summary": {
+    "A": {
+      "cases": 24,
+      "json_valid": 0,
+      "schema_valid": 0,
+      "field_correct": 0,
+      "field_total": 168,
+      "field_em": 0.0,
+      "object_exact": 0,
+      "schema_valid_but_wrong": 0,
+      "retry_calls": 0,
+      "latency_mean_s": 2.3221717724166715,
+      "latency_median_s": 2.405296446499989,
+      "peak_allocated_bytes": 3151396864,
+      "peak_reserved_bytes": 3372220416
+    },
+    "B": {
+      "cases": 24,
+      "json_valid": 0,
+      "schema_valid": 0,
+      "field_correct": 0,
+      "field_total": 168,
+      "field_em": 0.0,
+      "object_exact": 0,
+      "schema_valid_but_wrong": 0,
+      "retry_calls": 24,
+      "latency_mean_s": 4.653905768333336,
+      "latency_median_s": 4.827288324999984,
+      "peak_allocated_bytes": 3164447744,
+      "peak_reserved_bytes": 3372220416
+    },
+    "C": {
+      "cases": 24,
+      "json_valid": 22,
+      "schema_valid": 21,
+      "field_correct": 145,
+      "field_total": 168,
+      "field_em": 0.8630952380952381,
+      "object_exact": 15,
+      "schema_valid_but_wrong": 6,
+      "retry_calls": 0,
+      "latency_mean_s": 3.928890578166668,
+      "latency_median_s": 4.069701467999977,
+      "peak_allocated_bytes": 3151396864,
+      "peak_reserved_bytes": 3372220416
+    }
+  }
+}
+

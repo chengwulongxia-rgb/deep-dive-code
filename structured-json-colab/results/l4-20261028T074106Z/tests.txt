@@ -1,0 +1,21 @@
+test_b_retries_format_only_once_and_includes_full_cost (test_benchmark.EvaluationTests.test_b_retries_format_only_once_and_includes_full_cost) ... ok
+test_b_reuses_a_and_never_retries_semantic_errors (test_benchmark.EvaluationTests.test_b_reuses_a_and_never_retries_semantic_errors) ... ok
+test_fixture_count_and_all_gold_validate (test_benchmark.EvaluationTests.test_fixture_count_and_all_gold_validate) ... ok
+test_notebook_is_self_contained_and_matches_worker (test_benchmark.EvaluationTests.test_notebook_is_self_contained_and_matches_worker) ... ok
+test_prompt_never_uses_gold (test_benchmark.EvaluationTests.test_prompt_never_uses_gold) ... ok
+test_rejects_duplicate_keys_nonfinite_and_fences (test_benchmark.EvaluationTests.test_rejects_duplicate_keys_nonfinite_and_fences) ... ok
+test_schema_valid_does_not_mean_correct (test_benchmark.EvaluationTests.test_schema_valid_does_not_mean_correct) ... ok
+test_summary_keeps_fixed_field_denominator (test_benchmark.EvaluationTests.test_summary_keeps_fixed_field_denominator) ... ok
+test_refuses_incomplete_experiment (test_chart.ChartTests.test_refuses_incomplete_experiment) ... ok
+test_removes_only_one_complete_markdown_json_fence (test_diagnostics.DiagnosticTests.test_removes_only_one_complete_markdown_json_fence) ... ok
+test_budget_reserves_teardown_and_counts_prior_attempts (test_runner.BudgetTests.test_budget_reserves_teardown_and_counts_prior_attempts) ... ok
+test_extract_rejects_traversal_and_symlinks (test_runner.BudgetTests.test_extract_rejects_traversal_and_symlinks) ... ok
+test_parse_usage_fails_closed (test_runner.BudgetTests.test_parse_usage_fails_closed) ... ok
+test_prior_budget_rejects_invalid_individual_attempts (test_runner.BudgetTests.test_prior_budget_rejects_invalid_individual_attempts) ... ok
+test_refuses_invalid_or_exhausted_budgets (test_runner.BudgetTests.test_refuses_invalid_or_exhausted_budgets) ... ok
+test_completed_flag_alone_cannot_pass_verification (test_verify.EvidenceTests.test_completed_flag_alone_cannot_pass_verification) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.042s
+
+OK

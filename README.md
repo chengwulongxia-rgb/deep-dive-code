@@ -27,6 +27,26 @@ AI 圈子有一件事很煩：每個禮拜都有新論文說自己「突破極�
 | [`synthid-text-lab/`](./synthid-text-lab/) | SynthID 文字浮水印 | CPU 跑 96 份生成，檢出與未加水印誤報一起公開。 |
 | [`argus-boundary-audit/`](./argus-boundary-audit/) | Argus 提案與執行邊界 | 固定上游版本，停網容器重跑 18 項控制測試；附本機 Docker Notebook 入口與原始證據。 |
 | [`sdxl-colab-lifecycle/`](./sdxl-colab-lifecycle/) | SDXL → GCS 生命週期 | Colab L4 單張生圖，GCS 精確 generation／SHA256 讀回驗證與自動清理；附互動 Notebook。 |
+| [`structured-json-colab/`](./structured-json-colab/) | JSON 限制式解碼 | L4 實跑 24 題三組對照，分開原始 JSON、Schema 與內容正確率；保留 code fence 診斷與 nullable pattern 最小重現。 |
+
+### structured-json-colab
+
+**來源**：[LM Format Enforcer](https://github.com/noamgat/lm-format-enforcer)、[Qwen2.5-1.5B-Instruct](https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct) 與 [Ubicloud 的 vLLM 工具呼叫案例](https://www.ubicloud.com/blog/fixing-tool-call-accuracy-in-vllm)。本專案是小模型機制對照，不是該部署的完整重現。
+
+**核心問題**：只用 Prompt、格式驗證後重試、逐 token 約束，能否同時保證 JSON 合法與內容正確？
+
+**結果**：Colab L4、24 筆合成中文文字、七欄。C Schema 21/24、Field EM 145/168，六筆 Schema 合法但內容錯；A／B 全部帶 code fence，嚴格解析為零，事後離線只去除完整外框後則為 Schema 23/24、Field EM 160/168。原始分數與診斷分開保存，不能宣稱 C 語義能力更強。
+
+**洞察**：輸出契約、parser 支援範圍與內容真實性是不同問題。CPU 另重現 lm-format-enforcer 0.11.3 在 nullable string 分支遺失 pattern 的行為；GPU 已停止，原始證據、報告和自包含 Colab Notebook 均保留。
+
+```bash
+cd structured-json-colab
+uv sync --frozen
+uv run python -m unittest discover -s . -p 'test_*.py' -v
+uv run python verify_results.py results/l4-20261028T074106Z
+# 重評原始結果／繪圖不開 GPU；experiment.ipynb 才是互動 Colab 入口
+# 啟動新 GPU 需另確認預算，不把先前實驗授權視為永久額度
+```
 
 ### synthid-text-lab
 

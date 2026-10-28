@@ -1,0 +1,651 @@
+{
+  "posthoc": true,
+  "method": "Remove exactly one complete json/unlabelled Markdown code fence; no extraction from prose, no JSON repair, no model calls.",
+  "primary_metrics_unchanged": true,
+  "wrappers_removed": {
+    "A": 24,
+    "B": 24,
+    "C": 0
+  },
+  "summary": {
+    "A": {
+      "cases": 24,
+      "json_valid": 24,
+      "schema_valid": 23,
+      "field_correct": 160,
+      "field_total": 168,
+      "field_em": 0.9523809523809523,
+      "object_exact": 18,
+      "schema_valid_but_wrong": 5,
+      "retry_calls": 0,
+      "latency_mean_s": 2.3221717724166715,
+      "latency_median_s": 2.405296446499989,
+      "peak_allocated_bytes": 3151396864,
+      "peak_reserved_bytes": 3372220416
+    },
+    "B": {
+      "cases": 24,
+      "json_valid": 24,
+      "schema_valid": 23,
+      "field_correct": 160,
+      "field_total": 168,
+      "field_em": 0.9523809523809523,
+      "object_exact": 18,
+      "schema_valid_but_wrong": 5,
+      "retry_calls": 24,
+      "latency_mean_s": 4.653905768333336,
+      "latency_median_s": 4.827288324999984,
+      "peak_allocated_bytes": 3164447744,
+      "peak_reserved_bytes": 3372220416
+    },
+    "C": {
+      "cases": 24,
+      "json_valid": 22,
+      "schema_valid": 21,
+      "field_correct": 145,
+      "field_total": 168,
+      "field_em": 0.8630952380952381,
+      "object_exact": 15,
+      "schema_valid_but_wrong": 6,
+      "retry_calls": 0,
+      "latency_mean_s": 3.928890578166668,
+      "latency_median_s": 4.069701467999977,
+      "peak_allocated_bytes": 3151396864,
+      "peak_reserved_bytes": 3372220416
+    }
+  },
+  "remaining_failures": [
+    {
+      "case_id": "case-02",
+      "arm": "C",
+      "schema_valid": false,
+      "errors": [
+        "Unterminated string starting at: line 7 column 28 (char 154)"
+      ],
+      "wrong_fields": [
+        "buyer",
+        "vehicle_id",
+        "amount_twd",
+        "purchase_date",
+        "condition",
+        "accessories",
+        "paid"
+      ],
+      "gold": {
+        "buyer": "林美玲",
+        "vehicle_id": "XYZ-5678",
+        "amount_twd": 850000,
+        "purchase_date": "2026-09-15",
+        "condition": "new",
+        "accessories": [
+          "行車紀錄器",
+          "腳踏墊"
+        ],
+        "paid": false
+      },
+      "parsed": null
+    },
+    {
+      "case_id": "case-06",
+      "arm": "C",
+      "schema_valid": true,
+      "errors": [],
+      "wrong_fields": [
+        "vehicle_id"
+      ],
+      "gold": {
+        "buyer": null,
+        "vehicle_id": null,
+        "amount_twd": 80000,
+        "purchase_date": null,
+        "condition": "used",
+        "accessories": [],
+        "paid": null
+      },
+      "parsed": {
+        "buyer": null,
+        "vehicle_id": "ABC123",
+        "amount_twd": 80000,
+        "purchase_date": null,
+        "condition": "used",
+        "accessories": [],
+        "paid": null
+      }
+    },
+    {
+      "case_id": "case-12",
+      "arm": "C",
+      "schema_valid": true,
+      "errors": [],
+      "wrong_fields": [
+        "paid"
+      ],
+      "gold": {
+        "buyer": "蘇婉如",
+        "vehicle_id": "DDD-0404",
+        "amount_twd": null,
+        "purchase_date": null,
+        "condition": "unknown",
+        "accessories": [],
+        "paid": false
+      },
+      "parsed": {
+        "buyer": "蘇婉如",
+        "vehicle_id": "DDD-0404",
+        "amount_twd": null,
+        "purchase_date": null,
+        "condition": "unknown",
+        "accessories": [],
+        "paid": null
+      }
+    },
+    {
+      "case_id": "case-12",
+      "arm": "A",
+      "schema_valid": true,
+      "errors": [],
+      "wrong_fields": [
+        "paid"
+      ],
+      "gold": {
+        "buyer": "蘇婉如",
+        "vehicle_id": "DDD-0404",
+        "amount_twd": null,
+        "purchase_date": null,
+        "condition": "unknown",
+        "accessories": [],
+        "paid": false
+      },
+      "parsed": {
+        "buyer": "蘇婉如",
+        "vehicle_id": "DDD-0404",
+        "amount_twd": null,
+        "purchase_date": null,
+        "condition": "unknown",
+        "accessories": [],
+        "paid": null
+      }
+    },
+    {
+      "case_id": "case-12",
+      "arm": "B",
+      "schema_valid": true,
+      "errors": [],
+      "wrong_fields": [
+        "paid"
+      ],
+      "gold": {
+        "buyer": "蘇婉如",
+        "vehicle_id": "DDD-0404",
+        "amount_twd": null,
+        "purchase_date": null,
+        "condition": "unknown",
+        "accessories": [],
+        "paid": false
+      },
+      "parsed": {
+        "buyer": "蘇婉如",
+        "vehicle_id": "DDD-0404",
+        "amount_twd": null,
+        "purchase_date": null,
+        "condition": "unknown",
+        "accessories": [],
+        "paid": null
+      }
+    },
+    {
+      "case_id": "case-13",
+      "arm": "C",
+      "schema_valid": true,
+      "errors": [],
+      "wrong_fields": [
+        "purchase_date"
+      ],
+      "gold": {
+        "buyer": "趙志強",
+        "vehicle_id": "EEE-0505",
+        "amount_twd": 200000,
+        "purchase_date": "2026-01-02",
+        "condition": "used",
+        "accessories": [],
+        "paid": true
+      },
+      "parsed": {
+        "buyer": "趙志強",
+        "vehicle_id": "EEE-0505",
+        "amount_twd": 200000,
+        "purchase_date": "2026-01-10",
+        "condition": "used",
+        "accessories": [],
+        "paid": true
+      }
+    },
+    {
+      "case_id": "case-13",
+      "arm": "A",
+      "schema_valid": true,
+      "errors": [],
+      "wrong_fields": [
+        "purchase_date"
+      ],
+      "gold": {
+        "buyer": "趙志強",
+        "vehicle_id": "EEE-0505",
+        "amount_twd": 200000,
+        "purchase_date": "2026-01-02",
+        "condition": "used",
+        "accessories": [],
+        "paid": true
+      },
+      "parsed": {
+        "buyer": "趙志強",
+        "vehicle_id": "EEE-0505",
+        "amount_twd": 200000,
+        "purchase_date": "2026-01-10",
+        "condition": "used",
+        "accessories": [],
+        "paid": true
+      }
+    },
+    {
+      "case_id": "case-13",
+      "arm": "B",
+      "schema_valid": true,
+      "errors": [],
+      "wrong_fields": [
+        "purchase_date"
+      ],
+      "gold": {
+        "buyer": "趙志強",
+        "vehicle_id": "EEE-0505",
+        "amount_twd": 200000,
+        "purchase_date": "2026-01-02",
+        "condition": "used",
+        "accessories": [],
+        "paid": true
+      },
+      "parsed": {
+        "buyer": "趙志強",
+        "vehicle_id": "EEE-0505",
+        "amount_twd": 200000,
+        "purchase_date": "2026-01-10",
+        "condition": "used",
+        "accessories": [],
+        "paid": true
+      }
+    },
+    {
+      "case_id": "case-15",
+      "arm": "C",
+      "schema_valid": false,
+      "errors": [
+        "'114-12-30' does not match '^[0-9]{4}-[0-9]{2}-[0-9]{2}$'"
+      ],
+      "wrong_fields": [
+        "amount_twd",
+        "purchase_date"
+      ],
+      "gold": {
+        "buyer": "高文雄",
+        "vehicle_id": "GGG-0707",
+        "amount_twd": 188000,
+        "purchase_date": "2025-12-30",
+        "condition": "used",
+        "accessories": [],
+        "paid": false
+      },
+      "parsed": {
+        "buyer": "高文雄",
+        "vehicle_id": "GGG-0707",
+        "amount_twd": 18800,
+        "purchase_date": "114-12-30",
+        "condition": "used",
+        "accessories": [],
+        "paid": false
+      }
+    },
+    {
+      "case_id": "case-15",
+      "arm": "A",
+      "schema_valid": false,
+      "errors": [
+        "'114-12-30' does not match '^[0-9]{4}-[0-9]{2}-[0-9]{2}$'"
+      ],
+      "wrong_fields": [
+        "amount_twd",
+        "purchase_date"
+      ],
+      "gold": {
+        "buyer": "高文雄",
+        "vehicle_id": "GGG-0707",
+        "amount_twd": 188000,
+        "purchase_date": "2025-12-30",
+        "condition": "used",
+        "accessories": [],
+        "paid": false
+      },
+      "parsed": {
+        "buyer": "高文雄",
+        "vehicle_id": "GGG-0707",
+        "amount_twd": 18800,
+        "purchase_date": "114-12-30",
+        "condition": "used",
+        "accessories": [],
+        "paid": false
+      }
+    },
+    {
+      "case_id": "case-15",
+      "arm": "B",
+      "schema_valid": false,
+      "errors": [
+        "'114-12-30' does not match '^[0-9]{4}-[0-9]{2}-[0-9]{2}$'"
+      ],
+      "wrong_fields": [
+        "amount_twd",
+        "purchase_date"
+      ],
+      "gold": {
+        "buyer": "高文雄",
+        "vehicle_id": "GGG-0707",
+        "amount_twd": 188000,
+        "purchase_date": "2025-12-30",
+        "condition": "used",
+        "accessories": [],
+        "paid": false
+      },
+      "parsed": {
+        "buyer": "高文雄",
+        "vehicle_id": "GGG-0707",
+        "amount_twd": 18800,
+        "purchase_date": "114-12-30",
+        "condition": "used",
+        "accessories": [],
+        "paid": false
+      }
+    },
+    {
+      "case_id": "case-18",
+      "arm": "C",
+      "schema_valid": true,
+      "errors": [],
+      "wrong_fields": [
+        "paid"
+      ],
+      "gold": {
+        "buyer": "鄭雅雯",
+        "vehicle_id": "JJJ-1010",
+        "amount_twd": 950000,
+        "purchase_date": "2026-03-05",
+        "condition": "new",
+        "accessories": [],
+        "paid": false
+      },
+      "parsed": {
+        "buyer": "鄭雅雯",
+        "vehicle_id": "JJJ-1010",
+        "amount_twd": 950000,
+        "purchase_date": "2026-03-05",
+        "condition": "new",
+        "accessories": [],
+        "paid": null
+      }
+    },
+    {
+      "case_id": "case-18",
+      "arm": "A",
+      "schema_valid": true,
+      "errors": [],
+      "wrong_fields": [
+        "paid"
+      ],
+      "gold": {
+        "buyer": "鄭雅雯",
+        "vehicle_id": "JJJ-1010",
+        "amount_twd": 950000,
+        "purchase_date": "2026-03-05",
+        "condition": "new",
+        "accessories": [],
+        "paid": false
+      },
+      "parsed": {
+        "buyer": "鄭雅雯",
+        "vehicle_id": "JJJ-1010",
+        "amount_twd": 950000,
+        "purchase_date": "2026-03-05",
+        "condition": "new",
+        "accessories": [],
+        "paid": null
+      }
+    },
+    {
+      "case_id": "case-18",
+      "arm": "B",
+      "schema_valid": true,
+      "errors": [],
+      "wrong_fields": [
+        "paid"
+      ],
+      "gold": {
+        "buyer": "鄭雅雯",
+        "vehicle_id": "JJJ-1010",
+        "amount_twd": 950000,
+        "purchase_date": "2026-03-05",
+        "condition": "new",
+        "accessories": [],
+        "paid": false
+      },
+      "parsed": {
+        "buyer": "鄭雅雯",
+        "vehicle_id": "JJJ-1010",
+        "amount_twd": 950000,
+        "purchase_date": "2026-03-05",
+        "condition": "new",
+        "accessories": [],
+        "paid": null
+      }
+    },
+    {
+      "case_id": "case-21",
+      "arm": "C",
+      "schema_valid": true,
+      "errors": [],
+      "wrong_fields": [
+        "accessories"
+      ],
+      "gold": {
+        "buyer": "曾信宏",
+        "vehicle_id": "MMM-1313",
+        "amount_twd": 1100000,
+        "purchase_date": "2026-05-01",
+        "condition": "new",
+        "accessories": [
+          "腳踏墊"
+        ],
+        "paid": true
+      },
+      "parsed": {
+        "buyer": "曾信宏",
+        "vehicle_id": "MMM-1313",
+        "amount_twd": 1100000,
+        "purchase_date": "2026-05-01",
+        "condition": "new",
+        "accessories": [],
+        "paid": true
+      }
+    },
+    {
+      "case_id": "case-21",
+      "arm": "A",
+      "schema_valid": true,
+      "errors": [],
+      "wrong_fields": [
+        "accessories"
+      ],
+      "gold": {
+        "buyer": "曾信宏",
+        "vehicle_id": "MMM-1313",
+        "amount_twd": 1100000,
+        "purchase_date": "2026-05-01",
+        "condition": "new",
+        "accessories": [
+          "腳踏墊"
+        ],
+        "paid": true
+      },
+      "parsed": {
+        "buyer": "曾信宏",
+        "vehicle_id": "MMM-1313",
+        "amount_twd": 1100000,
+        "purchase_date": "2026-05-01",
+        "condition": "new",
+        "accessories": [],
+        "paid": true
+      }
+    },
+    {
+      "case_id": "case-21",
+      "arm": "B",
+      "schema_valid": true,
+      "errors": [],
+      "wrong_fields": [
+        "accessories"
+      ],
+      "gold": {
+        "buyer": "曾信宏",
+        "vehicle_id": "MMM-1313",
+        "amount_twd": 1100000,
+        "purchase_date": "2026-05-01",
+        "condition": "new",
+        "accessories": [
+          "腳踏墊"
+        ],
+        "paid": true
+      },
+      "parsed": {
+        "buyer": "曾信宏",
+        "vehicle_id": "MMM-1313",
+        "amount_twd": 1100000,
+        "purchase_date": "2026-05-01",
+        "condition": "new",
+        "accessories": [],
+        "paid": true
+      }
+    },
+    {
+      "case_id": "case-22",
+      "arm": "C",
+      "schema_valid": false,
+      "errors": [
+        "Invalid control character at: line 7 column 29 (char 156)"
+      ],
+      "wrong_fields": [
+        "buyer",
+        "vehicle_id",
+        "amount_twd",
+        "purchase_date",
+        "condition",
+        "accessories",
+        "paid"
+      ],
+      "gold": {
+        "buyer": "謝宜君",
+        "vehicle_id": "NNN-1414",
+        "amount_twd": 220000,
+        "purchase_date": "2026-05-02",
+        "condition": "used",
+        "accessories": [
+          "車罩",
+          "備用鑰匙"
+        ],
+        "paid": false
+      },
+      "parsed": null
+    },
+    {
+      "case_id": "case-24",
+      "arm": "A",
+      "schema_valid": true,
+      "errors": [],
+      "wrong_fields": [
+        "buyer",
+        "paid"
+      ],
+      "gold": {
+        "buyer": "鍾欣怡",
+        "vehicle_id": "PPP-1616",
+        "amount_twd": 260000,
+        "purchase_date": "2026-05-04",
+        "condition": "used",
+        "accessories": [],
+        "paid": true
+      },
+      "parsed": {
+        "buyer": "王大明",
+        "vehicle_id": "PPP-1616",
+        "amount_twd": 260000,
+        "purchase_date": "2026-05-04",
+        "condition": "used",
+        "accessories": [],
+        "paid": false
+      }
+    },
+    {
+      "case_id": "case-24",
+      "arm": "B",
+      "schema_valid": true,
+      "errors": [],
+      "wrong_fields": [
+        "buyer",
+        "paid"
+      ],
+      "gold": {
+        "buyer": "鍾欣怡",
+        "vehicle_id": "PPP-1616",
+        "amount_twd": 260000,
+        "purchase_date": "2026-05-04",
+        "condition": "used",
+        "accessories": [],
+        "paid": true
+      },
+      "parsed": {
+        "buyer": "王大明",
+        "vehicle_id": "PPP-1616",
+        "amount_twd": 260000,
+        "purchase_date": "2026-05-04",
+        "condition": "used",
+        "accessories": [],
+        "paid": false
+      }
+    },
+    {
+      "case_id": "case-24",
+      "arm": "C",
+      "schema_valid": true,
+      "errors": [],
+      "wrong_fields": [
+        "buyer",
+        "paid"
+      ],
+      "gold": {
+        "buyer": "鍾欣怡",
+        "vehicle_id": "PPP-1616",
+        "amount_twd": 260000,
+        "purchase_date": "2026-05-04",
+        "condition": "used",
+        "accessories": [],
+        "paid": true
+      },
+      "parsed": {
+        "buyer": "王大明",
+        "vehicle_id": "PPP-1616",
+        "amount_twd": 260000,
+        "purchase_date": "2026-05-04",
+        "condition": "used",
+        "accessories": [],
+        "paid": false
+      }
+    }
+  ],
+  "warning": "Diagnostic only, introduced after inspecting raw outputs. Not a preregistered fourth model arm. Latency/VRAM copied from original generation, not a new measurement."
+}

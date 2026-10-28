@@ -1,0 +1,245 @@
+{
+  "status": "completed",
+  "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+  "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "seed": 42,
+  "git_commit": "7b2b55d3f626eb5504593f8479dd63547be10cf7",
+  "fixture_sha256": "1349646cfbef0faac427970ed5da7d6212497f6ef70cfdd42265cc9bf4df8cc9",
+  "worker_sha256": "75518ab2c7924f186215a798923979ca210fae0efff127ae91db37474bc13802",
+  "cases_requested": 24,
+  "fields_per_case": 7,
+  "max_new_tokens": 256,
+  "decoding": "greedy; fp16; identical common prompt; C adds LM Format Enforcer token filter",
+  "latency_definition": "tokenization + C parser/filter construction + GPU generation + decoding, CUDA synchronized; excludes model load/shared tokenizer index/warmup/schema validation. B sums initial A plus retry if required.",
+  "provenance": "Synthetic Chinese vehicle-sale text authored before inference; not real records, not image OCR, not an independently sampled benchmark.",
+  "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "buyer",
+      "vehicle_id",
+      "amount_twd",
+      "purchase_date",
+      "condition",
+      "accessories",
+      "paid"
+    ],
+    "properties": {
+      "buyer": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "vehicle_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "amount_twd": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "purchase_date": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+      },
+      "condition": {
+        "type": "string",
+        "enum": [
+          "new",
+          "used",
+          "unknown"
+        ]
+      },
+      "accessories": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "paid": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      }
+    }
+  },
+  "limitations": [
+    "24 synthetic hand-authored Chinese texts; not image OCR or representative deployment data",
+    "single model/revision/seed; no statistical generalization or production guarantees",
+    "C enforces the supported schema subset but is independently validated; truncation can fail",
+    "B shares A first attempt; cost reflects a logical B request, not extra physical generation",
+    "absolute memory peaks include weights and allocator cache, not only incremental mask overhead"
+  ],
+  "environment": {
+    "python": "3.13.16",
+    "gpu": "NVIDIA L4, 23034 MiB, 580.82.07",
+    "torch": "2.11.0+cu130",
+    "cuda": "13.0",
+    "dependencies": {
+      "transformers": "4.55.4",
+      "lm-format-enforcer": "0.11.3",
+      "jsonschema": "4.25.1",
+      "tokenizers": "0.21.4",
+      "huggingface-hub": "0.36.2"
+    }
+  },
+  "model_load_seconds": 16.67202320199999,
+  "tokenizer_index_seconds": 5.4930025069999715,
+  "warmup_seconds": 5.3019972349999875,
+  "order_by_case": {
+    "case-01": [
+      "C",
+      "A"
+    ],
+    "case-02": [
+      "C",
+      "A"
+    ],
+    "case-03": [
+      "A",
+      "C"
+    ],
+    "case-04": [
+      "C",
+      "A"
+    ],
+    "case-05": [
+      "C",
+      "A"
+    ],
+    "case-06": [
+      "C",
+      "A"
+    ],
+    "case-07": [
+      "C",
+      "A"
+    ],
+    "case-08": [
+      "C",
+      "A"
+    ],
+    "case-09": [
+      "A",
+      "C"
+    ],
+    "case-10": [
+      "C",
+      "A"
+    ],
+    "case-11": [
+      "C",
+      "A"
+    ],
+    "case-12": [
+      "C",
+      "A"
+    ],
+    "case-13": [
+      "C",
+      "A"
+    ],
+    "case-14": [
+      "C",
+      "A"
+    ],
+    "case-15": [
+      "C",
+      "A"
+    ],
+    "case-16": [
+      "C",
+      "A"
+    ],
+    "case-17": [
+      "A",
+      "C"
+    ],
+    "case-18": [
+      "C",
+      "A"
+    ],
+    "case-19": [
+      "A",
+      "C"
+    ],
+    "case-20": [
+      "A",
+      "C"
+    ],
+    "case-21": [
+      "C",
+      "A"
+    ],
+    "case-22": [
+      "C",
+      "A"
+    ],
+    "case-23": [
+      "A",
+      "C"
+    ],
+    "case-24": [
+      "A",
+      "C"
+    ]
+  },
+  "elapsed_seconds": 240.29492896600001,
+  "records_written": 72,
+  "summary": {
+    "A": {
+      "cases": 24,
+      "json_valid": 0,
+      "schema_valid": 0,
+      "field_correct": 0,
+      "field_total": 168,
+      "field_em": 0.0,
+      "object_exact": 0,
+      "schema_valid_but_wrong": 0,
+      "retry_calls": 0,
+      "latency_mean_s": 2.3221717724166715,
+      "latency_median_s": 2.405296446499989,
+      "peak_allocated_bytes": 3151396864,
+      "peak_reserved_bytes": 3372220416
+    },
+    "B": {
+      "cases": 24,
+      "json_valid": 0,
+      "schema_valid": 0,
+      "field_correct": 0,
+      "field_total": 168,
+      "field_em": 0.0,
+      "object_exact": 0,
+      "schema_valid_but_wrong": 0,
+      "retry_calls": 24,
+      "latency_mean_s": 4.653905768333336,
+      "latency_median_s": 4.827288324999984,
+      "peak_allocated_bytes": 3164447744,
+      "peak_reserved_bytes": 3372220416
+    },
+    "C": {
+      "cases": 24,
+      "json_valid": 22,
+      "schema_valid": 21,
+      "field_correct": 145,
+      "field_total": 168,
+      "field_em": 0.8630952380952381,
+      "object_exact": 15,
+      "schema_valid_but_wrong": 6,
+      "retry_calls": 0,
+      "latency_mean_s": 3.928890578166668,
+      "latency_median_s": 4.069701467999977,
+      "peak_allocated_bytes": 3151396864,
+      "peak_reserved_bytes": 3372220416
+    }
+  }
+}

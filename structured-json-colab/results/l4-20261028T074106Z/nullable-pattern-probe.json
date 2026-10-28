@@ -1,0 +1,6 @@
+{
+  "version": "0.11.3",
+  "prefix": "\"114",
+  "string_schema_allows_premature_hyphen": false,
+  "nullable_string_schema_allows_premature_hyphen": true
+}

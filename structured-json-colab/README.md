@@ -53,9 +53,33 @@ uv run python build_notebook.py
 
 本機測試不載入模型、不配置 GPU。單元測試中的替身只測評分／重試邏輯，絕不當作實驗輸出。
 
-## 執行狀態
+## 實測結果（2026-10-28）
 
-尚未開始 GPU 實測。完成後在此補上真實結果與保存路徑，不能以預期數字替代。
+已在真正的 Colab L4 完成 24 題 × 3 組，共 72 筆結果；生命週期 369.583 秒，帳面餘額減少 0.13 CU，保守速率估算 0.1581 CU，執行階段已停止。16 項本機測試通過，另完成固定版本 CPU parser 探針。
+
+**嚴格原始輸出**：A／B 都因 24/24 筆 Markdown code fence 而無法直接當 JSON 解析；C Schema 21/24、Field EM 145/168（86.31%）、整筆正確 15/24，其中六筆 Schema 合法但內容錯誤。
+
+**事後、離線去除單層完整 code fence 的診斷**：A／B Schema 23/24、Field EM 160/168（95.24%）；C 不變。這不是新推論組、不修改原始分數，也不支持「C 比 A 更會擷取內容」。
+
+另外以 CPU 重現 lm-format-enforcer 0.11.3 在 `type: ["string", "null"]` 分支丟失 `pattern` 的行為，說明為何不能以套件名稱代替獨立 Schema 驗證。兩筆 C 的未完成中文字串根因尚未定位；未為了漂亮分數重跑或換 Gold。
+
+- [完整報告與具體錯誤](results/l4-20261028T074106Z/REPORT.md)
+- [原始模型輸出](results/l4-20261028T074106Z/results.jsonl)
+- [原始摘要](results/l4-20261028T074106Z/report.json)
+- [獨立重新評分與完整性驗證](results/l4-20261028T074106Z/verification.json)
+- [原定嚴格評分圖](results/l4-20261028T074106Z/primary.png)
+- [明確標記 post-hoc 的去框診斷圖](results/l4-20261028T074106Z/posthoc.png)
+
+```bash
+# 以下都在本機 CPU 執行，不會啟動 Colab、模型或 GPU
+uv run python verify_results.py results/l4-20261028T074106Z
+uv run python diagnostics.py results/l4-20261028T074106Z
+uv run python chart.py --input results/l4-20261028T074106Z/report.json --output results/l4-20261028T074106Z/primary.png
+uv run python chart.py --input results/l4-20261028T074106Z/report.json --output results/l4-20261028T074106Z/posthoc.png --posthoc
+uv run --with lm-format-enforcer==0.11.3 python probe_nullable_pattern.py
+```
+
+本次實跑是 CLI 管理的遠端 worker；Notebook 的內嵌源碼／輸入一致性與 cell 語法已驗證，但未另行完成互動 Jupyter Run all。
 
 ## 參考
 

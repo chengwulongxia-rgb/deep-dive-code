@@ -1,0 +1,3 @@
+Notebook schema valid; code/source/fixture consistency separately tested
+
+Executed entry point: Colab CLI uploaded benchmark.py; interactive Notebook Run all was NOT separately exercised.
