@@ -1,0 +1,10 @@
+{
+  "generations_verified": 96,
+  "score_rows_recomputed": 768,
+  "thresholds_recomputed": 16,
+  "prompt_seed_leakage": false,
+  "masks_and_g_values_verified": true,
+  "nonempty_evidence": true,
+  "text_and_prompt_tokenization_verified": true,
+  "mode": "generate"
+}

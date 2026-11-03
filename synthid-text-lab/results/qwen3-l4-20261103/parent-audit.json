@@ -1,0 +1,12 @@
+{
+  "original_CPU_scorer_cross_audit": "passed",
+  "generation_count": 96,
+  "rows_recomputed": 768,
+  "thresholds_recomputed": 16,
+  "notebook_errors": 0,
+  "attempts": 3,
+  "total_allocated_runtime_seconds": 1884.8719637310132,
+  "total_runtime_minutes": 31.41,
+  "formal_runtime_minutes": 15.23,
+  "previous_run_identical_token_sequences": 96
+}

@@ -1,0 +1,46 @@
+{
+  "model_id": "Qwen/Qwen3-4B",
+  "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+  "mode": "generate",
+  "created_utc": "2026-11-03T09:28:50.117555+00:00",
+  "source_reference_sha256": {
+    "real_lab.py": "0b7a654f600cbf427c7b6f700be11776762faf9c11af11620a6168133f9e02fd",
+    "lab.py": "7cd30f2a6449ec5de1a640ae0cd99bf051c1210229ac85271580d6c54e1c76d1",
+    "audit.py": "c5fac9cf2d89c66aee020881aad4864cea802da38d067cbc1835646b8891f716",
+    "main.py": "547d40cbfbe25e74125b440346786680a48d2718af227993365171c6fe60861b"
+  },
+  "canonical_sampling_table_sha256": "03f5cf50b0ca8eac3d92997927f953debae1a0a48b6eab992f282046da8db6d1",
+  "native_notebook": "qwen3_gpu.ipynb",
+  "implementation": "Transformers 4.57.1 official processor; CPU-seeded table copied to CUDA",
+  "raw_continuation": true,
+  "chat_template_used": false,
+  "think_prefix_used": false,
+  "audit": {
+    "generations_verified": 96,
+    "score_rows_recomputed": 768,
+    "thresholds_recomputed": 16,
+    "prompt_seed_leakage": false,
+    "masks_and_g_values_verified": true,
+    "nonempty_evidence": true,
+    "text_and_prompt_tokenization_verified": true,
+    "mode": "generate"
+  },
+  "artifacts": {
+    "generations.jsonl": {
+      "bytes": 144280,
+      "sha256": "af623ec05b3658f8b827ff2872d8f99e1f315613f9c19bb57e14d88293056754"
+    },
+    "real.json": {
+      "bytes": 11084587,
+      "sha256": "b3909ce532fa02a8cc32d3653115fd9d7f1f4f42c3e66ed0b6063ace8d734111"
+    },
+    "summary.png": {
+      "bytes": 164547,
+      "sha256": "dc2ade3148201c4bdb0809d0530df35a8c92d3ed57efe143ecf874ac4962dc40"
+    },
+    "audit.json": {
+      "bytes": 267,
+      "sha256": "6ec04dcad318b86325e4f799efabb62746abaa1cf4c20e3cda7569f834ad7af1"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # SynthID Text Lab：玩具機制與公開小模型，分開驗證
 
-這不是 Claude detector。這裡沒有 Claude 的正式 watermark keys，也沒有重現 Anthropic 的私有部署；不呼叫任何付費 API，不要求、不讀取或傳送 API keys。實驗只對公開的英文 distilgpt2，在 CPU 上使用 Hugging Face Transformers 的正式 SynthID Text processor。
+這不是 Claude detector。這裡沒有 Claude 的正式 watermark keys，也沒有重現 Anthropic 的私有部署；不呼叫付費模型推論 API；Colab GPU 會消耗計算額度。既有 CPU 實驗使用公開英文 distilgpt2；新增 Qwen3-4B／L4 原生 Notebook 另存結果，兩者都使用 Hugging Face Transformers 的正式 SynthID Text processor。CPU 路徑不需要憑證；GPU Notebook 由受控主機 runner 注入 HF_TOKEN 下載模型，不把憑證寫入 Notebook 或結果。
 
 ## 快速重跑
 
@@ -159,6 +159,51 @@ HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 uv run python audit.py --replay
 小型公開英文模型、少量手寫 English prompts、公開實驗 keys，不能外推 Claude、中文品質、任意人類文字、新聞文章、強力語義改寫、對抗性攻擊或 production false-positive rate。錯 key 分數不是「文字由人類寫的」證明。未檢出不等於非 AI，檢出也不是作者身份或抄襲判決。沒有做品質盲測；這裡只測生成與統計訊號。
 
 DeepMind 明確指出 reference implementation 的 hashing **不提供 cryptographic security guarantees**；不要把可重現的 toy/HF 實驗說成不能移除的加密簽章。
+
+## 2026-11-03：Qwen3-4B／Colab L4 原生 Notebook
+
+主入口：[qwen3_gpu.ipynb](qwen3_gpu.ipynb)；[本次實際執行輸出](qwen3_gpu_output.ipynb)。核心安裝、載入、生成、評分、audit、圖表皆為原生 cells，不呼叫舊 CPU main.py。
+
+模型為 `Qwen/Qwen3-4B`，固定 revision `1cfa9a7208912126459214e8b04321603b3df60c`。GPU bfloat16、eager attention；保留原 64/128 tokens、24 calibration plain＋12 evaluation plain＋12 evaluation watermarked、全部英文提示與 seed。這是 **raw English story continuation**，不套 chat template、不加 thinking 前綴，不能稱為標準 Qwen assistant/thinking 能力評估。模型、分詞器、精度與硬體均已改變，不是 CPU 對 GPU 的單變因速度比較。
+
+### 重跑與憑證
+
+在 Colab L4 開啟 Notebook，使用新的 `/content/synthid-qwen-output` 輸出目錄，由主機安全檔案注入流程提供 kernel 環境中的 `HF_TOKEN`，然後 Run all。不要把 token 值寫進程式碼、命令列 `--env`、輸出或 Git。Notebook 不需要 Colab Secrets；下載模型會使用已注入的憑證。維持 Colab 匹配的 torch/CUDA、NumPy 與已載入 Matplotlib，Transformers 固定4.57.1；完整實際版本見 real.json。舊 CPU `uv.lock` 不拿去替換 GPU torch。
+
+CPU 和 CUDA 在相同 sampling_table_seed 下可能建出不同 table。本實驗先在 CPU 以原規則建立官方 table，再複製至 CUDA；啟動時核對完整 table 與 probe g-values，保存 table SHA-256。Qwen generation defaults 明確停用，用實驗指定的 scalar EOS、temperature=1、top_k=40、top_p=1，固定 min=max 新生成 tokens。
+
+### 正式實測結果
+
+正式資料為 **96 份生成、768 筆評分、16 組重新校準門檻**；每個長度每條件 evaluation plain/watermarked 各12份。下表每格為「檢出數/12」；plain 欄為誤報，watermarked 欄為檢出。編輯條件共享生成來源，不是額外獨立文件，各條件各自校準，沒有以一個門檻盲測未知編輯。
+
+| Source tokens | Condition | Watermarked detection | Plain false positive |
+|---:|---|---:|---:|
+| 64 | clean | 12/12 | 1/12 |
+| 64 | truncate_half | 12/12 | 1/12 |
+| 64 | delete_10pct | 7/12 | 1/12 |
+| 64 | replace_10pct | 10/12 | 2/12 |
+| 128 | clean | 12/12 | 0/12 |
+| 128 | truncate_half | 12/12 | 0/12 |
+| 128 | delete_10pct | 11/12 | 2/12 |
+| 128 | replace_10pct | 10/12 | 0/12 |
+
+![Qwen3-4B correct/wrong-key detections and false positives](results/qwen3-l4-20261103/summary.png)
+
+短文本經刪除後會漏檢：64-token 刪除組7/12，128-token 刪除組11/12；後者另有2/12未水印誤報。這不是「大模型浮水印全面可靠」的證據。錯誤 key 的全部對照與 roundtrip 診斷保留在 JSON；未編輯 watermarked 仍有1/24 decode→encode 不一致，主結論仍限 token-ID 層。這不是正式 Claude detector、不是品質盲測，也不測語義改寫或翻譯。
+
+### 驗收與執行帳
+
+正式 Notebook 零 cell errors。Notebook 自帶全量 audit；另用原 CPU `lab.py/real_lab.py` 的 scorer 對768筆 masks/g-values/scores與重新分詞分數、16組門檻獨立重算一致。原測試加 Notebook 離線測試共16項通過。
+
+正式執行含下載、生成、取回與關機約15.23分鐘；包含先前兩次環境故障的總 VM lifecycle 約31.41分鐘，沒有超過本次60分鐘上限。第一輪ensurepip缺失未生成，第二輪Matplotlib預載版本檢查失敗但CLI仍執行了96份，**明確排除於正式資料**；第三輪正式96份與第二輪逐token一致96/96，不混成192份獨立主樣本。實際合計生成192份，詳見attempts.json。全部VM已停止，未加購額度。Colab exec會在cell出錯後繼續且回exit0，所以驗收還要看下載的Notebook錯誤輸出。
+
+- [逐筆結果、環境與摘要](results/qwen3-l4-20261103/real.json)
+- [96份原始生成](results/qwen3-l4-20261103/generations.jsonl)
+- [Notebook audit](results/qwen3-l4-20261103/audit.json)／[父端交叉重算](results/qwen3-l4-20261103/parent-audit.json)
+- [三次執行帳](results/qwen3-l4-20261103/attempts.json)／[正式關機收據](results/qwen3-l4-20261103/lifecycle.json)
+- [原始下載ZIP](results/qwen3-l4-20261103/results.zip)，SHA-256 `6d89d86c5e034f46d0b0b65ee9345a21cc44a6d4a67646126e488377b751ab0d`
+
+重算不需要GPU或新生成：在Notebook首格設`MODE='replay'`，`REPLAY_SOURCE`指向解壓後的既有資料，`OUTPUT`必須使用另一個空目錄。這只重算分數與圖表，不宣稱重跑了模型。原CPU audit.py含GPT-2特定EOS/vocabulary，不能直接拿來當Qwen完整tokenizer驗收；Notebook已使用保存的Qwen參數做audit。
 
 ## 官方參考
 

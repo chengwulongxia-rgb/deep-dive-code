@@ -24,7 +24,7 @@ AI 圈子有一件事很煩：每個禮拜都有新論文說自己「突破極�
 | [`kev-local-decision-gate/`](./kev-local-decision-gate/) | Kev × 客服退款安全閘門 | 讓 decision model 理解案件，但由可審計規則決定能不能退款。 |
 | [`killswitch-can-llms-use-it/`](./killswitch-can-llms-use-it/) | KillSwitch 最小重現 | 用真正的直譯器，比對印出 7 與錯誤順序造成的空堆疊失敗。 |
 | [`php2shell-oom-to-uaf/`](./php2shell-oom-to-uaf/) | PHP2Shell 觸發階段 | 一個 multipart POST 如何在應用程式碼之前把請求解析器推到 OOM——以及沒做到的下一步。 |
-| [`synthid-text-lab/`](./synthid-text-lab/) | SynthID 文字浮水印 | CPU 跑 96 份生成，檢出與未加水印誤報一起公開。 |
+| [`synthid-text-lab/`](./synthid-text-lab/) | SynthID 文字浮水印 | CPU 與 Qwen3-4B／L4 各96份主實驗，公開檢出、漏檢與誤報；GPU附原生Notebook。 |
 | [`argus-boundary-audit/`](./argus-boundary-audit/) | Argus 提案與執行邊界 | 固定上游版本，停網容器重跑 18 項控制測試；附本機 Docker Notebook 入口與原始證據。 |
 | [`sdxl-colab-lifecycle/`](./sdxl-colab-lifecycle/) | SDXL → GCS 生命週期 | Colab L4 單張生圖，GCS 精確 generation／SHA256 讀回驗證與自動清理；附互動 Notebook。 |
 | [`structured-json-colab/`](./structured-json-colab/) | JSON 限制式解碼 | Notebook 原生 cells：資料、模型、A/B/C 推論、評分、圖表與錯誤分析；可 replay 首輪 24 題真實輸出或選 L4 新跑。 |
@@ -56,7 +56,7 @@ uv run python legacy_cli/verify_results.py results/l4-20261028T074106Z
 
 **核心問題**：浮水印取樣如何留下可偵測訊號？只有檢出成功，是否足以判斷來源？
 
-**結果**：每長度 24 份校準 negative、12 份測試 negative、12 份水印測試；兩個長度共 96 次真實生成。正確 key 的水印各條件皆檢出 12/12，但未編輯 128-token negative 誤報 3/12。
+**結果**：原CPU每長度24份校準negative、12份測試negative、12份水印測試，兩長度共96次真實生成；正確key水印各條件皆檢出12/12，但未編輯128-token negative誤報3/12。新增[Qwen3-4B／L4原生Notebook](synthid-text-lab/qwen3_gpu.ipynb)，另跑同設計96份：64-token刪除組只檢出7/12、128-token刪除組11/12且誤報2/12；768筆score與16組重新校準門檻均經CPU交叉重算，正式Notebook零cell錯誤。模型、精度、分詞器與硬體均不同，不能把差異歸因於GPU。
 
 **洞察**：分數需要校準與有效位置；token-ID 層實驗不能冒充可驗 Claude 或任意網頁文字的偵測器。
 
@@ -66,7 +66,8 @@ uv sync --locked --python 3.11
 python3 main.py                        # stdlib 玩具，不下載模型
 uv run python main.py --real --threads 4 --output results/rerun
 uv run python main.py --chart results/redrawn.png --input results/real.json
-# 零 GPU、零 API key；真實模型首次需要下載公開權重
+# 上述為 CPU 路徑；GPU 另開 synthid-text-lab/qwen3_gpu.ipynb
+# L4/已注入 HF_TOKEN；以新輸出目錄 Run all，勿把 CPU lock 套用到 GPU
 ```
 
 ### killswitch-can-llms-use-it

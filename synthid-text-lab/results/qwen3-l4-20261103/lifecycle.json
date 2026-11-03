@@ -1,0 +1,14 @@
+{
+  "session": "synthid-qwen3-20261103T091343Z",
+  "authorized_seconds": 2628,
+  "gpu_requested": "L4",
+  "hf_auth": {
+    "authenticated": true,
+    "token_file_deleted": true
+  },
+  "download_verified": true,
+  "bundle_sha256": "6d89d86c5e034f46d0b0b65ee9345a21cc44a6d4a67646126e488377b751ab0d",
+  "stopped": true,
+  "sessions_after_stop": "[colab] No active sessions found on server.\n",
+  "elapsed_seconds": 913.8692555436864
+}

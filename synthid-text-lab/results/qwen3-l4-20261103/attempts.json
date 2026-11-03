@@ -1,0 +1,34 @@
+{
+  "formal_dataset_generations": 96,
+  "excluded_environment_failed_run_generations": 96,
+  "total_actual_generations": 192,
+  "attempts": [
+    {
+      "session": "synthid-qwen3-20261103T085419Z",
+      "elapsed_seconds": 41.84286777488887,
+      "successful": false,
+      "error_type": "RuntimeError",
+      "stopped": true,
+      "primary_generations": 0,
+      "excluded_generated_sequences": 0
+    },
+    {
+      "session": "synthid-qwen3-20261103T085704Z",
+      "elapsed_seconds": 929.1598404124379,
+      "successful": false,
+      "error_type": "AssertionError",
+      "stopped": true,
+      "primary_generations": 0,
+      "excluded_generated_sequences": 96
+    },
+    {
+      "session": "synthid-qwen3-20261103T091343Z",
+      "elapsed_seconds": 913.8692555436864,
+      "successful": true,
+      "error_type": null,
+      "stopped": true,
+      "primary_generations": 96,
+      "excluded_generated_sequences": 0
+    }
+  ]
+}
