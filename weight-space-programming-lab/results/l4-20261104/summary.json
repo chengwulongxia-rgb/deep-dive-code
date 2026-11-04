@@ -1,0 +1,655 @@
+{
+  "groups": [
+    {
+      "arm": "author_p50c",
+      "budget": 8192,
+      "n": 16,
+      "correct": 2,
+      "finish_length": 13,
+      "eos_stop": 3,
+      "thinking_closed": 2,
+      "has_boxed": 2,
+      "mean_tokens": 7558.75,
+      "mean_repetition": 0.5655381840345599
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 32768,
+      "n": 16,
+      "correct": 11,
+      "finish_length": 3,
+      "eos_stop": 13,
+      "thinking_closed": 13,
+      "has_boxed": 12,
+      "mean_tokens": 19057.5,
+      "mean_repetition": 0.6932722349224544
+    },
+    {
+      "arm": "base",
+      "budget": 8192,
+      "n": 16,
+      "correct": 0,
+      "finish_length": 16,
+      "eos_stop": 0,
+      "thinking_closed": 0,
+      "has_boxed": 2,
+      "mean_tokens": 8192.0,
+      "mean_repetition": 0.6860575161802418
+    },
+    {
+      "arm": "base",
+      "budget": 32768,
+      "n": 16,
+      "correct": 0,
+      "finish_length": 16,
+      "eos_stop": 0,
+      "thinking_closed": 0,
+      "has_boxed": 2,
+      "mean_tokens": 32768.0,
+      "mean_repetition": 0.90723905081642
+    },
+    {
+      "arm": "random_control",
+      "budget": 8192,
+      "n": 16,
+      "correct": 1,
+      "finish_length": 15,
+      "eos_stop": 1,
+      "thinking_closed": 1,
+      "has_boxed": 5,
+      "mean_tokens": 8037.75,
+      "mean_repetition": 0.7173003248994131
+    },
+    {
+      "arm": "random_control",
+      "budget": 32768,
+      "n": 16,
+      "correct": 2,
+      "finish_length": 14,
+      "eos_stop": 2,
+      "thinking_closed": 2,
+      "has_boxed": 6,
+      "mean_tokens": 29455.125,
+      "mean_repetition": 0.8801828950281706
+    }
+  ],
+  "pairs": [
+    {
+      "arm": "author_p50c",
+      "budget": 8192,
+      "problem_id": "test/number_theory/459.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "random_control",
+      "budget": 8192,
+      "problem_id": "test/number_theory/459.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 8192,
+      "problem_id": "test/counting_and_probability/116.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "random_control",
+      "budget": 8192,
+      "problem_id": "test/counting_and_probability/116.json",
+      "rescue": true,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": true
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 8192,
+      "problem_id": "test/precalculus/819.json",
+      "rescue": true,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": true
+    },
+    {
+      "arm": "random_control",
+      "budget": 8192,
+      "problem_id": "test/precalculus/819.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 8192,
+      "problem_id": "test/intermediate_algebra/662.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "random_control",
+      "budget": 8192,
+      "problem_id": "test/intermediate_algebra/662.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 8192,
+      "problem_id": "test/algebra/2102.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "random_control",
+      "budget": 8192,
+      "problem_id": "test/algebra/2102.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 8192,
+      "problem_id": "test/algebra/114.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "random_control",
+      "budget": 8192,
+      "problem_id": "test/algebra/114.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 8192,
+      "problem_id": "test/prealgebra/378.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "random_control",
+      "budget": 8192,
+      "problem_id": "test/prealgebra/378.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 8192,
+      "problem_id": "test/counting_and_probability/159.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "random_control",
+      "budget": 8192,
+      "problem_id": "test/counting_and_probability/159.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 8192,
+      "problem_id": "test/number_theory/46.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "random_control",
+      "budget": 8192,
+      "problem_id": "test/number_theory/46.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 8192,
+      "problem_id": "test/algebra/694.json",
+      "rescue": true,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": true
+    },
+    {
+      "arm": "random_control",
+      "budget": 8192,
+      "problem_id": "test/algebra/694.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 8192,
+      "problem_id": "test/algebra/841.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "random_control",
+      "budget": 8192,
+      "problem_id": "test/algebra/841.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 8192,
+      "problem_id": "test/number_theory/234.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "random_control",
+      "budget": 8192,
+      "problem_id": "test/number_theory/234.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 8192,
+      "problem_id": "test/intermediate_algebra/101.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "random_control",
+      "budget": 8192,
+      "problem_id": "test/intermediate_algebra/101.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 8192,
+      "problem_id": "test/prealgebra/2086.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "random_control",
+      "budget": 8192,
+      "problem_id": "test/prealgebra/2086.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 8192,
+      "problem_id": "test/number_theory/1055.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "random_control",
+      "budget": 8192,
+      "problem_id": "test/number_theory/1055.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 8192,
+      "problem_id": "test/number_theory/978.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "random_control",
+      "budget": 8192,
+      "problem_id": "test/number_theory/978.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 32768,
+      "problem_id": "test/number_theory/459.json",
+      "rescue": true,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": true
+    },
+    {
+      "arm": "random_control",
+      "budget": 32768,
+      "problem_id": "test/number_theory/459.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 32768,
+      "problem_id": "test/counting_and_probability/116.json",
+      "rescue": true,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": true
+    },
+    {
+      "arm": "random_control",
+      "budget": 32768,
+      "problem_id": "test/counting_and_probability/116.json",
+      "rescue": true,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": true
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 32768,
+      "problem_id": "test/precalculus/819.json",
+      "rescue": true,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": true
+    },
+    {
+      "arm": "random_control",
+      "budget": 32768,
+      "problem_id": "test/precalculus/819.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 32768,
+      "problem_id": "test/intermediate_algebra/662.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "random_control",
+      "budget": 32768,
+      "problem_id": "test/intermediate_algebra/662.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 32768,
+      "problem_id": "test/algebra/2102.json",
+      "rescue": true,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": true
+    },
+    {
+      "arm": "random_control",
+      "budget": 32768,
+      "problem_id": "test/algebra/2102.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 32768,
+      "problem_id": "test/algebra/114.json",
+      "rescue": true,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": true
+    },
+    {
+      "arm": "random_control",
+      "budget": 32768,
+      "problem_id": "test/algebra/114.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 32768,
+      "problem_id": "test/prealgebra/378.json",
+      "rescue": true,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": true
+    },
+    {
+      "arm": "random_control",
+      "budget": 32768,
+      "problem_id": "test/prealgebra/378.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 32768,
+      "problem_id": "test/counting_and_probability/159.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "random_control",
+      "budget": 32768,
+      "problem_id": "test/counting_and_probability/159.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 32768,
+      "problem_id": "test/number_theory/46.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": true
+    },
+    {
+      "arm": "random_control",
+      "budget": 32768,
+      "problem_id": "test/number_theory/46.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 32768,
+      "problem_id": "test/algebra/694.json",
+      "rescue": true,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": true
+    },
+    {
+      "arm": "random_control",
+      "budget": 32768,
+      "problem_id": "test/algebra/694.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 32768,
+      "problem_id": "test/algebra/841.json",
+      "rescue": true,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": true
+    },
+    {
+      "arm": "random_control",
+      "budget": 32768,
+      "problem_id": "test/algebra/841.json",
+      "rescue": true,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": true
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 32768,
+      "problem_id": "test/number_theory/234.json",
+      "rescue": true,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": true
+    },
+    {
+      "arm": "random_control",
+      "budget": 32768,
+      "problem_id": "test/number_theory/234.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 32768,
+      "problem_id": "test/intermediate_algebra/101.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": true
+    },
+    {
+      "arm": "random_control",
+      "budget": 32768,
+      "problem_id": "test/intermediate_algebra/101.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 32768,
+      "problem_id": "test/prealgebra/2086.json",
+      "rescue": true,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": true
+    },
+    {
+      "arm": "random_control",
+      "budget": 32768,
+      "problem_id": "test/prealgebra/2086.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 32768,
+      "problem_id": "test/number_theory/1055.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "random_control",
+      "budget": 32768,
+      "problem_id": "test/number_theory/1055.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    },
+    {
+      "arm": "author_p50c",
+      "budget": 32768,
+      "problem_id": "test/number_theory/978.json",
+      "rescue": true,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": true
+    },
+    {
+      "arm": "random_control",
+      "budget": 32768,
+      "problem_id": "test/number_theory/978.json",
+      "rescue": false,
+      "regression": false,
+      "base_thinking_closed": false,
+      "edited_thinking_closed": false
+    }
+  ],
+  "total": 96
+}

@@ -1,0 +1,53 @@
+{
+  "authorized_gpu": "L4",
+  "authorized_seconds_cumulative": 3600,
+  "allocation_started": false,
+  "upstream_revision": "4d09ba6d6a7e891dd8063974dfe81b3d78e3494f",
+  "model": "Qwen/Qwen3.5-0.8B",
+  "model_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+  "dataset_revision": "6e4ed1a2a79af7d8630a6b768ec859cb5af4d3be",
+  "n_problems": 16,
+  "arms": [
+    "base",
+    "author_p50c",
+    "random_control"
+  ],
+  "max_new_tokens": [
+    8192,
+    32768
+  ],
+  "n_per_problem": 1,
+  "expected_outputs": 96,
+  "selection_manifest": "predeclared-selection.json",
+  "generation": {
+    "thinking": true,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "presence_penalty": 1.5
+  },
+  "primary_metrics": [
+    "strict_boxed_correct",
+    "finish_reason_length",
+    "thinking_closed",
+    "completion_tokens",
+    "boxed_answer_present"
+  ],
+  "not_claimed": [
+    "Astra rediscovery",
+    "raw-weight comprehension",
+    "full MATH-500 replication",
+    "new mathematical capability",
+    "all length terminations are loops"
+  ],
+  "acceptance": [
+    "base and authored edited tensor SHA256 exact match upstream",
+    "random control float32 norm-matched and post-BF16 norm/support reported",
+    "all96 full raw outputs or explicit incomplete result",
+    "CPU replay of scores and aggregates",
+    "zero unaccounted Notebook cell errors",
+    "total runtime <=3600 including failed attempts",
+    "owned VM stopped and readback absent",
+    "repo and article pushed; exact deployed SHA and live new content verified"
+  ]
+}

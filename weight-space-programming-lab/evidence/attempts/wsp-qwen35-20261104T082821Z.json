@@ -1,0 +1,19 @@
+{
+  "session": "wsp-qwen35-20261104T082821Z",
+  "gpu_requested": "L4",
+  "authorized_seconds_total": 3600,
+  "previous_seconds": 0.0,
+  "attempt_available_seconds": 3600.0,
+  "authored_sha256": "bc405350c9da5707ec72fd97dc009ae4da96c1ab7ddaa275462303cdf8032714",
+  "hf_auth": {
+    "authenticated": true,
+    "token_file_deleted": true
+  },
+  "error_type": "FileNotFoundError",
+  "error": "[Errno 2] No such file or directory: '/home/wens/outputs/weight-space-programming-20261104/wsp-qwen35-20261104T082821Z/results/COMPLETE.json'",
+  "stopped": true,
+  "sessions_after_stop": "[colab] No active sessions found on server.\n",
+  "readback_owned_absent": true,
+  "elapsed_seconds": 28.593281688168645,
+  "cumulative_elapsed_seconds": 28.593281688168645
+}

@@ -1,0 +1,25 @@
+{
+  "session": "wsp-qwen35-20261104T083716Z",
+  "gpu_requested": "L4",
+  "authorized_seconds_total": 3600,
+  "previous_seconds": 28.593281688168645,
+  "attempt_available_seconds": 3571.4067183118314,
+  "authored_sha256": "b540268fe95df554892e508f439ce601f3b29a6eaf8c2afb6d38a54e78893c19",
+  "hf_auth": {
+    "authenticated": true,
+    "token_file_deleted": true
+  },
+  "notebook_errors": [
+    {
+      "cell": 12,
+      "ename": "TypeError"
+    }
+  ],
+  "error_type": "RuntimeError",
+  "error": "Notebook cell failed; inspect executed.ipynb before downstream artifacts",
+  "stopped": true,
+  "sessions_after_stop": "[colab] No active sessions found on server.\n",
+  "readback_owned_absent": true,
+  "elapsed_seconds": 323.8444535918534,
+  "cumulative_elapsed_seconds": 352.437735280022
+}

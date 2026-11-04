@@ -1,0 +1,43 @@
+{
+  "dataset": "HuggingFaceH4/MATH-500",
+  "revision": "6e4ed1a2a79af7d8630a6b768ec859cb5af4d3be",
+  "source_sha256": "35dc41080a3680858b27fa7e0533d2d547825316fc5dafe5d316f4ccc5a06132",
+  "source_rows": 500,
+  "selection": "first16 shuffled integer indices with random.Random(20261104)",
+  "indices": [
+    451,
+    348,
+    227,
+    96,
+    212,
+    395,
+    210,
+    142,
+    70,
+    258,
+    172,
+    209,
+    484,
+    200,
+    50,
+    186
+  ],
+  "ids": [
+    "test/number_theory/459.json",
+    "test/counting_and_probability/116.json",
+    "test/precalculus/819.json",
+    "test/intermediate_algebra/662.json",
+    "test/algebra/2102.json",
+    "test/algebra/114.json",
+    "test/prealgebra/378.json",
+    "test/counting_and_probability/159.json",
+    "test/number_theory/46.json",
+    "test/algebra/694.json",
+    "test/algebra/841.json",
+    "test/number_theory/234.json",
+    "test/intermediate_algebra/101.json",
+    "test/prealgebra/2086.json",
+    "test/number_theory/1055.json",
+    "test/number_theory/978.json"
+  ]
+}

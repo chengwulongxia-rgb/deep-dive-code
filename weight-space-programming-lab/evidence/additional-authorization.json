@@ -1,0 +1,8 @@
+{
+  "approved_at": "2026-11-04T17:16:18.623528+08:00",
+  "user_response": "追加最多90分鐘：保留8,192／32,768 token的原規格",
+  "original_authorized_seconds": 3600,
+  "additional_authorized_seconds": 5400,
+  "total_authorized_seconds": 9000,
+  "previous_used_seconds": 1567.4144734945148
+}

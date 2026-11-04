@@ -28,6 +28,24 @@ AI 圈子有一件事很煩：每個禮拜都有新論文說自己「突破極�
 | [`argus-boundary-audit/`](./argus-boundary-audit/) | Argus 提案與執行邊界 | 固定上游版本，停網容器重跑 18 項控制測試；附本機 Docker Notebook 入口與原始證據。 |
 | [`sdxl-colab-lifecycle/`](./sdxl-colab-lifecycle/) | SDXL → GCS 生命週期 | Colab L4 單張生圖，GCS 精確 generation／SHA256 讀回驗證與自動清理；附互動 Notebook。 |
 | [`structured-json-colab/`](./structured-json-colab/) | JSON 限制式解碼 | Notebook 原生 cells：資料、模型、A/B/C 推論、評分、圖表與錯誤分析；可 replay 首輪 24 題真實輸出或選 L4 新跑。 |
+| [`weight-space-programming-lab/`](./weight-space-programming-lab/) | Qwen權重修改效果重播 | L4真實96筆；長上限原版0/16、作者版11/16、隨機對照2/16，附原生Notebook與CPU重播。 |
+
+### weight-space-programming-lab
+
+**來源**：[Weight-Space Programming](https://rikiyat.github.io/blog/weight-space-programming/)與[Honnibal的方法論批評](https://honnibal.dev/blog/astra-read-write-misleading)。
+
+**核心問題**：固定公開權重差分的收益，來自新數學能力、完成行為修復，還是token上限？本篇不重做Astra找修改方向。
+
+**結果**：16題、三組、兩個上限，共96筆真實生成（80+16兩輪）；8,192上限原版0/16、作者版2/16、隨機1/16，32,768上限為0/16、11/16、2/16。長上限結束思考依序0/16、13/16、2/16。所有失敗計入185.51分鐘，VM均停止。
+
+**洞察**：改善真實，但小樣本與單一隨機控制不能證明普遍新增能力；預設Notebook只CPU重播實際輸出，不重新花GPU費用。
+
+```bash
+cd weight-space-programming-lab
+uv sync --frozen --extra notebook --python 3.13
+uv run python -B -m unittest test_notebook -v
+uv run python verify_replay.py
+```
 
 ### structured-json-colab
 

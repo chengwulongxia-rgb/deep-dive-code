@@ -1,0 +1,44 @@
+{
+  "authorized_seconds": 12000,
+  "attempts": [
+    {
+      "session": "wsp-qwen35-20261104T082821Z",
+      "elapsed_seconds": 28.593281688168645,
+      "stopped": true,
+      "readback_owned_absent": true,
+      "download_verified": null
+    },
+    {
+      "session": "wsp-qwen35-20261104T083716Z",
+      "elapsed_seconds": 323.8444535918534,
+      "stopped": true,
+      "readback_owned_absent": true,
+      "download_verified": null
+    },
+    {
+      "session": "wsp-qwen35-20261104T084904Z",
+      "elapsed_seconds": 1214.9767382144928,
+      "stopped": true,
+      "readback_owned_absent": true,
+      "download_verified": false,
+      "external_stop": true,
+      "duration_basis": "session UTC name rounded down, through verified external stop readback"
+    },
+    {
+      "session": "wsp-qwen35-20261104T091737Z",
+      "elapsed_seconds": 7158.698632828891,
+      "stopped": true,
+      "readback_owned_absent": true,
+      "download_verified": null
+    },
+    {
+      "session": "wsp-qwen35-20261104T115013Z",
+      "elapsed_seconds": 2404.689114840701,
+      "stopped": true,
+      "readback_owned_absent": true,
+      "download_verified": true
+    }
+  ],
+  "additional_authorization": "additional-authorization.json",
+  "completion_authorization": "completion-authorization.json"
+}

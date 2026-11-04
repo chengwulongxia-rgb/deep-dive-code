@@ -1,0 +1,12 @@
+{
+  "session": "wsp-qwen35-20261104T084904Z",
+  "elapsed_seconds": 1214.9767382144928,
+  "stopped": true,
+  "readback_owned_absent": true,
+  "download_verified": false,
+  "external_stop": true,
+  "duration_basis": "session UTC name rounded down, through verified external stop readback",
+  "error_type": "InterruptedForBudgetPlanning",
+  "formal_generations_preserved": 16,
+  "wrapper_killed_only_after_runtime_stop_verified": true
+}

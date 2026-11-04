@@ -1,0 +1,9 @@
+[project]
+name = "weight-space-programming-lab"
+version = "0.1.0"
+description = "Native Colab sparse weight-edit replay with saved real96-output CPU verification"
+requires-python = ">=3.13,<3.14"
+dependencies = ["numpy==2.4.6", "math-verify==0.9.0", "matplotlib==3.10.0"]
+
+[project.optional-dependencies]
+notebook = ["nbclient==0.11.0", "ipykernel==7.4.0"]

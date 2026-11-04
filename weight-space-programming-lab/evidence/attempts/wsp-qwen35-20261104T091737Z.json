@@ -1,0 +1,19 @@
+{
+  "session": "wsp-qwen35-20261104T091737Z",
+  "gpu_requested": "L4",
+  "authorized_seconds_total": 9000,
+  "previous_seconds": 1567.4144734945148,
+  "attempt_available_seconds": 7432.585526505485,
+  "authored_sha256": "0ef4169b953800c8980d495719add18d1c3f01e8a660bed862355fc7f8f9e228",
+  "hf_auth": {
+    "authenticated": true,
+    "token_file_deleted": true
+  },
+  "error_type": "TimeoutExpired",
+  "error": "Command '['colab', '--auth', 'adc', '--config', '/home/wens/outputs/weight-space-programming-20261104/wsp-qwen35-20261104T091737Z/.private/sessions.json', 'exec', '-s', 'wsp-qwen35-20261104T091737Z', '-f', '/home/wens/outputs/weight-space-programming-20261104/wsp-qwen35-20261104T091737Z/authored.ipynb', '--timeout', '7063', '--env', 'WSP_DEADLINE_EPOCH=1793790989.294265']' timed out after 7068 seconds",
+  "stopped": true,
+  "sessions_after_stop": "[colab] No active sessions found on server.\n",
+  "readback_owned_absent": true,
+  "elapsed_seconds": 7158.698632828891,
+  "cumulative_elapsed_seconds": 8726.113106323406
+}

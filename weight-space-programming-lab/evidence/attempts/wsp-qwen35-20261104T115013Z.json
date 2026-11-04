@@ -1,0 +1,22 @@
+{
+  "session": "wsp-qwen35-20261104T115013Z",
+  "gpu_requested": "L4",
+  "authorized_seconds_total": 12000,
+  "previous_seconds": 8726.113106323406,
+  "attempt_available_seconds": 3273.886893676594,
+  "authored_sha256": "0c0de33cc50dae853bcc671764d9199541755898e79fcc4af8beaedd8bf6f781",
+  "hf_auth": {
+    "authenticated": true,
+    "token_file_deleted": true
+  },
+  "notebook_errors": [],
+  "bootstrap_code_cells_excluded": 2,
+  "authored_markdown_restored": true,
+  "download_verified": true,
+  "bundle_sha256": "855053d07396a8070bb1b0206b4307785867f8e76e0277de655441f240b2311c",
+  "stopped": true,
+  "sessions_after_stop": "[colab] No active sessions found on server.\n",
+  "readback_owned_absent": true,
+  "elapsed_seconds": 2404.689114840701,
+  "cumulative_elapsed_seconds": 11130.802221164107
+}
