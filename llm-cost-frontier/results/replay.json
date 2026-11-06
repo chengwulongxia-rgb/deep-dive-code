@@ -1,0 +1,26 @@
+{
+  "snapshot": "2026-10-26",
+  "calculation_date": "2026-11-02",
+  "configurations_checked": 45,
+  "target_scores": [
+    0.81,
+    0.256
+  ],
+  "baseline_usd_per_1000": 129.649245,
+  "blend_scores": [
+    0.8200000000000001,
+    0.256
+  ],
+  "blend_usd_per_1000": 75.17718400000001,
+  "saving_pct": 42.01494655830814,
+  "cheapest_eligible_single": "gpt-6-1-terra-low",
+  "relaxed_single": "gpt-6-luna",
+  "relaxed_scores": [
+    0.833333333333333,
+    0.228
+  ],
+  "relaxed_usd_per_1000": 19.367298,
+  "relaxed_passes_both": false,
+  "dual_certificate_verified": true,
+  "model_api_calls": 0
+}

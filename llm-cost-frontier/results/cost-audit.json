@@ -1,0 +1,66 @@
+{
+  "input_sha256": "39c67d819e8f69f9904db23afd257ff74fe0377151c8a4abaa430a31ab56c95e",
+  "snapshot": "2026-10-26",
+  "calculation_date": "2026-11-02",
+  "measured_configurations": 45,
+  "benchmark_metadata": {
+    "artificial-analysis-long-context-reasoning": {
+      "name": "AA-LCR v1.1",
+      "label": "Long-context reasoning"
+    },
+    "gdp-pdf": {
+      "name": "GDP.pdf",
+      "label": "Document reasoning"
+    }
+  },
+  "target": {
+    "id": "gpt-6-1-terra-low",
+    "cost": 0.129649245,
+    "scores": [
+      0.81,
+      0.256
+    ]
+  },
+  "peers": {
+    "gpt-6-1-terra-medium": {
+      "share": 0.5,
+      "cost": 0.13098707,
+      "scores": [
+        0.806666666666667,
+        0.284
+      ],
+      "name": "GPT-6.1 Terra (Medium)"
+    },
+    "gpt-6-luna": {
+      "share": 0.5,
+      "cost": 0.019367298,
+      "scores": [
+        0.833333333333333,
+        0.228
+      ],
+      "name": "GPT-6 Luna (Max)"
+    }
+  },
+  "blend_scores": [
+    0.8200000000000001,
+    0.256
+  ],
+  "blend_cost_per_1000": 75.17718400000001,
+  "baseline_cost_per_1000": 129.649245,
+  "savings_pct": 42.01494655830814,
+  "best_single": {
+    "id": "gpt-6-1-terra-low",
+    "cost_per_1000": 129.649245
+  },
+  "relaxed_control": {
+    "id": "gpt-6-luna",
+    "cost_per_1000": 19.367298,
+    "scores": [
+      0.833333333333333,
+      0.228
+    ],
+    "passes_all": false
+  },
+  "dual_certificate_verified": true,
+  "model_api_calls": 0
+}

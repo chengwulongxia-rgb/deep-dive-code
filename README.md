@@ -29,6 +29,24 @@ AI 圈子有一件事很煩：每個禮拜都有新論文說自己「突破極�
 | [`sdxl-colab-lifecycle/`](./sdxl-colab-lifecycle/) | SDXL → GCS 生命週期 | Colab L4 單張生圖，GCS 精確 generation／SHA256 讀回驗證與自動清理；附互動 Notebook。 |
 | [`structured-json-colab/`](./structured-json-colab/) | JSON 限制式解碼 | Notebook 原生 cells：資料、模型、A/B/C 推論、評分、圖表與錯誤分析；可 replay 首輪 24 題真實輸出或選 L4 新跑。 |
 | [`weight-space-programming-lab/`](./weight-space-programming-lab/) | Qwen權重修改效果重播 | L4真實96筆；長上限原版0/16、作者版11/16、隨機對照2/16，附原生Notebook與CPU重播。 |
+| [`llm-cost-frontier/`](./llm-cost-frontier/) | 模型成本混用核對 | 固定45配置，重算兩項分數門檻、混用成本與只移除一條件的失敗對照；CPU離線可跑。 |
+
+### llm-cost-frontier
+
+**來源**：[Jeffery Kline的模型成本工具](https://jeff-kline.github.io/posts/same-ai-results-for-less/index.html)，2026-11-02；資料快照2026-10-26。
+
+**核心問題**：沒有更便宜的合格單模型時，線性工作量組合能否同時保留兩項分數門檻？只取消其中一條件，又會得到什麼結果？
+
+**結果**：固定45配置，混用每千項估算75.177184美元，原配置129.649245美元；只保留AA-LCR門檻可降至19.367298美元，但GDP.pdf不再達標。這是算術與約束核對，不是新模型評測或實際帳單。
+
+**洞察**：省錢必須連同保住哪些條件一起報告。輸入快照、原始結果與本次離線重跑均收在專案內，無GPU或模型API。
+
+```bash
+cd llm-cost-frontier
+uv sync --frozen --python 3.13
+uv run --frozen python audit_cost.py data/cost-data.json
+uv run --frozen python -m unittest discover -s tests -v
+```
 
 ### weight-space-programming-lab
 
