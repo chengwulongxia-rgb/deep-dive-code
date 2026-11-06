@@ -1,0 +1,62 @@
+{
+  "verified_at": "2026-11-06T18:04:57+0800",
+  "checks": {
+    "summary_complete": true,
+    "original_paragraph_question_references_id_preserved": true,
+    "thirty_three_distinct_contexts": true,
+    "all_model_requests_serial": true,
+    "all_model_request_timeouts_below_120s": true,
+    "formal_inference_under_20_minutes": true,
+    "fresh_cells_under_35_minutes": true,
+    "ninety_real_requests_zero_paid_calls": true,
+    "explicit_cpu_localhost_commands": true,
+    "servers_no_longer_running": true,
+    "both_localhost_ports_closed": true,
+    "unchanged_audit_cost.py": true,
+    "unchanged_data/cost-data.json": true,
+    "unchanged_results/cost-audit.json": true,
+    "unchanged_results/replay.json": true,
+    "drcd_cpu.executed.ipynb_all_cells_executed_no_errors": true,
+    "drcd_cpu.replayed.ipynb_all_cells_executed_no_errors": true,
+    "small_actual_model_matches_official_lfs_sha": true,
+    "large_actual_model_matches_official_lfs_sha": true,
+    "replay_passed_with_urllib_http_blocked": true,
+    "replay_preserved_raw_generation_sha256": true
+  },
+  "all_checks_passed": true,
+  "unit_tests": {
+    "passed": 9,
+    "failed": 0,
+    "skipped": 0
+  },
+  "test_results": {
+    "all_large": {
+      "n": 24,
+      "em": 0.625,
+      "f1": 0.780787037037037,
+      "elapsed_seconds": 63.57690132036805,
+      "prompt_tokens": 9839,
+      "completion_tokens": 118,
+      "errors": 0
+    },
+    "all_small": {
+      "n": 24,
+      "em": 0.4583333333333333,
+      "f1": 0.6418325461088619,
+      "elapsed_seconds": 30.679284799844027,
+      "prompt_tokens": 9839,
+      "completion_tokens": 198,
+      "errors": 0
+    },
+    "frozen_mix": {
+      "n": 24,
+      "em": 0.625,
+      "f1": 0.7397435897435898,
+      "elapsed_seconds": 54.2549261348322,
+      "prompt_tokens": 9839,
+      "completion_tokens": 123,
+      "errors": 0
+    }
+  },
+  "limitation": "Frozen mix fails held-out F1 preservation despite matching EM; not a quality-preserving saving result."
+}

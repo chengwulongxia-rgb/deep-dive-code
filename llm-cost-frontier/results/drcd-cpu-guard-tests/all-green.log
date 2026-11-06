@@ -1,0 +1,27 @@
+test_changed_snapshot_rejected (test_audit.AuditTests.test_changed_snapshot_rejected) ... ok
+test_frozen_snapshot_and_scope (test_audit.AuditTests.test_frozen_snapshot_and_scope) ... ok
+test_offline_audit_does_not_use_http (test_audit.AuditTests.test_offline_audit_does_not_use_http) ... ok
+test_original_results_preserved (test_audit.AuditTests.test_original_results_preserved) ... ok
+test_relaxed_constraint_is_not_full_success (test_audit.AuditTests.test_relaxed_constraint_is_not_full_success) ... ok
+test_dataset_cache_requires_official_pinned_sha (test_drcd_guard.GuardTests.test_dataset_cache_requires_official_pinned_sha) ... ok
+test_evidence_write_failure_still_kills (test_drcd_guard.GuardTests.test_evidence_write_failure_still_kills) ... ok
+test_exception_cleans_children (test_drcd_guard.GuardTests.test_exception_cleans_children) ... ok
+test_fail_closed_shared_process_group (test_drcd_guard.GuardTests.test_fail_closed_shared_process_group) ... ok
+test_inference_kills_blocked_worker_and_child (test_drcd_guard.GuardTests.test_inference_kills_blocked_worker_and_child) ... ok
+test_kernel_blocking_setup_overall_deadline (test_drcd_guard.GuardTests.test_kernel_blocking_setup_overall_deadline) ... ok
+test_kernel_callback_disarms_only_after_final_cell (test_drcd_guard.GuardTests.test_kernel_callback_disarms_only_after_final_cell) ... ok
+test_kernel_setup_cell_exception_cleans_group (test_drcd_guard.GuardTests.test_kernel_setup_cell_exception_cleans_group) ... ok
+test_normal_disarm_no_kill_or_residue (test_drcd_guard.GuardTests.test_normal_disarm_no_kill_or_residue) ... ok
+test_overall_kills_blocked_worker_and_child (test_drcd_guard.GuardTests.test_overall_kills_blocked_worker_and_child) ... ok
+test_parentdeath_cleans_children (test_drcd_guard.GuardTests.test_parentdeath_cleans_children) ... ok
+test_request_kills_blocked_worker_and_child (test_drcd_guard.GuardTests.test_request_kills_blocked_worker_and_child) ... ok
+test_frozen_decision_precedes_true_test_dispatch (test_drcd_notebook.ArtifactTests.test_frozen_decision_precedes_true_test_dispatch) ... ok
+test_frozen_manifest_context_disjoint (test_drcd_notebook.ArtifactTests.test_frozen_manifest_context_disjoint) ... ok
+test_gold_never_affects_messages_or_routing (test_drcd_notebook.DesignTests.test_gold_never_affects_messages_or_routing) ... ok
+test_normalized_em_and_character_multiset (test_drcd_notebook.ScoringTests.test_normalized_em_and_character_multiset) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 6.959s
+
+OK
+mode: replay ; paid budget: 0; GPU: disabled

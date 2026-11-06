@@ -1,0 +1,23 @@
+test_dataset_cache_requires_official_pinned_sha (test_drcd_guard.GuardTests.test_dataset_cache_requires_official_pinned_sha) ... FAIL
+test_exception_cleans_children (test_drcd_guard.GuardTests.test_exception_cleans_children) ... ok
+test_fail_closed_shared_process_group (test_drcd_guard.GuardTests.test_fail_closed_shared_process_group) ... ok
+test_inference_kills_blocked_worker_and_child (test_drcd_guard.GuardTests.test_inference_kills_blocked_worker_and_child) ... ok
+test_normal_disarm_no_kill_or_residue (test_drcd_guard.GuardTests.test_normal_disarm_no_kill_or_residue) ... ok
+test_overall_kills_blocked_worker_and_child (test_drcd_guard.GuardTests.test_overall_kills_blocked_worker_and_child) ... ok
+test_parentdeath_cleans_children (test_drcd_guard.GuardTests.test_parentdeath_cleans_children) ... ok
+test_request_kills_blocked_worker_and_child (test_drcd_guard.GuardTests.test_request_kills_blocked_worker_and_child) ... ok
+
+======================================================================
+FAIL: test_dataset_cache_requires_official_pinned_sha (test_drcd_guard.GuardTests.test_dataset_cache_requires_official_pinned_sha)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/wens/project/deep-dive-code/llm-cost-frontier/tests/test_drcd_guard.py", line 70, in test_dataset_cache_requires_official_pinned_sha
+    with self.assertRaisesRegex(ValueError, 'expected SHA256'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 8 tests in 3.478s
+
+FAILED (failures=1)
+mode: replay ; paid budget: 0; GPU: disabled

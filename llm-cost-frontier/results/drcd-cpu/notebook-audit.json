@@ -1,0 +1,24 @@
+{
+  "complete": true,
+  "requests": 90,
+  "paid_api_calls": 0,
+  "all_source_context_hashes_match": true,
+  "dev_only_selection_recomputed": true,
+  "decision_hash_matches": true,
+  "test_request_counts": {
+    "all_large": 24,
+    "all_small": 24,
+    "frozen_mix": 24
+  },
+  "test_mix_model_counts": {
+    "large": 18,
+    "small": 6
+  },
+  "finish_reasons": {
+    "stop": 90
+  },
+  "all_requests_error_free": true,
+  "saved_test_mix_matches_large_em": true,
+  "saved_test_mix_matches_large_f1": false,
+  "warning": "Development equality does not guarantee held-out F1 equality; this run is not a demonstrated quality-preserving saving."
+}

@@ -29,7 +29,7 @@ AI 圈子有一件事很煩：每個禮拜都有新論文說自己「突破極�
 | [`sdxl-colab-lifecycle/`](./sdxl-colab-lifecycle/) | SDXL → GCS 生命週期 | Colab L4 單張生圖，GCS 精確 generation／SHA256 讀回驗證與自動清理；附互動 Notebook。 |
 | [`structured-json-colab/`](./structured-json-colab/) | JSON 限制式解碼 | Notebook 原生 cells：資料、模型、A/B/C 推論、評分、圖表與錯誤分析；可 replay 首輪 24 題真實輸出或選 L4 新跑。 |
 | [`weight-space-programming-lab/`](./weight-space-programming-lab/) | Qwen權重修改效果重播 | L4真實96筆；長上限原版0/16、作者版11/16、隨機對照2/16，附原生Notebook與CPU重播。 |
-| [`llm-cost-frontier/`](./llm-cost-frontier/) | 模型成本混用核對 | 固定45配置，重算兩項分數門檻、混用成本與只移除一條件的失敗對照；CPU離線可跑。 |
+| [`llm-cost-frontier/`](./llm-cost-frontier/) | 模型混用的成本與品質 | 固定45配置算術核對，加上原生DRCD Notebook的CPU真模型對照；分開報答案品質、耗時與歷史成本估值。 |
 
 ### llm-cost-frontier
 
@@ -39,13 +39,13 @@ AI 圈子有一件事很煩：每個禮拜都有新論文說自己「突破極�
 
 **結果**：固定45配置，混用每千項估算75.177184美元，原配置129.649245美元；只保留AA-LCR門檻可降至19.367298美元，但GDP.pdf不再達標。這是算術與約束核對，不是新模型評測或實際帳單。
 
-**洞察**：省錢必須連同保住哪些條件一起報告。輸入快照、原始結果與本次離線重跑均收在專案內，無GPU或模型API。
+**洞察**：省錢必須連同保住哪些條件一起報告。上述固定快照核對無GPU或模型服務需求；新增的[DRCD原生Notebook](./llm-cost-frontier/drcd_cpu.ipynb)則用兩個本機CPU模型真正作答，將8題開發選比例與24題保留測試分開，預設只重播保存輸出。CPU耗時不等於API美元節費，實測結果與操作方式見子專案README。
 
 ```bash
 cd llm-cost-frontier
 uv sync --frozen --python 3.13
 uv run --frozen python audit_cost.py data/cost-data.json
-uv run --frozen python -m unittest discover -s tests -v
+uv run --frozen python -m unittest discover -s tests -p 'test_audit.py' -v
 ```
 
 ### weight-space-programming-lab

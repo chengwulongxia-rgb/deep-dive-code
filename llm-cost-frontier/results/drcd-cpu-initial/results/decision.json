@@ -1,0 +1,98 @@
+{
+  "small_share": 0.25,
+  "grid": [
+    {
+      "small_share": 0,
+      "eligible": true,
+      "n": 8,
+      "em": 0.75,
+      "f1": 0.828125,
+      "elapsed_seconds": 23.102298102341592,
+      "prompt_tokens": 3471,
+      "completion_tokens": 50,
+      "errors": 0
+    },
+    {
+      "small_share": 0.25,
+      "eligible": true,
+      "n": 8,
+      "em": 0.75,
+      "f1": 0.828125,
+      "elapsed_seconds": 19.196698476560414,
+      "prompt_tokens": 3471,
+      "completion_tokens": 50,
+      "errors": 0
+    },
+    {
+      "small_share": 0.5,
+      "eligible": false,
+      "n": 8,
+      "em": 0.625,
+      "f1": 0.7178308823529411,
+      "elapsed_seconds": 16.251059161499143,
+      "prompt_tokens": 3471,
+      "completion_tokens": 56,
+      "errors": 0
+    },
+    {
+      "small_share": 0.75,
+      "eligible": false,
+      "n": 8,
+      "em": 0.625,
+      "f1": 0.7178308823529411,
+      "elapsed_seconds": 13.750092823058367,
+      "prompt_tokens": 3471,
+      "completion_tokens": 56,
+      "errors": 0
+    },
+    {
+      "small_share": 1,
+      "eligible": false,
+      "n": 8,
+      "em": 0.5,
+      "f1": 0.6075367647058824,
+      "elapsed_seconds": 11.302640638314188,
+      "prompt_tokens": 3471,
+      "completion_tokens": 85,
+      "errors": 0
+    }
+  ],
+  "baseline": {
+    "n": 8,
+    "em": 0.75,
+    "f1": 0.828125,
+    "elapsed_seconds": 23.102298102341592,
+    "prompt_tokens": 3471,
+    "completion_tokens": 50,
+    "errors": 0
+  },
+  "selected_on": "dev only",
+  "frozen_before_test": true,
+  "frozen_at_monotonic": 7330017.393843493,
+  "test_routes": {
+    "test-2994": "large",
+    "test-2082": "small",
+    "test-321": "small",
+    "test-3222": "large",
+    "test-2862": "large",
+    "test-1921": "large",
+    "test-1937": "large",
+    "test-280": "large",
+    "test-718": "small",
+    "test-3475": "large",
+    "test-788": "small",
+    "test-3388": "large",
+    "test-2715": "large",
+    "test-282": "large",
+    "test-1658": "large",
+    "test-1971": "large",
+    "test-3014": "large",
+    "test-2161": "large",
+    "test-1418": "large",
+    "test-2445": "small",
+    "test-2256": "large",
+    "test-2266": "large",
+    "test-572": "large",
+    "test-2647": "small"
+  }
+}

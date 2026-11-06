@@ -1,0 +1,9 @@
+{
+  "protected_sha256": {
+    "audit_cost.py": "06c255d0893087c3b87aadd79170e72fd2d790f8ea5bfb5a676e730d0f21ea64",
+    "data/cost-data.json": "39c67d819e8f69f9904db23afd257ff74fe0377151c8a4abaa430a31ab56c95e",
+    "results/cost-audit.json": "3a15e5093e06ad3940604bedb79e1cdbde272f906fbe2061416afbaacb925ee1",
+    "results/replay.json": "4dc1fdf4fc91911fc80f7eb4cd1d8c6c4cd8839a4df760f1ac250f6d26cb5873"
+  },
+  "provenance": "Initial fresh notebook had 10 cells; final acceptance audit added after fresh and present in replay. No new watchdog in initial fresh."
+}

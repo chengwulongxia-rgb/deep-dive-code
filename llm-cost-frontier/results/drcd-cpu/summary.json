@@ -1,0 +1,62 @@
+{
+  "complete": true,
+  "stop_reason": null,
+  "paid_api_calls": 0,
+  "local_model_requests": 90,
+  "local_model_requests_by_phase": {
+    "warmup": 2,
+    "dev": 16,
+    "test": 72
+  },
+  "gpu_allocations": 0,
+  "collection_elapsed_seconds": 191.83211490139365,
+  "inference_elapsed_seconds": 187.90855085849762,
+  "warmup": {
+    "n": 2,
+    "em": 0.5,
+    "f1": 0.5909090909090909,
+    "elapsed_seconds": 3.9053326221182942,
+    "prompt_tokens": 796,
+    "completion_tokens": 13,
+    "errors": 0
+  },
+  "dev_collection": {
+    "n": 16,
+    "em": 0.625,
+    "f1": 0.7178308823529411,
+    "elapsed_seconds": 34.528029658831656,
+    "prompt_tokens": 6942,
+    "completion_tokens": 135,
+    "errors": 0
+  },
+  "test": {
+    "all_large": {
+      "n": 24,
+      "em": 0.625,
+      "f1": 0.780787037037037,
+      "elapsed_seconds": 63.23072106856853,
+      "prompt_tokens": 9839,
+      "completion_tokens": 118,
+      "errors": 0
+    },
+    "all_small": {
+      "n": 24,
+      "em": 0.4583333333333333,
+      "f1": 0.6418325461088619,
+      "elapsed_seconds": 31.445689807645977,
+      "prompt_tokens": 9839,
+      "completion_tokens": 198,
+      "errors": 0
+    },
+    "frozen_mix": {
+      "n": 24,
+      "em": 0.625,
+      "f1": 0.7397435897435898,
+      "elapsed_seconds": 54.08240690547973,
+      "prompt_tokens": 9839,
+      "completion_tokens": 123,
+      "errors": 0
+    }
+  },
+  "notes": "Single CPU pilot; warm cache and temporal effects. Per-scheme request elapsed excludes startup/warmup/dev. No dollar-savings or statistical-generalization claim."
+}

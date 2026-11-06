@@ -1,0 +1,23 @@
+{
+  "seed": 20261106,
+  "dev": 8,
+  "test": 24,
+  "warmup": 1,
+  "shares": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "max_tokens": 64,
+  "temperature": 0,
+  "per_request_timeout_seconds": 120,
+  "inference_deadline_seconds": 1200,
+  "overall_deadline_seconds": 2100,
+  "paid_budget": 0,
+  "gpu_layers": 0,
+  "system_prompt": "請只根據提供的段落回答問題。僅輸出最短的答案原文，不要解釋或加入前綴。",
+  "dataset_revision": "93ae26a94572907f6d33f9844abd9d074bcc3723",
+  "sampling": "sorted paragraph SHA256 groups; random.Random(seed).sample 33; choice one row per group"
+}

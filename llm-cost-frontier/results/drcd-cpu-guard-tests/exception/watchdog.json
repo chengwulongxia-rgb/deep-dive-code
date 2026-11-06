@@ -1,0 +1,9 @@
+{
+  "status": "partial",
+  "reason": "exception: dummy cell exception",
+  "target_pid": 747473,
+  "target_pgid": 747473,
+  "request": null,
+  "monotonic": 7332793.216435748,
+  "requests_saved": 0
+}

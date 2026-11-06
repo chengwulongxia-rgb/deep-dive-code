@@ -1,0 +1,11 @@
+{
+  "mode": "replay",
+  "source_sha256": "9ac09ae40c8c47f854a1a761f463cb344054d4453fe24d72a471228270f17511",
+  "cells": 12,
+  "code_cells": 9,
+  "all_cells_executed": true,
+  "ipc_transport": true,
+  "kernel_stopped": true,
+  "replay_http_blocked": true,
+  "raw_sha256": "91f58f6d14fd722ef9993e5af9c415348f7b3f71571c055443cfaa78849cc886"
+}

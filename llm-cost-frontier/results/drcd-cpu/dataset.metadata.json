@@ -1,0 +1,6670 @@
+{
+  "_id": "65974d7dfd17ceb1d4c26ed3",
+  "id": "MediaTek-Research/TCEval-v2",
+  "author": "MediaTek-Research",
+  "sha": "93ae26a94572907f6d33f9844abd9d074bcc3723",
+  "lastModified": "2024-04-02T10:15:50.000Z",
+  "private": false,
+  "gated": false,
+  "disabled": false,
+  "tags": [
+    "size_categories:10K<n<100K",
+    "format:parquet",
+    "modality:text",
+    "library:datasets",
+    "library:pandas",
+    "library:mlcroissant",
+    "library:polars",
+    "arxiv:2309.08448",
+    "region:us"
+  ],
+  "description": "\n\t\n\t\t\n\t\n\t\n\t\tTCEval v2\n\t\n\nTCEval-v2 is a Traditional Chinese evaluation suite for foundation models derived from TCEval-v1. It covers 5 capabilities, including contextual QA, knowledge, classification, and table understanding.\n\n\t\n\t\t\n\t\n\t\n\t\tBenchmark\n\t\n\n\nContextual QA\ndrcd : DRCD is a Traditional Chinese machine reading comprehension dataset containing 10,014 paragraphs from 2,108 Wikipedia articles and over 30,000 questions.\n\n\nKnowledge\ntmmluplus (provided by MediaTek Research and iKala): Taiwan… See the full description on the dataset page: https://huggingface.co/datasets/MediaTek-Research/TCEval-v2.",
+  "downloads": 2317,
+  "likes": 28,
+  "cardData": {
+    "dataset_info": [
+      {
+        "config_name": "drcd",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "paragraph",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "references",
+            "list": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 4899369,
+            "num_examples": 3493
+          },
+          {
+            "name": "dev",
+            "num_bytes": 5845,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 1168539,
+        "dataset_size": 4905214
+      },
+      {
+        "config_name": "mt_bench_tw-coding",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "turns",
+            "list": "string"
+          },
+          {
+            "name": "reference",
+            "list": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 11252,
+            "num_examples": 10
+          }
+        ],
+        "download_size": 10860,
+        "dataset_size": 11252
+      },
+      {
+        "config_name": "mt_bench_tw-extraction",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "turns",
+            "list": "string"
+          },
+          {
+            "name": "reference",
+            "list": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 10882,
+            "num_examples": 10
+          }
+        ],
+        "download_size": 17098,
+        "dataset_size": 10882
+      },
+      {
+        "config_name": "mt_bench_tw-humanities",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "turns",
+            "list": "string"
+          },
+          {
+            "name": "reference",
+            "list": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 2996,
+            "num_examples": 10
+          }
+        ],
+        "download_size": 5049,
+        "dataset_size": 2996
+      },
+      {
+        "config_name": "mt_bench_tw-math",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "turns",
+            "list": "string"
+          },
+          {
+            "name": "reference",
+            "list": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 3041,
+            "num_examples": 10
+          }
+        ],
+        "download_size": 5054,
+        "dataset_size": 3041
+      },
+      {
+        "config_name": "mt_bench_tw-reasoning",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "turns",
+            "list": "string"
+          },
+          {
+            "name": "reference",
+            "list": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 4492,
+            "num_examples": 10
+          }
+        ],
+        "download_size": 8402,
+        "dataset_size": 4492
+      },
+      {
+        "config_name": "mt_bench_tw-roleplay",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "turns",
+            "list": "string"
+          },
+          {
+            "name": "reference",
+            "list": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 4134,
+            "num_examples": 10
+          }
+        ],
+        "download_size": 6634,
+        "dataset_size": 4134
+      },
+      {
+        "config_name": "mt_bench_tw-stem",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "turns",
+            "list": "string"
+          },
+          {
+            "name": "reference",
+            "list": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 3103,
+            "num_examples": 10
+          }
+        ],
+        "download_size": 5430,
+        "dataset_size": 3103
+      },
+      {
+        "config_name": "mt_bench_tw-writing",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "turns",
+            "list": "string"
+          },
+          {
+            "name": "reference",
+            "list": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 3469,
+            "num_examples": 10
+          }
+        ],
+        "download_size": 6701,
+        "dataset_size": 3469
+      },
+      {
+        "config_name": "penguin_table",
+        "features": [
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "E",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "id",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "dev",
+            "num_bytes": 2588,
+            "num_examples": 5
+          },
+          {
+            "name": "test",
+            "num_bytes": 74241,
+            "num_examples": 144
+          }
+        ],
+        "download_size": 21218,
+        "dataset_size": 76829
+      },
+      {
+        "config_name": "tmmluplus-accounting",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 134876,
+            "num_examples": 191
+          },
+          {
+            "name": "dev",
+            "num_bytes": 3764,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 87921,
+        "dataset_size": 138640
+      },
+      {
+        "config_name": "tmmluplus-administrative_law",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 169553,
+            "num_examples": 420
+          },
+          {
+            "name": "dev",
+            "num_bytes": 2567,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 107897,
+        "dataset_size": 172120
+      },
+      {
+        "config_name": "tmmluplus-advance_chemistry",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 33891,
+            "num_examples": 123
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1581,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 34210,
+        "dataset_size": 35472
+      },
+      {
+        "config_name": "tmmluplus-agriculture",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 46502,
+            "num_examples": 151
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1715,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 40849,
+        "dataset_size": 48217
+      },
+      {
+        "config_name": "tmmluplus-anti_money_laundering",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 54293,
+            "num_examples": 134
+          },
+          {
+            "name": "dev",
+            "num_bytes": 2552,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 47614,
+        "dataset_size": 56845
+      },
+      {
+        "config_name": "tmmluplus-auditing",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 272426,
+            "num_examples": 550
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1947,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 147664,
+        "dataset_size": 274373
+      },
+      {
+        "config_name": "tmmluplus-basic_medical_science",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 312503,
+            "num_examples": 954
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1599,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 194337,
+        "dataset_size": 314102
+      },
+      {
+        "config_name": "tmmluplus-business_management",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 45074,
+            "num_examples": 139
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1403,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 39338,
+        "dataset_size": 46477
+      },
+      {
+        "config_name": "tmmluplus-chinese_language_and_literature",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 127469,
+            "num_examples": 199
+          },
+          {
+            "name": "dev",
+            "num_bytes": 2054,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 103909,
+        "dataset_size": 129523
+      },
+      {
+        "config_name": "tmmluplus-clinical_psychology",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 55748,
+            "num_examples": 125
+          },
+          {
+            "name": "dev",
+            "num_bytes": 2029,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 51770,
+        "dataset_size": 57777
+      },
+      {
+        "config_name": "tmmluplus-computer_science",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 57883,
+            "num_examples": 174
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1894,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 49090,
+        "dataset_size": 59777
+      },
+      {
+        "config_name": "tmmluplus-culinary_skills",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 94564,
+            "num_examples": 292
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1540,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 69998,
+        "dataset_size": 96104
+      },
+      {
+        "config_name": "tmmluplus-dentistry",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 152113,
+            "num_examples": 399
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1684,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 105595,
+        "dataset_size": 153797
+      },
+      {
+        "config_name": "tmmluplus-economics",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 145972,
+            "num_examples": 393
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1946,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 91284,
+        "dataset_size": 147918
+      },
+      {
+        "config_name": "tmmluplus-education",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 44729,
+            "num_examples": 124
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1760,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 41837,
+        "dataset_size": 46489
+      },
+      {
+        "config_name": "tmmluplus-education_(profession_level)",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 208632,
+            "num_examples": 486
+          },
+          {
+            "name": "dev",
+            "num_bytes": 3183,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 136861,
+        "dataset_size": 211815
+      },
+      {
+        "config_name": "tmmluplus-educational_psychology",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 71860,
+            "num_examples": 176
+          },
+          {
+            "name": "dev",
+            "num_bytes": 2314,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 56964,
+        "dataset_size": 74174
+      },
+      {
+        "config_name": "tmmluplus-engineering_math",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 35214,
+            "num_examples": 103
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1954,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 33378,
+        "dataset_size": 37168
+      },
+      {
+        "config_name": "tmmluplus-finance_banking",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 59005,
+            "num_examples": 135
+          },
+          {
+            "name": "dev",
+            "num_bytes": 2232,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 47576,
+        "dataset_size": 61237
+      },
+      {
+        "config_name": "tmmluplus-financial_analysis",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 128903,
+            "num_examples": 382
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1537,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 68492,
+        "dataset_size": 130440
+      },
+      {
+        "config_name": "tmmluplus-fire_science",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 37661,
+            "num_examples": 124
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1690,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 33612,
+        "dataset_size": 39351
+      },
+      {
+        "config_name": "tmmluplus-general_principles_of_law",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 47582,
+            "num_examples": 106
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1777,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 40369,
+        "dataset_size": 49359
+      },
+      {
+        "config_name": "tmmluplus-geography_of_taiwan",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 242009,
+            "num_examples": 768
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1689,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 144499,
+        "dataset_size": 243698
+      },
+      {
+        "config_name": "tmmluplus-human_behavior",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 132226,
+            "num_examples": 309
+          },
+          {
+            "name": "dev",
+            "num_bytes": 2149,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 93526,
+        "dataset_size": 134375
+      },
+      {
+        "config_name": "tmmluplus-insurance_studies",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 349058,
+            "num_examples": 760
+          },
+          {
+            "name": "dev",
+            "num_bytes": 2023,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 174957,
+        "dataset_size": 351081
+      },
+      {
+        "config_name": "tmmluplus-introduction_to_law",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 93914,
+            "num_examples": 237
+          },
+          {
+            "name": "dev",
+            "num_bytes": 3868,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 72390,
+        "dataset_size": 97782
+      },
+      {
+        "config_name": "tmmluplus-jce_humanities",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 95795,
+            "num_examples": 90
+          },
+          {
+            "name": "dev",
+            "num_bytes": 6230,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 79879,
+        "dataset_size": 102025
+      },
+      {
+        "config_name": "tmmluplus-junior_chemistry",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 56079,
+            "num_examples": 209
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1472,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 44646,
+        "dataset_size": 57551
+      },
+      {
+        "config_name": "tmmluplus-junior_chinese_exam",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 169271,
+            "num_examples": 175
+          },
+          {
+            "name": "dev",
+            "num_bytes": 7581,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 139825,
+        "dataset_size": 176852
+      },
+      {
+        "config_name": "tmmluplus-junior_math_exam",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 51452,
+            "num_examples": 175
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1511,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 38704,
+        "dataset_size": 52963
+      },
+      {
+        "config_name": "tmmluplus-junior_science_exam",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 105830,
+            "num_examples": 213
+          },
+          {
+            "name": "dev",
+            "num_bytes": 2473,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 78758,
+        "dataset_size": 108303
+      },
+      {
+        "config_name": "tmmluplus-junior_social_studies",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 92873,
+            "num_examples": 126
+          },
+          {
+            "name": "dev",
+            "num_bytes": 4171,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 76559,
+        "dataset_size": 97044
+      },
+      {
+        "config_name": "tmmluplus-logic_reasoning",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 40639,
+            "num_examples": 139
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1591,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 31931,
+        "dataset_size": 42230
+      },
+      {
+        "config_name": "tmmluplus-macroeconomics",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 125238,
+            "num_examples": 411
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1510,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 76559,
+        "dataset_size": 126748
+      },
+      {
+        "config_name": "tmmluplus-management_accounting",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 105401,
+            "num_examples": 215
+          },
+          {
+            "name": "dev",
+            "num_bytes": 2212,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 63286,
+        "dataset_size": 107613
+      },
+      {
+        "config_name": "tmmluplus-marketing_management",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 32431,
+            "num_examples": 93
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1802,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 32600,
+        "dataset_size": 34233
+      },
+      {
+        "config_name": "tmmluplus-mechanical",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 32709,
+            "num_examples": 118
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1112,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 30409,
+        "dataset_size": 33821
+      },
+      {
+        "config_name": "tmmluplus-music",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 91304,
+            "num_examples": 278
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1598,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 68538,
+        "dataset_size": 92902
+      },
+      {
+        "config_name": "tmmluplus-national_protection",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 55256,
+            "num_examples": 211
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1186,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 42755,
+        "dataset_size": 56442
+      },
+      {
+        "config_name": "tmmluplus-nautical_science",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 163848,
+            "num_examples": 551
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1131,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 97058,
+        "dataset_size": 164979
+      },
+      {
+        "config_name": "tmmluplus-occupational_therapy_for_psychological_disorders",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 268018,
+            "num_examples": 543
+          },
+          {
+            "name": "dev",
+            "num_bytes": 2198,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 152382,
+        "dataset_size": 270216
+      },
+      {
+        "config_name": "tmmluplus-official_document_management",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 67868,
+            "num_examples": 222
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1752,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 42263,
+        "dataset_size": 69620
+      },
+      {
+        "config_name": "tmmluplus-optometry",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 367273,
+            "num_examples": 920
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1756,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 197708,
+        "dataset_size": 369029
+      },
+      {
+        "config_name": "tmmluplus-organic_chemistry",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 29720,
+            "num_examples": 109
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1316,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 31856,
+        "dataset_size": 31036
+      },
+      {
+        "config_name": "tmmluplus-pharmacology",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 164131,
+            "num_examples": 577
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1040,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 94751,
+        "dataset_size": 165171
+      },
+      {
+        "config_name": "tmmluplus-pharmacy",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 113563,
+            "num_examples": 391
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1252,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 77275,
+        "dataset_size": 114815
+      },
+      {
+        "config_name": "tmmluplus-physical_education",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 47469,
+            "num_examples": 179
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1202,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 39538,
+        "dataset_size": 48671
+      },
+      {
+        "config_name": "tmmluplus-physics",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 30030,
+            "num_examples": 97
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1191,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 30370,
+        "dataset_size": 31221
+      },
+      {
+        "config_name": "tmmluplus-politic_science",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 279612,
+            "num_examples": 995
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1444,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 155705,
+        "dataset_size": 281056
+      },
+      {
+        "config_name": "tmmluplus-real_estate",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 38600,
+            "num_examples": 92
+          },
+          {
+            "name": "dev",
+            "num_bytes": 2599,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 36955,
+        "dataset_size": 41199
+      },
+      {
+        "config_name": "tmmluplus-secondary_physics",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 45698,
+            "num_examples": 112
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1686,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 41917,
+        "dataset_size": 47384
+      },
+      {
+        "config_name": "tmmluplus-statistics_and_machine_learning",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 83999,
+            "num_examples": 224
+          },
+          {
+            "name": "dev",
+            "num_bytes": 2368,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 64213,
+        "dataset_size": 86367
+      },
+      {
+        "config_name": "tmmluplus-taiwanese_hokkien",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 40896,
+            "num_examples": 129
+          },
+          {
+            "name": "dev",
+            "num_bytes": 2197,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 40308,
+        "dataset_size": 43093
+      },
+      {
+        "config_name": "tmmluplus-taxation",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 154730,
+            "num_examples": 375
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1924,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 97906,
+        "dataset_size": 156654
+      },
+      {
+        "config_name": "tmmluplus-technical",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 94384,
+            "num_examples": 402
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1084,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 60659,
+        "dataset_size": 95468
+      },
+      {
+        "config_name": "tmmluplus-three_principles_of_people",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 33261,
+            "num_examples": 139
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1234,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 28540,
+        "dataset_size": 34495
+      },
+      {
+        "config_name": "tmmluplus-trade",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 179952,
+            "num_examples": 502
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1679,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 98998,
+        "dataset_size": 181631
+      },
+      {
+        "config_name": "tmmluplus-traditional_chinese_medicine_clinical_medicine",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 115490,
+            "num_examples": 278
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1922,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 76367,
+        "dataset_size": 117412
+      },
+      {
+        "config_name": "tmmluplus-trust_practice",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 155403,
+            "num_examples": 401
+          },
+          {
+            "name": "dev",
+            "num_bytes": 2556,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 94795,
+        "dataset_size": 157959
+      },
+      {
+        "config_name": "tmmluplus-ttqav2",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 41379,
+            "num_examples": 113
+          },
+          {
+            "name": "dev",
+            "num_bytes": 2246,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 40353,
+        "dataset_size": 43625
+      },
+      {
+        "config_name": "tmmluplus-tve_chinese_language",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 539326,
+            "num_examples": 483
+          },
+          {
+            "name": "dev",
+            "num_bytes": 5360,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 401013,
+        "dataset_size": 544686
+      },
+      {
+        "config_name": "tmmluplus-tve_design",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 182865,
+            "num_examples": 480
+          },
+          {
+            "name": "dev",
+            "num_bytes": 2304,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 119979,
+        "dataset_size": 185169
+      },
+      {
+        "config_name": "tmmluplus-tve_mathematics",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 42519,
+            "num_examples": 150
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1290,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 36304,
+        "dataset_size": 43809
+      },
+      {
+        "config_name": "tmmluplus-tve_natural_sciences",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 139853,
+            "num_examples": 424
+          },
+          {
+            "name": "dev",
+            "num_bytes": 2163,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 100220,
+        "dataset_size": 142016
+      },
+      {
+        "config_name": "tmmluplus-veterinary_pathology",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 91700,
+            "num_examples": 283
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1803,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 59000,
+        "dataset_size": 93503
+      },
+      {
+        "config_name": "tmmluplus-veterinary_pharmacology",
+        "features": [
+          {
+            "name": "id",
+            "dtype": "string"
+          },
+          {
+            "name": "question",
+            "dtype": "string"
+          },
+          {
+            "name": "A",
+            "dtype": "string"
+          },
+          {
+            "name": "B",
+            "dtype": "string"
+          },
+          {
+            "name": "C",
+            "dtype": "string"
+          },
+          {
+            "name": "D",
+            "dtype": "string"
+          },
+          {
+            "name": "answer",
+            "dtype": "string"
+          },
+          {
+            "name": "category",
+            "dtype": "string"
+          },
+          {
+            "name": "subcategory",
+            "dtype": "string"
+          },
+          {
+            "name": "subject",
+            "dtype": "string"
+          }
+        ],
+        "splits": [
+          {
+            "name": "test",
+            "num_bytes": 151825,
+            "num_examples": 540
+          },
+          {
+            "name": "dev",
+            "num_bytes": 1419,
+            "num_examples": 5
+          }
+        ],
+        "download_size": 81980,
+        "dataset_size": 153244
+      }
+    ],
+    "configs": [
+      {
+        "config_name": "drcd",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "drcd/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "drcd/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "mt_bench_tw-coding",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "mt_bench_tw-coding/test-*"
+          }
+        ]
+      },
+      {
+        "config_name": "mt_bench_tw-extraction",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "mt_bench_tw-extraction/test-*"
+          }
+        ]
+      },
+      {
+        "config_name": "mt_bench_tw-humanities",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "mt_bench_tw-humanities/test-*"
+          }
+        ]
+      },
+      {
+        "config_name": "mt_bench_tw-math",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "mt_bench_tw-math/test-*"
+          }
+        ]
+      },
+      {
+        "config_name": "mt_bench_tw-reasoning",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "mt_bench_tw-reasoning/test-*"
+          }
+        ]
+      },
+      {
+        "config_name": "mt_bench_tw-roleplay",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "mt_bench_tw-roleplay/test-*"
+          }
+        ]
+      },
+      {
+        "config_name": "mt_bench_tw-stem",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "mt_bench_tw-stem/test-*"
+          }
+        ]
+      },
+      {
+        "config_name": "mt_bench_tw-writing",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "mt_bench_tw-writing/test-*"
+          }
+        ]
+      },
+      {
+        "config_name": "penguin_table",
+        "data_files": [
+          {
+            "split": "dev",
+            "path": "penguin_table/dev-*"
+          },
+          {
+            "split": "test",
+            "path": "penguin_table/test-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-accounting",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-accounting/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-accounting/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-administrative_law",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-administrative_law/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-administrative_law/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-advance_chemistry",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-advance_chemistry/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-advance_chemistry/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-agriculture",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-agriculture/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-agriculture/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-anti_money_laundering",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-anti_money_laundering/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-anti_money_laundering/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-auditing",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-auditing/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-auditing/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-basic_medical_science",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-basic_medical_science/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-basic_medical_science/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-business_management",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-business_management/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-business_management/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-chinese_language_and_literature",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-chinese_language_and_literature/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-chinese_language_and_literature/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-clinical_psychology",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-clinical_psychology/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-clinical_psychology/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-computer_science",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-computer_science/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-computer_science/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-culinary_skills",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-culinary_skills/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-culinary_skills/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-dentistry",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-dentistry/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-dentistry/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-economics",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-economics/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-economics/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-education",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-education/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-education/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-education_(profession_level)",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-education_(profession_level)/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-education_(profession_level)/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-educational_psychology",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-educational_psychology/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-educational_psychology/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-engineering_math",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-engineering_math/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-engineering_math/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-finance_banking",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-finance_banking/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-finance_banking/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-financial_analysis",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-financial_analysis/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-financial_analysis/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-fire_science",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-fire_science/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-fire_science/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-general_principles_of_law",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-general_principles_of_law/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-general_principles_of_law/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-geography_of_taiwan",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-geography_of_taiwan/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-geography_of_taiwan/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-human_behavior",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-human_behavior/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-human_behavior/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-insurance_studies",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-insurance_studies/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-insurance_studies/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-introduction_to_law",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-introduction_to_law/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-introduction_to_law/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-jce_humanities",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-jce_humanities/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-jce_humanities/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-junior_chemistry",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-junior_chemistry/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-junior_chemistry/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-junior_chinese_exam",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-junior_chinese_exam/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-junior_chinese_exam/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-junior_math_exam",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-junior_math_exam/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-junior_math_exam/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-junior_science_exam",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-junior_science_exam/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-junior_science_exam/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-junior_social_studies",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-junior_social_studies/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-junior_social_studies/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-logic_reasoning",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-logic_reasoning/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-logic_reasoning/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-macroeconomics",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-macroeconomics/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-macroeconomics/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-management_accounting",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-management_accounting/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-management_accounting/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-marketing_management",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-marketing_management/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-marketing_management/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-mechanical",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-mechanical/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-mechanical/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-music",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-music/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-music/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-national_protection",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-national_protection/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-national_protection/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-nautical_science",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-nautical_science/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-nautical_science/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-occupational_therapy_for_psychological_disorders",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-occupational_therapy_for_psychological_disorders/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-occupational_therapy_for_psychological_disorders/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-official_document_management",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-official_document_management/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-official_document_management/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-optometry",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-optometry/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-optometry/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-organic_chemistry",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-organic_chemistry/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-organic_chemistry/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-pharmacology",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-pharmacology/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-pharmacology/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-pharmacy",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-pharmacy/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-pharmacy/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-physical_education",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-physical_education/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-physical_education/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-physics",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-physics/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-physics/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-politic_science",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-politic_science/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-politic_science/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-real_estate",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-real_estate/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-real_estate/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-secondary_physics",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-secondary_physics/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-secondary_physics/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-statistics_and_machine_learning",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-statistics_and_machine_learning/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-statistics_and_machine_learning/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-taiwanese_hokkien",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-taiwanese_hokkien/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-taiwanese_hokkien/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-taxation",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-taxation/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-taxation/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-technical",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-technical/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-technical/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-three_principles_of_people",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-three_principles_of_people/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-three_principles_of_people/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-trade",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-trade/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-trade/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-traditional_chinese_medicine_clinical_medicine",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-traditional_chinese_medicine_clinical_medicine/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-traditional_chinese_medicine_clinical_medicine/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-trust_practice",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-trust_practice/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-trust_practice/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-ttqav2",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-ttqav2/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-ttqav2/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-tve_chinese_language",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-tve_chinese_language/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-tve_chinese_language/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-tve_design",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-tve_design/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-tve_design/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-tve_mathematics",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-tve_mathematics/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-tve_mathematics/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-tve_natural_sciences",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-tve_natural_sciences/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-tve_natural_sciences/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-veterinary_pathology",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-veterinary_pathology/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-veterinary_pathology/dev-*"
+          }
+        ]
+      },
+      {
+        "config_name": "tmmluplus-veterinary_pharmacology",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "tmmluplus-veterinary_pharmacology/test-*"
+          },
+          {
+            "split": "dev",
+            "path": "tmmluplus-veterinary_pharmacology/dev-*"
+          }
+        ]
+      }
+    ]
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "28df5f900b358436f0267334b3e3e9af33f917ba",
+      "size": 2307
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "50a1b678462fc336f3cb151cc79c94cd26e2520d",
+      "size": 55106
+    },
+    {
+      "rfilename": "TW-RAG/test-00000-of-00001.parquet",
+      "blobId": "788950c423abba54d69dfb87c4ac2477781de047",
+      "size": 33988,
+      "lfs": {
+        "sha256": "55a8668ab46fe3bef6774b92c1446c3d0bf6a1639f11ac6a28494ba1e35bb334",
+        "size": 33988,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "drcd/dev-00000-of-00001.parquet",
+      "blobId": "51a64cf11ac72bc71af27ff624624b6ea961f2c7",
+      "size": 13563,
+      "lfs": {
+        "sha256": "fd58519886bb6c254d8646f41e07d54024ac2e6d77cd10c1680f22e4eac939e2",
+        "size": 13563,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "drcd/test-00000-of-00001.parquet",
+      "blobId": "6c5266d16fb304ab968cd54421d7152d55ae7811",
+      "size": 1154976,
+      "lfs": {
+        "sha256": "c96bd232753f77096a05fa16e58904018495ae3fefd062216042600818666364",
+        "size": 1154976,
+        "pointerSize": 132
+      }
+    },
+    {
+      "rfilename": "mt_bench_tw-coding/test-00000-of-00001.parquet",
+      "blobId": "4802299bdf8b7284476543112b6f3a677c7de3b1",
+      "size": 10860,
+      "lfs": {
+        "sha256": "b8ded75eaed512d93c534ce1a431ce023db7fdf0813505473c35136d427ab087",
+        "size": 10860,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "mt_bench_tw-extraction/test-00000-of-00001.parquet",
+      "blobId": "c5c3d5be0f35d97a751ea59981c470a483209a2a",
+      "size": 17098,
+      "lfs": {
+        "sha256": "3b5261500be288435bfd6a766173a541f243278342d50743a522dd894e8b4a04",
+        "size": 17098,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "mt_bench_tw-humanities/test-00000-of-00001.parquet",
+      "blobId": "c1edfb9b43e9b018c35c799b2c281eb28c036122",
+      "size": 5049,
+      "lfs": {
+        "sha256": "82372da1d9db6548e1d224e743d6098e2d9ff1cdd4afdaab22335da868aa1fee",
+        "size": 5049,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "mt_bench_tw-math/test-00000-of-00001.parquet",
+      "blobId": "af5e36c46e222b9c135f81bb26e73d09461d49b7",
+      "size": 5054,
+      "lfs": {
+        "sha256": "3bf1877e8d18c5d93add4588cab5ea11611ad72b379c2213dd1a3a4dd7f13e86",
+        "size": 5054,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "mt_bench_tw-reasoning/test-00000-of-00001.parquet",
+      "blobId": "b5b55fd18ce506ebc05a6d22b8c7c468405cabb4",
+      "size": 8402,
+      "lfs": {
+        "sha256": "076e0fdfa31ee1280fa12980c56094399ae62a7f2b98c41a807117d39f0279a9",
+        "size": 8402,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "mt_bench_tw-roleplay/test-00000-of-00001.parquet",
+      "blobId": "96aa912242f96057cfbfeadd0028abadc792ee97",
+      "size": 6634,
+      "lfs": {
+        "sha256": "3f1a7f76c70a4d0b8d1b64a5761703e8220ad35e9370c4373510e0f685ad4e4a",
+        "size": 6634,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "mt_bench_tw-stem/test-00000-of-00001.parquet",
+      "blobId": "098357c0f088fd235458d178b7d7df3ce5f94b7c",
+      "size": 5430,
+      "lfs": {
+        "sha256": "72f214f3464320e6de4b585d538e0632d457cb49887bb02c0598c23200e2ecf9",
+        "size": 5430,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "mt_bench_tw-writing/test-00000-of-00001.parquet",
+      "blobId": "9bca00de454d445564f140a450adc8b8b5377934",
+      "size": 6701,
+      "lfs": {
+        "sha256": "276637ddba89fd5a1de6bb15c0506bbe6ebc15c1367c30937e81848c4c175bd2",
+        "size": 6701,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "penguin_table/dev-00000-of-00001.parquet",
+      "blobId": "0e7167d0e308c5226f8bb63bf559161f315d7845",
+      "size": 7689,
+      "lfs": {
+        "sha256": "e7248b68003d2cbb786125e0271009b4869e8ebd6863713ac885f8dc32cbc409",
+        "size": 7689,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "penguin_table/test-00000-of-00001.parquet",
+      "blobId": "d923330e21cef4ba37bc640f18a7474dd229b28a",
+      "size": 13529,
+      "lfs": {
+        "sha256": "405dc8a209daff40c1d28dbc439ff84b7c9045cf30c80d2113b406859028069d",
+        "size": 13529,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-accounting/dev-00000-of-00001.parquet",
+      "blobId": "31a6fda3fcfaa2d306c95672bf89f742d63cf23a",
+      "size": 10901,
+      "lfs": {
+        "sha256": "9452e29b9055215da80a1301d8303444b8b4552dc061af943c54b3a1519964dc",
+        "size": 10901,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-accounting/test-00000-of-00001.parquet",
+      "blobId": "a266b4703469d6cec1c9bbce325081b11cd14f49",
+      "size": 77020,
+      "lfs": {
+        "sha256": "f902034e94228296b6a3656b3836a0d1b55158f5acb099634e505f075db2adff",
+        "size": 77020,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-administrative_law/dev-00000-of-00001.parquet",
+      "blobId": "2a28f1671a9969b3b796ce8efd6001fcdd13c5f9",
+      "size": 8451,
+      "lfs": {
+        "sha256": "c367ca4183f9e092243c084195450d5b6e4adad940365b76dbd1a00763406a6b",
+        "size": 8451,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-administrative_law/test-00000-of-00001.parquet",
+      "blobId": "ca5b52570d48b8e6444569d9928d8f5efd2cf825",
+      "size": 99446,
+      "lfs": {
+        "sha256": "c12d44c6a01553ff813bcb8a1786565b5abbb7f14662293f75aeb3eaa2abc6af",
+        "size": 99446,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-advance_chemistry/dev-00000-of-00001.parquet",
+      "blobId": "f9034980050ea90eead03bbaf4604fe01cd42462",
+      "size": 6813,
+      "lfs": {
+        "sha256": "803fae4c17cefc10229e7a129eedf0468d2a85c45889e914545aaa1a782cf0f9",
+        "size": 6813,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-advance_chemistry/test-00000-of-00001.parquet",
+      "blobId": "5e2824ea11de343d61028de914854486563ae519",
+      "size": 27397,
+      "lfs": {
+        "sha256": "54558b104336963a618e0fb04a2aea7e5dc419b1f3cf8d549a3bbdf2743a0213",
+        "size": 27397,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-agriculture/dev-00000-of-00001.parquet",
+      "blobId": "f59d903481532857ab1e37f94e6dc4c605937971",
+      "size": 6901,
+      "lfs": {
+        "sha256": "0b6fe3e65da950390207b38f8f2ded54592c8380438d8fb3a4b4e9efc02d2ee2",
+        "size": 6901,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-agriculture/test-00000-of-00001.parquet",
+      "blobId": "2f1c0d6bbf5e4ebfb134a11ce943935dee141934",
+      "size": 33948,
+      "lfs": {
+        "sha256": "20e082356354c391d77d4c573376602b308a227f35112cb8ca91f7f7192ad398",
+        "size": 33948,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-anti_money_laundering/dev-00000-of-00001.parquet",
+      "blobId": "0d56e085e5d3c6129a39a16f4b25debe5efaaad0",
+      "size": 9035,
+      "lfs": {
+        "sha256": "75802237f80895cc249a6bbd6d3ef9b31924775e851c348ff20ac8527cdd7e15",
+        "size": 9035,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-anti_money_laundering/test-00000-of-00001.parquet",
+      "blobId": "a6ec6b9e902f5cd97cf9b94007197e6c728e8253",
+      "size": 38579,
+      "lfs": {
+        "sha256": "b1387df15072b45e3d18a40784b1c2525eeb33c61b80580d79af7bc817030474",
+        "size": 38579,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-auditing/dev-00000-of-00001.parquet",
+      "blobId": "1ab287f91fcf2cd71551cce177f37b91d063de7e",
+      "size": 7990,
+      "lfs": {
+        "sha256": "ebac13df95fffaf79bd48d584e68572b7540ddc96508e0fbbf6ab4966edefe01",
+        "size": 7990,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-auditing/test-00000-of-00001.parquet",
+      "blobId": "7d4578f244cc342e98b3ef8fbdb47775c80a6fa9",
+      "size": 139674,
+      "lfs": {
+        "sha256": "3ab319e153b3d8e76b54cbf09ac609fa4cf3168e34130f1405060b01a34048dc",
+        "size": 139674,
+        "pointerSize": 131
+      }
+    },
+    {
+      "rfilename": "tmmluplus-basic_medical_science/dev-00000-of-00001.parquet",
+      "blobId": "27a1018840f1a972d2cd1ac34bb24c940e19aa21",
+      "size": 6800,
+      "lfs": {
+        "sha256": "5958273c9b4fbec2f7180282d4e09fb2e6781a859245d038296a49ec68d3829c",
+        "size": 6800,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-basic_medical_science/test-00000-of-00001.parquet",
+      "blobId": "6f8153dccf65f7df0b0974de6c1cbf97fc39e872",
+      "size": 187537,
+      "lfs": {
+        "sha256": "f16bc4eca9def989aceacf34797e0c38c4c8b15d877462748e7365476d4a8e0e",
+        "size": 187537,
+        "pointerSize": 131
+      }
+    },
+    {
+      "rfilename": "tmmluplus-business_management/dev-00000-of-00001.parquet",
+      "blobId": "3f7b9b6c98959b28d9ac4cf50bb4f14d4f530bb2",
+      "size": 6179,
+      "lfs": {
+        "sha256": "ebe4140cc027eb5c6c51da64d5a1f77ef4d93f07804fc67f6f6cb3594a3e91fd",
+        "size": 6179,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-business_management/test-00000-of-00001.parquet",
+      "blobId": "aff2438cc037a3d85d3c6d79b8ed5cc1958b2db7",
+      "size": 33159,
+      "lfs": {
+        "sha256": "64374de7bae07600c99dcb08b7d6479891584513c060e7696921dbcfaf102e63",
+        "size": 33159,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-chinese_language_and_literature/dev-00000-of-00001.parquet",
+      "blobId": "eb28d73c37cf885f1ec36bcd0abc06ca9d3733ab",
+      "size": 7785,
+      "lfs": {
+        "sha256": "659308552dff3bd159a7574a9217c9a2134af7974bd89d9b603352f0c178b534",
+        "size": 7785,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-chinese_language_and_literature/test-00000-of-00001.parquet",
+      "blobId": "a373ee94eccc48c7d1c1501dbac04a5323db7487",
+      "size": 96124,
+      "lfs": {
+        "sha256": "d6e7a17da9b9509921eebf1a17c2adf745739da83feab0a0804ba5513147a5c1",
+        "size": 96124,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-clinical_psychology/dev-00000-of-00001.parquet",
+      "blobId": "19ec44b0b954c712de0a5dfc5a4ec28afa6c1214",
+      "size": 7595,
+      "lfs": {
+        "sha256": "d45ef43c615debdf6629fe4f813ddd094a0ea160dfd583e8cfba075d091342e7",
+        "size": 7595,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-clinical_psychology/test-00000-of-00001.parquet",
+      "blobId": "46701463be3d4c65cb47b2bf7c27e7b8db26dae4",
+      "size": 44175,
+      "lfs": {
+        "sha256": "302de64776881fefce435a54253151a0d57e52414d4a3316cbb27d1f1f9478a1",
+        "size": 44175,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-computer_science/dev-00000-of-00001.parquet",
+      "blobId": "9754b2135b067cd5f1ac94c9e07fb6f472b9f68e",
+      "size": 6978,
+      "lfs": {
+        "sha256": "8b85d86649eab39d238d08806a2ee2a4640f46dd0e88cd019c6f2bac92250d63",
+        "size": 6978,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-computer_science/test-00000-of-00001.parquet",
+      "blobId": "33108b321734d1f9d867adebac7d0a4a2efa1238",
+      "size": 42112,
+      "lfs": {
+        "sha256": "1c27676d47dc52b50f3c3e318e3bad943c58cd12f26d7801c8fb537d5ca35ef9",
+        "size": 42112,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-culinary_skills/dev-00000-of-00001.parquet",
+      "blobId": "ce1d98942733b66f351140daf004a7f0760edea8",
+      "size": 6282,
+      "lfs": {
+        "sha256": "272cc05b85d76739e3d57ade08ce402f08aa675b0d90dd4094f71652d0a9dd54",
+        "size": 6282,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-culinary_skills/test-00000-of-00001.parquet",
+      "blobId": "420a024287642a0b14348217b2bddfb7911755ba",
+      "size": 63716,
+      "lfs": {
+        "sha256": "9b9ca3caa3bb2255c000f80692d441b6b2242f23d2b933ff23d42f260ca487ea",
+        "size": 63716,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-dentistry/dev-00000-of-00001.parquet",
+      "blobId": "b889953cba12e0803fa5000fb159d67789c75646",
+      "size": 7169,
+      "lfs": {
+        "sha256": "8f4299adad95d76057673716cf20d4ca4e0a0235c989eb07046dc422ccbeaf28",
+        "size": 7169,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-dentistry/test-00000-of-00001.parquet",
+      "blobId": "f8eb69f7541c70f078c7267067c112990e1a9420",
+      "size": 98426,
+      "lfs": {
+        "sha256": "0b2a96a7f40f46115b1556bd91daa7af8c9b1c5ff547d779df310f19a88554c1",
+        "size": 98426,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-economics/dev-00000-of-00001.parquet",
+      "blobId": "5d8b59237526a9786afb7c71a08560b4dc064c6c",
+      "size": 7499,
+      "lfs": {
+        "sha256": "854ecdc0ece88dac0f534e39722d09e520460f5beafed47015c6dddd515e9f51",
+        "size": 7499,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-economics/test-00000-of-00001.parquet",
+      "blobId": "483664021332decfbf3ca3087fffb2c4e069cd1f",
+      "size": 83785,
+      "lfs": {
+        "sha256": "e8586ff60595d8cc06279c6b997867aa0d9b1df0c37bee74b98bdf2ff428ce2f",
+        "size": 83785,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-education/dev-00000-of-00001.parquet",
+      "blobId": "db2b291e4b64d4aec9275e60d307b79c2755fa4c",
+      "size": 7491,
+      "lfs": {
+        "sha256": "fe8ecdfce690d15fddb7359b913b90e8b28d2d5e936729982658f163d2a39fb1",
+        "size": 7491,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-education/test-00000-of-00001.parquet",
+      "blobId": "e7c43047cc71b7937ad6d69ab5e040a75ceabe73",
+      "size": 34346,
+      "lfs": {
+        "sha256": "d796ad010733b3283a1b7dfe2e952712eebe7c79280474c804cf5963177be749",
+        "size": 34346,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-education_(profession_level)/dev-00000-of-00001.parquet",
+      "blobId": "95830947367640ba39ef2c63dd8e8101f280b319",
+      "size": 10388,
+      "lfs": {
+        "sha256": "4187abcb7b4f947952b151c1261305d73f0348898dee90c384f4d62e007cac45",
+        "size": 10388,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-education_(profession_level)/test-00000-of-00001.parquet",
+      "blobId": "0a295bbd001e35306e18be8a3c8a5c2623a0c277",
+      "size": 126473,
+      "lfs": {
+        "sha256": "52be03458edf3e4eff36c47ef834db2e56892b39444cab680de1dcb333cd5f41",
+        "size": 126473,
+        "pointerSize": 131
+      }
+    },
+    {
+      "rfilename": "tmmluplus-educational_psychology/dev-00000-of-00001.parquet",
+      "blobId": "6913fecbc933a6a7b56c7fe98a78cb717a45154b",
+      "size": 8658,
+      "lfs": {
+        "sha256": "49bc4c04db9a41abc9dbbb8c11198c80cec70357e91dcd6e412d87ae4ec34a4f",
+        "size": 8658,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-educational_psychology/test-00000-of-00001.parquet",
+      "blobId": "901306f2c13887da323bd7446c49fc6b0bcccf64",
+      "size": 48306,
+      "lfs": {
+        "sha256": "017587c9415fda2e95258a88a7f4a671dba6fc19a7a71262e06f7a197016804d",
+        "size": 48306,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-engineering_math/dev-00000-of-00001.parquet",
+      "blobId": "cc449fbc4807201371fd8a0ad0b73fdc757a1d7b",
+      "size": 7002,
+      "lfs": {
+        "sha256": "5936804b253ca973a1e575f448b860bf2c0018f9c9b99b9929550f74114d1db0",
+        "size": 7002,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-engineering_math/test-00000-of-00001.parquet",
+      "blobId": "a17faa00355b7bcd9f2382d4ec197a3860e804e1",
+      "size": 26376,
+      "lfs": {
+        "sha256": "614b4362b449b1ce4077ed238500fc10e58604cfb3e9555a2088ab8de065adc7",
+        "size": 26376,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-finance_banking/dev-00000-of-00001.parquet",
+      "blobId": "4c2490853f74fb48f9e75f7f4fa5f51d1f0a2ccc",
+      "size": 8248,
+      "lfs": {
+        "sha256": "263ef1c2419110742c9765aa6a010027ad1e3dff68e00b579f14d4ecfe36424f",
+        "size": 8248,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-finance_banking/test-00000-of-00001.parquet",
+      "blobId": "e56cda6df60fba3404eeba11e26e382e0ebad8fd",
+      "size": 39328,
+      "lfs": {
+        "sha256": "4a390be62511a596c4b200b152c42ed6662b8c9ee0716152cca9a8f9e9cc8762",
+        "size": 39328,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-financial_analysis/dev-00000-of-00001.parquet",
+      "blobId": "d4d0fb75f9f97c11be9260b2767ebf7ced428f47",
+      "size": 6485,
+      "lfs": {
+        "sha256": "3e03245171fd6810c6be40fb87e962aa5adbb1e6bbbb4ead94bb88eea9d16d7a",
+        "size": 6485,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-financial_analysis/test-00000-of-00001.parquet",
+      "blobId": "f8670ee84e9ad8c0fa5f428ea522729bb2eecb57",
+      "size": 62007,
+      "lfs": {
+        "sha256": "29c1a42f9ca52b693f58fccb9620acdcbd34b6b8224c8770d4e148ff7c84cd79",
+        "size": 62007,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-fire_science/dev-00000-of-00001.parquet",
+      "blobId": "229b8cf3b60834992cf6989c8aa3549aaf9f54c6",
+      "size": 6786,
+      "lfs": {
+        "sha256": "06ea62dfb8c3af5b538183f760b1eac1638a0b942529d185f3f905cc5d6ecc39",
+        "size": 6786,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-fire_science/test-00000-of-00001.parquet",
+      "blobId": "ca6bc93bcfe4ae6fa60de5155b2ddf855e94e70e",
+      "size": 26826,
+      "lfs": {
+        "sha256": "01fec69cbe68ad41f557aba8c395b84fedfc9a19333e78787bdcaf0a9bf34fb9",
+        "size": 26826,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-general_principles_of_law/dev-00000-of-00001.parquet",
+      "blobId": "48aa1af051480f88c0e8900b9a38fe8e4fff8584",
+      "size": 7668,
+      "lfs": {
+        "sha256": "d54987e1946ceb14f40f1e7c13e854267cfc4b8dd1f05d331866d9e2c8ef94bf",
+        "size": 7668,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-general_principles_of_law/test-00000-of-00001.parquet",
+      "blobId": "a32576d1469b560e525e83d84524433fa9659a68",
+      "size": 32701,
+      "lfs": {
+        "sha256": "78f96ca02739822e356398bc8715ebe1f3f552d56107464a428d8d8a797da6fd",
+        "size": 32701,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-geography_of_taiwan/dev-00000-of-00001.parquet",
+      "blobId": "855d14949216549996fd8a550fcf8591e99807e3",
+      "size": 6952,
+      "lfs": {
+        "sha256": "226cef630ba9bf9ae543a161f28211aa7cc18962b33b72e7fc8185841790b51c",
+        "size": 6952,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-geography_of_taiwan/test-00000-of-00001.parquet",
+      "blobId": "4e785fa15e5be01a084b46ec1dff057c2367b130",
+      "size": 137547,
+      "lfs": {
+        "sha256": "d960508b29b622ae2004f52dd23e17b26dec2e0e32c2e4b18ecd6880c784b005",
+        "size": 137547,
+        "pointerSize": 131
+      }
+    },
+    {
+      "rfilename": "tmmluplus-human_behavior/dev-00000-of-00001.parquet",
+      "blobId": "c1d18923fc6559ad11cd47465adff6b44714e47a",
+      "size": 7625,
+      "lfs": {
+        "sha256": "918a94c414c5b2114ef5c9def4953d3d78a286dc506e47e1fe02b721a12f344a",
+        "size": 7625,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-human_behavior/test-00000-of-00001.parquet",
+      "blobId": "f3845540699979b5b7f13c1d9af91e0ed309ec31",
+      "size": 85901,
+      "lfs": {
+        "sha256": "e4d6c5e0732e5901689a5db01aad9c9a55af706276f8956773e63726dd9bf84a",
+        "size": 85901,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-insurance_studies/dev-00000-of-00001.parquet",
+      "blobId": "b608d999ea8f052efc6a0aef9aea5eea7189d5e1",
+      "size": 7844,
+      "lfs": {
+        "sha256": "ec7a35bfaa4e1ccfb9341e9231d5ca4a6c609edc47c401c2379cea91c746300c",
+        "size": 7844,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-insurance_studies/test-00000-of-00001.parquet",
+      "blobId": "8dcb276c65e4254f0d79ba55d1f652c6072cd390",
+      "size": 167113,
+      "lfs": {
+        "sha256": "c5b125cafc7469ca211bd69c743b302abc50a26a20b350faa82813ea0f4ca8d6",
+        "size": 167113,
+        "pointerSize": 131
+      }
+    },
+    {
+      "rfilename": "tmmluplus-introduction_to_law/dev-00000-of-00001.parquet",
+      "blobId": "8b43f8d467298b7f3440d9b4f1a29f8d4d18b8d4",
+      "size": 10827,
+      "lfs": {
+        "sha256": "6d1964aa9865f4bc9602be2033fe740493d622da3291c5fffb79592ca980ed23",
+        "size": 10827,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-introduction_to_law/test-00000-of-00001.parquet",
+      "blobId": "a09cc66522a5967728e245008b49f2e5ba58b6ff",
+      "size": 61563,
+      "lfs": {
+        "sha256": "da7b3f1900a5553c91635ea9cafc957b7278c8402fa5e784c033052793a257e9",
+        "size": 61563,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-jce_humanities/dev-00000-of-00001.parquet",
+      "blobId": "37e6fd2127303ea4b455be860f97cd10cb15e5ca",
+      "size": 16489,
+      "lfs": {
+        "sha256": "60d60e711c048a6893563a4cf5de8e459410b39dd1f4c507898c5265632397bf",
+        "size": 16489,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-jce_humanities/test-00000-of-00001.parquet",
+      "blobId": "708b514947819369b093752fb83637e8054ccb66",
+      "size": 63390,
+      "lfs": {
+        "sha256": "2c2910f6238e47118bae703e4982100bae20f896b73bfa6cb6a3a0d89db99ca3",
+        "size": 63390,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-junior_chemistry/dev-00000-of-00001.parquet",
+      "blobId": "bc70c7369f251f38cae912a6cdb126654f7507c6",
+      "size": 6398,
+      "lfs": {
+        "sha256": "cce94dbe16870b2a488581ee0ac1d89889116147c819993b7b140e97cd1041ec",
+        "size": 6398,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-junior_chemistry/test-00000-of-00001.parquet",
+      "blobId": "f6a98f89ba30935d4a431d8217cffb2b965f8c56",
+      "size": 38248,
+      "lfs": {
+        "sha256": "5dc00aa4c8f8bc780ec875a73723934a2d1900ec8245f9c60996e38129a867f8",
+        "size": 38248,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-junior_chinese_exam/dev-00000-of-00001.parquet",
+      "blobId": "8c7abf002df989da30ae15326c843813be56083d",
+      "size": 14517,
+      "lfs": {
+        "sha256": "5a5820d0665fff5f735c498d6f1aa3d5c72cbc2f4be525862d84a1af28665861",
+        "size": 14517,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-junior_chinese_exam/test-00000-of-00001.parquet",
+      "blobId": "324e2a238d5b3f29fdce70b4a18829f374d9cff4",
+      "size": 125308,
+      "lfs": {
+        "sha256": "bc20d6de0cec569b457d3bcd4fbf6aa67cb0396b0cf2963fb93b90c4b3625291",
+        "size": 125308,
+        "pointerSize": 131
+      }
+    },
+    {
+      "rfilename": "tmmluplus-junior_math_exam/dev-00000-of-00001.parquet",
+      "blobId": "e77ed32ccd8913da3d4bdca4bfb08dbb862fc5e7",
+      "size": 6751,
+      "lfs": {
+        "sha256": "df2633c72a98202ef7f50cb537b77ff54f1062bd9560c76583557af2ef375921",
+        "size": 6751,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-junior_math_exam/test-00000-of-00001.parquet",
+      "blobId": "4c369b5f4e0e5cbcdb1067072437e229033ec41f",
+      "size": 31953,
+      "lfs": {
+        "sha256": "1399852774c6ffbc9c78e822effe2bc86ae0186db946216234813fcf28acde5a",
+        "size": 31953,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-junior_science_exam/dev-00000-of-00001.parquet",
+      "blobId": "1d42e4c83aa210baec5a5fcc0bdbb2d4ced49f8e",
+      "size": 8103,
+      "lfs": {
+        "sha256": "3864fcf481a2604b833c44c5b7b1f2ed657971482845bdf17964f19a71098a51",
+        "size": 8103,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-junior_science_exam/test-00000-of-00001.parquet",
+      "blobId": "2686d752f664d34bc4de6ee20a7b5ec348dcb190",
+      "size": 70655,
+      "lfs": {
+        "sha256": "74ab447d81087ce1d44ac828d5c69bbbe53ee3f87bc8d240a38e3e83e00ff814",
+        "size": 70655,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-junior_social_studies/dev-00000-of-00001.parquet",
+      "blobId": "9afc374bfd661a7e17b69f3fd83a9ed727d579d2",
+      "size": 10750,
+      "lfs": {
+        "sha256": "448b917f82499823d8a281b0c9c6602090bdeb73b54aeed40dff4cdc10386c54",
+        "size": 10750,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-junior_social_studies/test-00000-of-00001.parquet",
+      "blobId": "7af1f4a5943ce159572581a44ff6665ff3e9fd72",
+      "size": 65809,
+      "lfs": {
+        "sha256": "26ef9c377eedc8d2ef98d8ac66e9e569f8ac52c02d52b97154861946e20edf96",
+        "size": 65809,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-logic_reasoning/dev-00000-of-00001.parquet",
+      "blobId": "392eb641359338230b8f506af94038fb3f167194",
+      "size": 6800,
+      "lfs": {
+        "sha256": "37accfede12010e588f5a8a112fc5524eea05d979593d5b9d6cf23f876835156",
+        "size": 6800,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-logic_reasoning/test-00000-of-00001.parquet",
+      "blobId": "99d798eca7c5fb6354a906c994a0ef7fd07fbfc6",
+      "size": 25131,
+      "lfs": {
+        "sha256": "81eec91939a9b143d654f3a07c9e328a8e4a9c58dfd3d16e8024d3fa045126f3",
+        "size": 25131,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-macroeconomics/dev-00000-of-00001.parquet",
+      "blobId": "12c801c269c75aa399b5f74e548e3716a2b109a7",
+      "size": 6654,
+      "lfs": {
+        "sha256": "b9e77e7a45eb8677012959f4cd6d65070ab3e8fa956143ea5224f1126192ae5e",
+        "size": 6654,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-macroeconomics/test-00000-of-00001.parquet",
+      "blobId": "6478bf97195cc6b512441342981f36e8d17248af",
+      "size": 69905,
+      "lfs": {
+        "sha256": "718603d86cdc4974ae0a54bdbd16f0365f1f6ef2d1b5a7a1c85bb2567c69a788",
+        "size": 69905,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-management_accounting/dev-00000-of-00001.parquet",
+      "blobId": "d9d1f0cd53c6ad14b3a9bcadc0b96c3ef07c1c10",
+      "size": 6539,
+      "lfs": {
+        "sha256": "973466c53b874b8f29037b0719ba11efa27650699b2a0f7cfc91e19640a8ded1",
+        "size": 6539,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-management_accounting/test-00000-of-00001.parquet",
+      "blobId": "85bed49af7b775572d7f7817d3d643ca66809b16",
+      "size": 56747,
+      "lfs": {
+        "sha256": "1b7c6ddd06d50b7e69a842348b40ad60d32fe1a7e38d03378e59787bedc26073",
+        "size": 56747,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-marketing_management/dev-00000-of-00001.parquet",
+      "blobId": "200e730027e70d8b8a7a48c61ad5e4c3c9d0a34e",
+      "size": 7276,
+      "lfs": {
+        "sha256": "6da09f0e188557f20b7e99462ec3b620f9bd87af2fcbc2526d4995b31ab3d7f5",
+        "size": 7276,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-marketing_management/test-00000-of-00001.parquet",
+      "blobId": "d1ad8e90ff959800c0871ef5e87626c4c3dd4198",
+      "size": 25324,
+      "lfs": {
+        "sha256": "0f864a123de96f8e95ebe48d537b24ac91d0a10e3ab14fd8662b20ec8fa27725",
+        "size": 25324,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-mechanical/dev-00000-of-00001.parquet",
+      "blobId": "463006f487ae9d1e6f455ea3cf2f16607cca0b72",
+      "size": 5798,
+      "lfs": {
+        "sha256": "6efbc4a2951b9c5b327d605508e4d3a6534cf16292664dac7a87617d341a5928",
+        "size": 5798,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-mechanical/test-00000-of-00001.parquet",
+      "blobId": "846c4246a8675a3620c67ba6005390b7739f8ac6",
+      "size": 24611,
+      "lfs": {
+        "sha256": "a444b592ea82cd6e2a5a89d7e04713f4b59def2fffdf120a139104be81ffb869",
+        "size": 24611,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-music/dev-00000-of-00001.parquet",
+      "blobId": "f501e793cd46baf82aa6b732daff9c95ca938105",
+      "size": 6555,
+      "lfs": {
+        "sha256": "53d89e596ed3199bc283f12bdf51869bcabb1627c7b2e1d2c3bdfec0cc0162cf",
+        "size": 6555,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-music/test-00000-of-00001.parquet",
+      "blobId": "9cb3d069b0f708ac5e31275da953ee5c0237a82f",
+      "size": 61983,
+      "lfs": {
+        "sha256": "b3db44d284ec282579270662b77f9879535a4211e7f931e5342ef751339f8c02",
+        "size": 61983,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-national_protection/dev-00000-of-00001.parquet",
+      "blobId": "15221978eb59d4241c3f7d074e19c74661a2fdc1",
+      "size": 5998,
+      "lfs": {
+        "sha256": "3e940f42c8132376ac04eace453601ff8c505162a04a16fb8cae6e8a183e0d22",
+        "size": 5998,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-national_protection/test-00000-of-00001.parquet",
+      "blobId": "d1043ae3f37ef3d06d81e5be11a9d6c08578fbe1",
+      "size": 36757,
+      "lfs": {
+        "sha256": "a064fcce4343cf3f615be8c05db3d068b3e3d1ad875b10e64e6d4dd03d05de0b",
+        "size": 36757,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-nautical_science/dev-00000-of-00001.parquet",
+      "blobId": "1f4b1526820cae3982c8c40a68498a352de3fa0d",
+      "size": 5967,
+      "lfs": {
+        "sha256": "73376ac05dca142c242630bf081e2e1eefc0abfcd32e8bcc3c435d2a58a2abdf",
+        "size": 5967,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-nautical_science/test-00000-of-00001.parquet",
+      "blobId": "81b42fb82d0ce6d7eccb415b2e677b30c4122d67",
+      "size": 91091,
+      "lfs": {
+        "sha256": "3b54d61af10a6272bb5568e33796415c053480f7fe71049a6dcbbf9a9784cc7d",
+        "size": 91091,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-occupational_therapy_for_psychological_disorders/dev-00000-of-00001.parquet",
+      "blobId": "22ce87c26133fe24ef89a5e7813ddecbf166a5a8",
+      "size": 8622,
+      "lfs": {
+        "sha256": "7ad2cf41343797d1da93727193f8804a51a3ebfe9ae9ebb9aadb085c355e9f50",
+        "size": 8622,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-occupational_therapy_for_psychological_disorders/test-00000-of-00001.parquet",
+      "blobId": "6bf15b3e52ede872a5245b24e545afd3472da498",
+      "size": 143760,
+      "lfs": {
+        "sha256": "71065164db702cd69594e630cba07bed88225cfd48ce92baad1e551770dd3032",
+        "size": 143760,
+        "pointerSize": 131
+      }
+    },
+    {
+      "rfilename": "tmmluplus-official_document_management/dev-00000-of-00001.parquet",
+      "blobId": "a1a51772976c6fe245e560d3665cfcf01e67bc81",
+      "size": 7154,
+      "lfs": {
+        "sha256": "46471adc424b9cb339fb0259b7bc894e849ef4b2f1876bd4496362e21c4eb5d7",
+        "size": 7154,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-official_document_management/test-00000-of-00001.parquet",
+      "blobId": "525938981a9ab2944dbde58459663a5aaab90b26",
+      "size": 35109,
+      "lfs": {
+        "sha256": "3eba22653824bd0431408217dee850a82ca6702b97400475464797199a333022",
+        "size": 35109,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-optometry/dev-00000-of-00001.parquet",
+      "blobId": "709c3ecc7189c0a29b8057ed1515e7c1abf82dc5",
+      "size": 6693,
+      "lfs": {
+        "sha256": "2eeeff72e2d775e5d976a8dab894bfcafb6fc5f4f7aa44429d17d3bae0753c68",
+        "size": 6693,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-optometry/test-00000-of-00001.parquet",
+      "blobId": "ebdc3de67c327d65a166cef83e6bc3f2e9159f59",
+      "size": 191015,
+      "lfs": {
+        "sha256": "68f6085909580d1529b1d79371e89931888c320ada70bd3398114aee170e27e3",
+        "size": 191015,
+        "pointerSize": 131
+      }
+    },
+    {
+      "rfilename": "tmmluplus-organic_chemistry/dev-00000-of-00001.parquet",
+      "blobId": "352697c3c739c68d6bce7abfd2855ff844579c46",
+      "size": 6489,
+      "lfs": {
+        "sha256": "f1140b81be7c8b9fead2ff8171d65d9e8bf4e163e5c5f32dbbf898b12bf1dc48",
+        "size": 6489,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-organic_chemistry/test-00000-of-00001.parquet",
+      "blobId": "5b0278e26bea4358777b0ac343a8137dc9fb9d5d",
+      "size": 25367,
+      "lfs": {
+        "sha256": "abe276948eaf2634a7e2c831ddaba64af4e649d1aa0f607b9c6ccbb71f8bc40a",
+        "size": 25367,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-pharmacology/dev-00000-of-00001.parquet",
+      "blobId": "f144066f711d2b63b8c50b55f21b646c921b045e",
+      "size": 5700,
+      "lfs": {
+        "sha256": "e1f459d71030ad24a1dbdbee0388fb5c8d6f20ace9333b7ebe66f70ad0a77b2e",
+        "size": 5700,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-pharmacology/test-00000-of-00001.parquet",
+      "blobId": "ded1e15384e32a72dbf3687ec317cbcef9e706ba",
+      "size": 89051,
+      "lfs": {
+        "sha256": "0e148bafba99818e575d8281b022c18aa6ce7b173f7a4fafbd80c80bb0f05ee9",
+        "size": 89051,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-pharmacy/dev-00000-of-00001.parquet",
+      "blobId": "a8eba757ac723f1d37895ee791dbfab0fbb372ae",
+      "size": 6156,
+      "lfs": {
+        "sha256": "35b86f7937da679adbbb07caf24ed1405bb1aed4ae6fd9b8425fe5a68061b063",
+        "size": 6156,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-pharmacy/test-00000-of-00001.parquet",
+      "blobId": "1ffe29f1f6165cc768a8d61e7eb7839ae9b1ba0a",
+      "size": 71119,
+      "lfs": {
+        "sha256": "53e1605a5243c0cf39d92e73d5eabf34d0a6ec67980ea8f8419392557209f383",
+        "size": 71119,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-physical_education/dev-00000-of-00001.parquet",
+      "blobId": "73f96ca73d2d5387638582061648370d61f0382b",
+      "size": 6341,
+      "lfs": {
+        "sha256": "6ce42b11ba52d304d25b19b3d4c15ce375f1cc2b35a502dbd78eb742d1fff985",
+        "size": 6341,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-physical_education/test-00000-of-00001.parquet",
+      "blobId": "3834c15ccd0c6f63b4a1cdc6db83b2f9df59252e",
+      "size": 33197,
+      "lfs": {
+        "sha256": "d32bdbbe9252bb4211e7808c0b896fac099d515ebf1a04f4dda86a553f26b0ad",
+        "size": 33197,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-physics/dev-00000-of-00001.parquet",
+      "blobId": "e508c38ad2b0f0d8678b1ac7d2a3c3151c1d3662",
+      "size": 5997,
+      "lfs": {
+        "sha256": "d0d102c0da440fcddadaef66d96eb2ed65deab1ac7b0834a71bec1a805a1228d",
+        "size": 5997,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-physics/test-00000-of-00001.parquet",
+      "blobId": "5aa6289368ea385e82620b87b5fb5601baa8ad3e",
+      "size": 24373,
+      "lfs": {
+        "sha256": "e947ea4cd336a38da48670d0d8ffd41f77162a128522a1a8a09760061c02be37",
+        "size": 24373,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-politic_science/dev-00000-of-00001.parquet",
+      "blobId": "82fcf18fc876af950fc71334a2c519e382e0317a",
+      "size": 6982,
+      "lfs": {
+        "sha256": "89568724af1e4374bcc108dd8541e40a4b095d2dba85f6cb2514c0a4903328d6",
+        "size": 6982,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-politic_science/test-00000-of-00001.parquet",
+      "blobId": "1dc4fcf31774d0f1d96679c9e6d8deef1ad3f25c",
+      "size": 148723,
+      "lfs": {
+        "sha256": "295e6730bb057dee8e0f9f0134b82d835ddb8dafd88ee36cb8c37c4f34b0a7e6",
+        "size": 148723,
+        "pointerSize": 131
+      }
+    },
+    {
+      "rfilename": "tmmluplus-real_estate/dev-00000-of-00001.parquet",
+      "blobId": "c748762d524a4320386091a32e6731071092f163",
+      "size": 9729,
+      "lfs": {
+        "sha256": "7330a818a647c2e7fe29abd5b208989230de32a4874f3fe327416c683f4804dc",
+        "size": 9729,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-real_estate/test-00000-of-00001.parquet",
+      "blobId": "1a746971c621510bd92fc6cc666e2a1989a31ea1",
+      "size": 27226,
+      "lfs": {
+        "sha256": "2d5b2aaa442d23277d6c3836767102af37ca8f15f287277bfb199db0ae71a3cf",
+        "size": 27226,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-secondary_physics/dev-00000-of-00001.parquet",
+      "blobId": "c6b6e08ee3673caefca06c49e06bdde8debd5226",
+      "size": 7153,
+      "lfs": {
+        "sha256": "14b5ce1a90e12d0407d0f867dcab01558926327e2b66376b420533e666e86768",
+        "size": 7153,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-secondary_physics/test-00000-of-00001.parquet",
+      "blobId": "6ba582d1d2b1121ce21c2e05588b280d646b2a90",
+      "size": 34764,
+      "lfs": {
+        "sha256": "c11b90bf707a70ca1cb827dce56d9554a6376230d0ab95c7c005e72e56c93fdd",
+        "size": 34764,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-statistics_and_machine_learning/dev-00000-of-00001.parquet",
+      "blobId": "34bf3da804ae18281e1ededc7d200c6934469849",
+      "size": 9416,
+      "lfs": {
+        "sha256": "7010b988df9d864c343b8e4f3b7ed9787ec5f454d9169cd6f9cd20baae843c45",
+        "size": 9416,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-statistics_and_machine_learning/test-00000-of-00001.parquet",
+      "blobId": "bc7bbf14334bc0adddebd5532ed3d0440865cea3",
+      "size": 54797,
+      "lfs": {
+        "sha256": "4b92fe82193f13c5a975a2164d272c78b96ad912f104ae662e24c56856fc676e",
+        "size": 54797,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-taiwanese_hokkien/dev-00000-of-00001.parquet",
+      "blobId": "e5fe56458dcfd3a08b4fa5307421d6c27ff9ab58",
+      "size": 10302,
+      "lfs": {
+        "sha256": "339ace3fc0ec2cbf09418f17c95ee1d245d04c207f866546cf95711ac4b10e16",
+        "size": 10302,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-taiwanese_hokkien/test-00000-of-00001.parquet",
+      "blobId": "00538ae91665706afc240d35f541d85339e6dc6d",
+      "size": 30006,
+      "lfs": {
+        "sha256": "77c02330ae31757ddd20b872f5a8a9a6e5cc0952abf409a12d6e92f45e8a937f",
+        "size": 30006,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-taxation/dev-00000-of-00001.parquet",
+      "blobId": "aab72ea3c7f110cbb9446e150aa2c3442d2b01fc",
+      "size": 7070,
+      "lfs": {
+        "sha256": "90a650085467ecfc9e1a7393520ce084791428c42299848ee55bc6e122029b48",
+        "size": 7070,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-taxation/test-00000-of-00001.parquet",
+      "blobId": "973411fa61f3a6dd3262171bebc8bf785548eba3",
+      "size": 90836,
+      "lfs": {
+        "sha256": "2e64dd255308bbcc43d2b06d2d0e1c884e16debe2947b5a3bc9db694c3d4371c",
+        "size": 90836,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-technical/dev-00000-of-00001.parquet",
+      "blobId": "1edcd58d0bc3ca397921f1e8b779d3c13f295627",
+      "size": 5771,
+      "lfs": {
+        "sha256": "46a16368de49d560a53ef8a36b9a8fc7f524b0f771267d7035081a17328a58cf",
+        "size": 5771,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-technical/test-00000-of-00001.parquet",
+      "blobId": "4840b85d34744de3c678c137d78efca65f8b89e4",
+      "size": 54888,
+      "lfs": {
+        "sha256": "8ed13880bf1b2897011a18d26c28432edfe6aeb2435290d75392ad5fae5f86ff",
+        "size": 54888,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-three_principles_of_people/dev-00000-of-00001.parquet",
+      "blobId": "b503ba35d2d76ec3af16ba36b36c5bca926b599d",
+      "size": 6243,
+      "lfs": {
+        "sha256": "edb2af7abb187d92a7ab20b1c6fd82f608ded8d4631a19a53484c0ffccf9953b",
+        "size": 6243,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-three_principles_of_people/test-00000-of-00001.parquet",
+      "blobId": "1854ac808fc6c0fe414bb3001aa0eee83e2bb245",
+      "size": 22297,
+      "lfs": {
+        "sha256": "9d10b7d05802ab288ef2123ee44b0d648daa7a84f638bb05edcbe92f90ed7b2b",
+        "size": 22297,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-trade/dev-00000-of-00001.parquet",
+      "blobId": "ab0b4fe943e63744900ff5a651797ffc4597145a",
+      "size": 6818,
+      "lfs": {
+        "sha256": "09115769f0ddc9256d15142d5a98c5b5aca43646de422640d0529ed661a6e62b",
+        "size": 6818,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-trade/test-00000-of-00001.parquet",
+      "blobId": "ffca11c5ce4fa0326c2f45670423abc4aee14333",
+      "size": 92180,
+      "lfs": {
+        "sha256": "4f3a57a6051220b6a86d26ed70b015abec55bbac31f8a0cf1d2a1c4ffaddf58c",
+        "size": 92180,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-traditional_chinese_medicine_clinical_medicine/dev-00000-of-00001.parquet",
+      "blobId": "61410f4606f3461d33b115123929b9565b87567d",
+      "size": 7284,
+      "lfs": {
+        "sha256": "8cc411328408f902533a0e0e9095261c9f71467a1aa63c210dd60fc886e92c19",
+        "size": 7284,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-traditional_chinese_medicine_clinical_medicine/test-00000-of-00001.parquet",
+      "blobId": "ffa42c1f5f68f0e841cdf8e06134cc53f7395980",
+      "size": 69083,
+      "lfs": {
+        "sha256": "0b95bfc3013235645b727a812dab8fa884985a95feb16ee406ef499694998b24",
+        "size": 69083,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-trust_practice/dev-00000-of-00001.parquet",
+      "blobId": "0784970ee38b07565ff3440bed073f0d2f3f84b1",
+      "size": 8472,
+      "lfs": {
+        "sha256": "840dbb646003952534e9e6745b158ec429295b99f6ac32798ecd6256f4ef35b7",
+        "size": 8472,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-trust_practice/test-00000-of-00001.parquet",
+      "blobId": "80bb356e514a6858875192e4d8c152ef7ceb9819",
+      "size": 86323,
+      "lfs": {
+        "sha256": "4a14a369c43bde3c707e77969c6ff007feef895a60a291fed7afadad815d5aca",
+        "size": 86323,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-ttqav2/dev-00000-of-00001.parquet",
+      "blobId": "6c39fb5ae1ed431d74b611bb22f6b8085c63e2ee",
+      "size": 7068,
+      "lfs": {
+        "sha256": "f3edc97aeaa143c3510f75556b59008f96043a986d61085124dba4dc86448326",
+        "size": 7068,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-ttqav2/test-00000-of-00001.parquet",
+      "blobId": "9a1a16c3c74c99674f2303acf7a5482dec697eff",
+      "size": 33285,
+      "lfs": {
+        "sha256": "a7a478d9d30b940863c66b1d0813b3f7a3098a370a51f43ff1e9e3a7201e7a98",
+        "size": 33285,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-tve_chinese_language/dev-00000-of-00001.parquet",
+      "blobId": "7a478a8d02b6d80a2dfbdd7ac6d8969c624df466",
+      "size": 16100,
+      "lfs": {
+        "sha256": "f7e7f6c8579c3c2c821756ec1f8bfdd717b7b6c71324b92ac1059ac59aaa735c",
+        "size": 16100,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-tve_chinese_language/test-00000-of-00001.parquet",
+      "blobId": "5fa60de35f17500f52acbaaf4592691bbb1e47d0",
+      "size": 384913,
+      "lfs": {
+        "sha256": "4255d87e162c5cf737b1a95577edf31e543fe8134342e741815d676d113afcb9",
+        "size": 384913,
+        "pointerSize": 131
+      }
+    },
+    {
+      "rfilename": "tmmluplus-tve_design/dev-00000-of-00001.parquet",
+      "blobId": "f348c60981a23ab8f267d97c791c59674c0a6b9d",
+      "size": 7956,
+      "lfs": {
+        "sha256": "79f6ab4f5064e1b17e0d003ab00ced3dfddd63bc454d84b5d961e8e7f60b68e0",
+        "size": 7956,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-tve_design/test-00000-of-00001.parquet",
+      "blobId": "c76360276d5e66aff9e750ebaf0ef17eb43a560d",
+      "size": 112023,
+      "lfs": {
+        "sha256": "d53940478e4f95f5063b581b4b159f3f333358e69dc894d3314f7c5f32f63746",
+        "size": 112023,
+        "pointerSize": 131
+      }
+    },
+    {
+      "rfilename": "tmmluplus-tve_mathematics/dev-00000-of-00001.parquet",
+      "blobId": "4fe8d80e052a7042f6e40ca286ad4a8d4e92dd3a",
+      "size": 6246,
+      "lfs": {
+        "sha256": "55c8037a91f31bb3c1fa6458351f1b98b849626e4184b85d073bc226a242acc6",
+        "size": 6246,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-tve_mathematics/test-00000-of-00001.parquet",
+      "blobId": "6b63c1e1829841dfde936fc200b6d460468ac30e",
+      "size": 30058,
+      "lfs": {
+        "sha256": "f0693c8279e7a9ae1b41ecbf0882a80cbe2c2706d4a615208c9e198f5e9e54e2",
+        "size": 30058,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-tve_natural_sciences/dev-00000-of-00001.parquet",
+      "blobId": "26751702cfdc6f7227fe2a696d83c0eb4ecb5611",
+      "size": 8668,
+      "lfs": {
+        "sha256": "4555aeddab133161990d6597c61ef45ffecf0cd6f400753f1dcc96b876330ef6",
+        "size": 8668,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-tve_natural_sciences/test-00000-of-00001.parquet",
+      "blobId": "31f87e6bd37eb4858b507a53d07161727aba57bc",
+      "size": 91552,
+      "lfs": {
+        "sha256": "9d63d81e5299ab441dbc8661fb3b2d9b6b7ee39f839f4f42466c1eb2233df0cb",
+        "size": 91552,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-veterinary_pathology/dev-00000-of-00001.parquet",
+      "blobId": "7de26404d7900fbe4975589500d2e3a3dafd5549",
+      "size": 6478,
+      "lfs": {
+        "sha256": "f784e90f072b672c2838fc0a698bef2dcf8c152a4b093bf949f3a483acf61204",
+        "size": 6478,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-veterinary_pathology/test-00000-of-00001.parquet",
+      "blobId": "158cb58677c151c9aed0a231b094a4b7a790f18e",
+      "size": 52522,
+      "lfs": {
+        "sha256": "15f83f4ce10da4d7f0db5fb6faf304c1c3251edc6eae8db00cf330c93aa2ec1e",
+        "size": 52522,
+        "pointerSize": 130
+      }
+    },
+    {
+      "rfilename": "tmmluplus-veterinary_pharmacology/dev-00000-of-00001.parquet",
+      "blobId": "a13ac57e26ba78a53d6cf5671e8eccda3d1d5288",
+      "size": 6365,
+      "lfs": {
+        "sha256": "2b0dac6d8dc50dc7176fff88f33daf1c0e5970a2690d854140d4c6414f51838d",
+        "size": 6365,
+        "pointerSize": 129
+      }
+    },
+    {
+      "rfilename": "tmmluplus-veterinary_pharmacology/test-00000-of-00001.parquet",
+      "blobId": "5d2966c16a08f622f177140fdac69e5bceeec4b9",
+      "size": 75615,
+      "lfs": {
+        "sha256": "ea2a4e524a5e8fc54f5c73aa5d80da1c862352066f188db50858018ecc4a6adf",
+        "size": 75615,
+        "pointerSize": 130
+      }
+    }
+  ],
+  "createdAt": "2024-01-05T00:29:49.000Z",
+  "usedStorage": 708082864
+}

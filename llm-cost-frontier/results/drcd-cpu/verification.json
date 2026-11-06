@@ -1,0 +1,126 @@
+{
+  "complete": true,
+  "source_sha256": "9ac09ae40c8c47f854a1a761f463cb344054d4453fe24d72a471228270f17511",
+  "source_fresh_replay_cells_identical": true,
+  "cells": 12,
+  "code_cells": 9,
+  "manifest_byte_identical": true,
+  "manifest_rows": 33,
+  "protocol_byte_identical": true,
+  "manifest_sha256": "1821c4f1904a51b26a3b87baa2831140064b06f118307bc9882f469fb36d1cf3",
+  "official_dataset_lfs_sha256": "c96bd232753f77096a05fa16e58904018495ae3fefd062216042600818666364",
+  "initial_notebook_cell_counts": {
+    "drcd_cpu.ipynb": 11,
+    "drcd_cpu.replayed.ipynb": 11,
+    "drcd_cpu.executed.ipynb": 10
+  },
+  "local_requests": {
+    "initial": 90,
+    "guarded_fresh": 90,
+    "total": 180
+  },
+  "all_raw_prompts_and_outputs_match_initial": true,
+  "all_90_response_ids_new": true,
+  "all_90_request_clocks_new": true,
+  "paid_evaluation_api_calls": 0,
+  "gpu_allocations": 0,
+  "all_21_tests_passed_no_skip_or_warning": true,
+  "fresh_pids_stopped": {
+    "server-small": 744493,
+    "server-large": 744494,
+    "fresh-kernel": 744433,
+    "fresh-watchdog": 744451
+  },
+  "microtests": {
+    "evidencewrite": {
+      "pids": [
+        747452,
+        747454,
+        747453
+      ],
+      "no_live_processes": true
+    },
+    "exception": {
+      "pids": [
+        747473,
+        747475,
+        747474
+      ],
+      "no_live_processes": true
+    },
+    "inference": {
+      "pids": [
+        747476,
+        747478,
+        747477
+      ],
+      "no_live_processes": true
+    },
+    "kernel-exception": {
+      "pids": [
+        747548,
+        747568,
+        747567
+      ],
+      "no_live_processes": true
+    },
+    "kernel-normal": {
+      "pids": [
+        747506,
+        747544,
+        747543
+      ],
+      "no_live_processes": true
+    },
+    "kernel-overall": {
+      "pids": [
+        747480,
+        747503,
+        747502
+      ],
+      "no_live_processes": true
+    },
+    "normal": {
+      "pids": [
+        747570,
+        747572,
+        747571
+      ],
+      "no_live_processes": true
+    },
+    "overall": {
+      "pids": [
+        747573,
+        747575,
+        747574
+      ],
+      "no_live_processes": true
+    },
+    "parentdeath": {
+      "pids": [
+        747585,
+        747587,
+        747586
+      ],
+      "no_live_processes": true
+    },
+    "request": {
+      "pids": [
+        747588,
+        747590,
+        747589
+      ],
+      "no_live_processes": true
+    }
+  },
+  "no_live_fresh_or_microtest_processes": true,
+  "protected_head_sha256": {
+    "audit_cost.py": "06c255d0893087c3b87aadd79170e72fd2d790f8ea5bfb5a676e730d0f21ea64",
+    "data/cost-data.json": "39c67d819e8f69f9904db23afd257ff74fe0377151c8a4abaa430a31ab56c95e",
+    "results/cost-audit.json": "3a15e5093e06ad3940604bedb79e1cdbde272f906fbe2061416afbaacb925ee1",
+    "results/replay.json": "4dc1fdf4fc91911fc80f7eb4cd1d8c6c4cd8839a4df760f1ac250f6d26cb5873"
+  },
+  "guarded_full_notebook_elapsed_seconds": 192.29422376211733,
+  "request_elapsed_seconds": 187.19218006264418,
+  "quality_preservation_demonstrated": false
+}

@@ -1,0 +1,18 @@
+test_kernel_callback_disarms_only_after_final_cell (test_drcd_guard.GuardTests.test_kernel_callback_disarms_only_after_final_cell) ... FAIL
+
+======================================================================
+FAIL: test_kernel_callback_disarms_only_after_final_cell (test_drcd_guard.GuardTests.test_kernel_callback_disarms_only_after_final_cell)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/wens/project/deep-dive-code/llm-cost-frontier/tests/test_drcd_guard.py", line 85, in test_kernel_callback_disarms_only_after_final_cell
+    self.kernel_case('normal')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/wens/project/deep-dive-code/llm-cost-frontier/tests/test_drcd_guard.py", line 117, in kernel_case
+    self.assertTrue((out / 'watchdog.json').exists(), 'watchdog did not disarm after final cell or clean up setup exception')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : watchdog did not disarm after final cell or clean up setup exception
+
+----------------------------------------------------------------------
+Ran 1 test in 3.720s
+
+FAILED (failures=1)

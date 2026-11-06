@@ -1,0 +1,20 @@
+{
+  "small": {
+    "port": 53185,
+    "pid": 744493,
+    "startup_start_monotonic": 7332415.891513501,
+    "startup_seconds": 0.6047127461060882,
+    "exit_code": 0,
+    "stopped_verified": true,
+    "port_closed_verified": true
+  },
+  "large": {
+    "port": 57029,
+    "pid": 744494,
+    "startup_start_monotonic": 7332415.892443902,
+    "startup_seconds": 1.2066357424482703,
+    "exit_code": 0,
+    "stopped_verified": true,
+    "port_closed_verified": true
+  }
+}

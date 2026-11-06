@@ -1,0 +1,43 @@
+test_dataset_cache_requires_official_pinned_sha (test_drcd_guard.GuardTests.test_dataset_cache_requires_official_pinned_sha) ... ok
+test_evidence_write_failure_still_kills (test_drcd_guard.GuardTests.test_evidence_write_failure_still_kills) ... ERROR
+/home/wens/.local/share/uv/python/cpython-3.13.14-linux-x86_64-gnu/lib/python3.13/unittest/case.py:650: ResourceWarning: unclosed file <_io.TextIOWrapper name=4 encoding='UTF-8'>
+  with outcome.testPartExecutor(self):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/wens/.local/share/uv/python/cpython-3.13.14-linux-x86_64-gnu/lib/python3.13/unittest/case.py:650: ResourceWarning: unclosed file <_io.TextIOWrapper name=6 encoding='UTF-8'>
+  with outcome.testPartExecutor(self):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+test_exception_cleans_children (test_drcd_guard.GuardTests.test_exception_cleans_children) ... ok
+test_fail_closed_shared_process_group (test_drcd_guard.GuardTests.test_fail_closed_shared_process_group) ... ok
+test_inference_kills_blocked_worker_and_child (test_drcd_guard.GuardTests.test_inference_kills_blocked_worker_and_child) ... ok
+test_normal_disarm_no_kill_or_residue (test_drcd_guard.GuardTests.test_normal_disarm_no_kill_or_residue) ... ok
+test_overall_kills_blocked_worker_and_child (test_drcd_guard.GuardTests.test_overall_kills_blocked_worker_and_child) ... ok
+test_parentdeath_cleans_children (test_drcd_guard.GuardTests.test_parentdeath_cleans_children) ... ok
+test_request_kills_blocked_worker_and_child (test_drcd_guard.GuardTests.test_request_kills_blocked_worker_and_child) ... ok
+
+======================================================================
+ERROR: test_evidence_write_failure_still_kills (test_drcd_guard.GuardTests.test_evidence_write_failure_still_kills)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/wens/project/deep-dive-code/llm-cost-frontier/tests/test_drcd_guard.py", line 66, in test_evidence_write_failure_still_kills
+    def test_evidence_write_failure_still_kills(self): self.worker('evidencewrite')
+                                                       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/wens/project/deep-dive-code/llm-cost-frontier/tests/test_drcd_guard.py", line 37, in worker
+    stdout, stderr = p.communicate(timeout=12)
+                     ~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/wens/.local/share/uv/python/cpython-3.13.14-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 1222, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wens/.local/share/uv/python/cpython-3.13.14-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 2155, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wens/.local/share/uv/python/cpython-3.13.14-linux-x86_64-gnu/lib/python3.13/subprocess.py", line 1269, in _check_timeout
+    raise TimeoutExpired(
+    ...<2 lines>...
+            stderr=b''.join(stderr_seq) if stderr_seq else None)
+subprocess.TimeoutExpired: Command '['/home/wens/project/deep-dive-code/llm-cost-frontier/.venv/bin/python', '-c', "# Infrastructure only: fixed Python source, no shell, no model-generated commands.\nimport os, sys, json, time, subprocess, signal\nfrom pathlib import Path\n\nWATCHDOG_SOURCE = r'''\nimport os, sys, json, time, signal\nfrom pathlib import Path\nout = Path(sys.argv[1]); pid = int(sys.argv[2]); identity = sys.argv[3]\ndef stat():\n    try: return Path(f'/proc/{pid}/stat').read_text().split(') ')[1].split()\n    except FileNotFoundError: return None\ndef write(name, obj):\n    p = out / name; t = p.with_suffix('.watchdog.tmp')\n    with t.open('w') as f:\n        json.dump(obj, f, indent=2); f.flush(); os.fsync(f.fileno())\n    t.replace(p)\ns = stat()\nif not s or s[19] != identity or int(s[2]) != pid or os.getpgrp() == pid:\n    sys.exit(91)\nwrite('watchdog-ready.json', {'pid': os.getpid(), 'target_pid': pid, 'target_pgid': pid})\nwhile True:\n    reason = None\n    s = stat()\n    if not s or s[0] == 'Z': reason = 'parentdeath'\n    elif s[19] != identity: sys.exit(92)  # never signal a reused PID\n    try:\n        state = json.loads((out / 'watchdog-control.json').read_text())\n        now = time.monotonic()\n        for key in ['overall', 'inference', 'request']:\n            if state.get(key) is not None and now >= state[key]:\n                reason = key + ' hard deadline'; break\n        if state.get('abort'): reason = 'exception: ' + state['abort']\n        if state.get('done') and not reason:\n            write('watchdog.json', {'status':'complete', 'target_pid':pid, 'elapsed_seconds':now-state['started']})\n            sys.exit(0)\n    except Exception as exc:\n        state = {}; reason = 'watchdog control failure: ' + repr(exc)\n    if reason:\n        evidence = {'status':'partial', 'reason':reason, 'target_pid':pid,\n                    'target_pgid':pid, 'request':state.get('active_request'), 'monotonic':time.monotonic()}\n        raw = out / 'raw-generations.jsonl'\n        evidence['requests_saved'] = len(raw.read_text().splitlines()) if raw.exists() else 0\n        write('failure.json', evidence); write('watchdog.json', evidence)\n        # Only the group verified above as the dedicated worker/kernel's own group.\n        try: os.killpg(pid, signal.SIGKILL)\n        except ProcessLookupError: pass\n        sys.exit(0)\n    time.sleep(.02)\n'''\n\nclass ResourceGuard:\n    def __init__(self, out, overall_seconds=2100):\n        self.pid = os.getpid()\n        if os.getpgrp() != self.pid or os.getsid(0) != self.pid:\n            raise RuntimeError('fresh requires a dedicated kernel session with PGID == PID; refusing to signal shared group')\n        self.out = Path(out); self.out.mkdir(parents=True, exist_ok=True)\n        identity = Path(f'/proc/{self.pid}/stat').read_text().split(') ')[1].split()[19]\n        now = time.monotonic()\n        self.state = dict(started=now, overall=now+overall_seconds, inference=None, request=None, done=False)\n        self._write()\n        ready = self.out / 'watchdog-ready.json'\n        ready.unlink(missing_ok=True)\n        self.proc = subprocess.Popen([sys.executable, '-c', WATCHDOG_SOURCE, str(self.out), str(self.pid), identity], start_new_session=True)\n        until = time.monotonic()+5\n        while not ready.exists():\n            if self.proc.poll() is not None or time.monotonic() > until:\n                raise RuntimeError('independent watchdog failed startup')\n            time.sleep(.01)\n    def _write(self):\n        p = self.out / 'watchdog-control.json'; t = p.with_suffix('.kernel.tmp')\n        with t.open('w') as f:\n            json.dump(self.state, f); f.flush(); os.fsync(f.fileno())\n        t.replace(p)\n    def inference(self, seconds=1200):\n        self.state['inference'] = time.monotonic()+seconds; self._write()\n    def request(self, seconds=120, metadata=None):\n        self.state['request'] = time.monotonic()+seconds\n        self.state['active_request'] = metadata; self._write()\n    def clear_request(self):\n        self.state['request'] = None; self.state['active_request'] = None; self._write()\n    def inference_complete(self):\n        self.state['inference'] = None; self._write()\n    def abort(self, error):\n        self.state['abort'] = str(error); self._write()\n    def finish(self):\n        self.state['done'] = True; self._write()\n        self.proc.wait(timeout=5)\n        assert self.proc.returncode == 0\n        assert json.loads((self.out/'watchdog.json').read_text())['status'] == 'complete'\n\n\nimport signal\nout = Path(sys.argv[1]); mode = sys.argv[2]\ng = ResourceGuard(out, overall_seconds=(.7 if mode in {'overall','evidencewrite'} else 8))\nif mode == 'evidencewrite': (out / 'watchdog.json').mkdir()\nchild = subprocess.Popen([sys.executable, '-c', 'import signal; signal.pause()'])\n(out / 'pids.json').write_text(json.dumps([os.getpid(), child.pid, g.proc.pid]))\nif mode == 'inference': g.inference(.7)\nif mode == 'request': g.request(.7, {'id': 'blocked'})\nif mode == 'normal':\n    child.terminate(); child.wait(); g.finish(); time.sleep(1); sys.exit(0)\nif mode == 'parentdeath': os._exit(23)\nif mode == 'exception': g.abort('dummy cell exception')\nsignal.pause()\n", '/home/wens/.hermes/cache/scratch/tmpl8abw08m', 'evidencewrite']' timed out after 12 seconds
+
+----------------------------------------------------------------------
+Ran 9 tests in 15.633s
+
+FAILED (errors=1)
+mode: replay ; paid budget: 0; GPU: disabled

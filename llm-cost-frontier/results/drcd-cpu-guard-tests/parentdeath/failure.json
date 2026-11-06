@@ -1,0 +1,9 @@
+{
+  "status": "partial",
+  "reason": "parentdeath",
+  "target_pid": 747585,
+  "target_pgid": 747585,
+  "request": null,
+  "monotonic": 7332798.596712849,
+  "requests_saved": 0
+}
