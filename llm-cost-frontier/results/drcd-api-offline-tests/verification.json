@@ -1,0 +1,17 @@
+{
+  "source_sha256": "303c1c2bb97a9325faeb02cc2cf66b9c8e8525e9667aec4fde7831bd317d1c9e",
+  "manifest_sha256": "1821c4f1904a51b26a3b87baa2831140064b06f118307bc9882f469fb36d1cf3",
+  "source_replay_cells_identical": true,
+  "replay_status": "not_run",
+  "paid_results_directory_absent": true,
+  "original_tracked_cpu_and_raw_unchanged": true,
+  "tracked_changes": [
+    "llm-cost-frontier/README.md"
+  ],
+  "offline_tests_total": 44,
+  "original_tests_preserved": 21,
+  "new_api_tests": 23,
+  "fresh_executed": false,
+  "live_inference_requests": 0,
+  "live_token_counting_requests": 0
+}

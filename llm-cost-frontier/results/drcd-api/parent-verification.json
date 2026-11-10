@@ -1,0 +1,46 @@
+{
+  "status": "verified_complete",
+  "inference_requests": 90,
+  "metadata_input_counts": 66,
+  "phase_counts": {
+    "warmup": 2,
+    "dev": 16,
+    "test": 72
+  },
+  "total_usage_derived_usd": "0.0198837",
+  "billing_reconciled": false,
+  "unresolved_reserve_usd": "0",
+  "test": {
+    "all_terra": {
+      "correct": 20,
+      "n": 24,
+      "em_pct": 83.33333333333334,
+      "f1_pct": 95.04357298474946,
+      "usage_derived_usd": "0.012181",
+      "output_tokens": 203
+    },
+    "all_luna": {
+      "correct": 18,
+      "n": 24,
+      "em_pct": 75.0,
+      "f1_pct": 88.00653594771242,
+      "usage_derived_usd": "0.0012241",
+      "output_tokens": 215
+    },
+    "frozen_mix": {
+      "correct": 19,
+      "n": 24,
+      "em_pct": 79.16666666666666,
+      "f1_pct": 93.85309679427326,
+      "usage_derived_usd": "0.0012231",
+      "output_tokens": 213
+    }
+  },
+  "selected_luna_share": 1,
+  "selection_label": "all_luna",
+  "quality_preservation_passed": false,
+  "chosen_cost_reduction_pct": 89.95895246695673,
+  "fresh_replay_source_match": true,
+  "kernels_stopped": true,
+  "raw_sha256": "3f40949261c6d73b1d0e50cdb3d46d74c08aeba810a07c67666bbca208ac9c5e"
+}

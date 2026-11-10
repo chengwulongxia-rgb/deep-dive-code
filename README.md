@@ -29,7 +29,7 @@ AI 圈子有一件事很煩：每個禮拜都有新論文說自己「突破極�
 | [`sdxl-colab-lifecycle/`](./sdxl-colab-lifecycle/) | SDXL → GCS 生命週期 | Colab L4 單張生圖，GCS 精確 generation／SHA256 讀回驗證與自動清理；附互動 Notebook。 |
 | [`structured-json-colab/`](./structured-json-colab/) | JSON 限制式解碼 | Notebook 原生 cells：資料、模型、A/B/C 推論、評分、圖表與錯誤分析；可 replay 首輪 24 題真實輸出或選 L4 新跑。 |
 | [`weight-space-programming-lab/`](./weight-space-programming-lab/) | Qwen權重修改效果重播 | L4真實96筆；長上限原版0/16、作者版11/16、隨機對照2/16，附原生Notebook與CPU重播。 |
-| [`llm-cost-frontier/`](./llm-cost-frontier/) | 模型混用的成本與品質 | 固定45配置算術核對，加上原生DRCD Notebook的CPU真模型對照；分開報答案品質、耗時與歷史成本估值。 |
+| [`llm-cost-frontier/`](./llm-cost-frontier/) | 模型混用的成本與品質 | 固定45配置算術核對與DRCD CPU／API真實對照；API整輪用量換算US$0.0198837，開發選定策略未維持保留集雙品質。 |
 
 ### llm-cost-frontier
 

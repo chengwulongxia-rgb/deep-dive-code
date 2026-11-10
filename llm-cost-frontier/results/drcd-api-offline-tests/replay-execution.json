@@ -1,0 +1,11 @@
+{
+  "mode": "replay",
+  "source_sha256": "303c1c2bb97a9325faeb02cc2cf66b9c8e8525e9667aec4fde7831bd317d1c9e",
+  "kernel_pid": 2827369,
+  "kernel_stopped": true,
+  "ipc_transport": true,
+  "all_cells_executed": true,
+  "code_cells": 10,
+  "replay_http_and_key_blocked": true,
+  "output": "/home/wens/project/deep-dive-code/llm-cost-frontier/drcd_api.replayed.ipynb"
+}

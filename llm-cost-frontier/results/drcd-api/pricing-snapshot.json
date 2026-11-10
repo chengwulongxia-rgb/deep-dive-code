@@ -1,0 +1,45 @@
+{
+  "verified_at": "2026-11-10T12:32:18.346770+08:00",
+  "currency": "USD",
+  "unit": "per 1 million tokens",
+  "tier": "Standard, short context, nonregional official OpenAI Responses API",
+  "input_limit": 8192,
+  "max_output_tokens": 500,
+  "reasoning_effort": "none",
+  "cache": "explicit mode, no breakpoints; all 90 responses report zero cached and write tokens",
+  "rates": {
+    "gpt-6.1-terra": {
+      "input": "1.00",
+      "output": "5.00",
+      "reserve_12h_write": "2.50"
+    },
+    "gpt-6-luna": {
+      "input": "0.10",
+      "output": "0.50",
+      "reserve_12h_write": "0.25"
+    }
+  },
+  "sources": [
+    {
+      "url": "https://developers.openai.com/api/docs/pricing",
+      "download_sha256": "7a62cd6710ca281c30cdce94f939532fcc0a88b1bd3fd63d1e84085fc0db716a"
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/models/gpt-6.1-terra",
+      "download_sha256": "6a73b3e2e941fbe3813636d5bd2d653ff190e49cc3692eaf8daa3bb125c877f8"
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+      "download_sha256": "e3578e39ea91fde7045e386ba3863fa621dbf9a31d44e0cd569b74822721223b"
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/token-counting",
+      "download_sha256": "5143ec9e0e239b127c56d74bb11ea5f79baf5677ee6b3a86cd65a33577840281"
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/guides/prompt-caching",
+      "download_sha256": "58b38fa712a1bb7bdbc53b5357408903fb668dca82d141e5cacf92e672986487"
+    }
+  ],
+  "billing_reconciled": false
+}
